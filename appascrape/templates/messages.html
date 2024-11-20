@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Messages{% endblock %}
+{% block stylesheet %}messages.css{% endblock %}
+
+{% block main %}
+    {% for message in messages %}
+            {% if message['url'] %}
+                <a title="{{ message['text'] }}" href="{{ message['url'] }}" onclick="window.open('{{ message['url'] }}', 'newwindow', 'width=550,height=600'); return false;" onmouseover="this.title='';"><div id="msg-{{ message['sid'] }}" class="message">
+                    {% if message['atts'] %}<img src="{{ message['atts'][0]['url'] }}" alt>{% endif %}
+                    <div class="date">{{ message['date'] }}</div>
+                    <span class="msg-text">{{ message['text_with_br'] }} </span><span class="msg-more" aria-hidden="true">[more]</span>
+                </div></a>
+            {% else %}
+                <div id="msg-{{ message['sid'] }}" class="message">
+                    <div class="date">{{ message['date'] }}</div>
+                    {{ message['text'] }}
+                </div>
+            {% endif %}
+
+        <hr>
+    {% endfor %}
+{% endblock %}
+
+{% block footer %}
+    Last updated {{ last_update }}.
+{% endblock %}

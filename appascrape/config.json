@@ -1,0 +1,7 @@
+{
+  "app": "elginpark",
+  "file_path": "orca_news",
+  "save": {"messages": ["html"], "calendar": ["json"]},
+  "footer": "Updated daily.<br>Content © Elgin Park Secondary staff and student contributors. Website code © Elgin Park Computer Programming Club. All rights reserved.",
+  "pwa": true
+}

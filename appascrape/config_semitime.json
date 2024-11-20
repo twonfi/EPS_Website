@@ -1,0 +1,7 @@
+{
+  "app": "semitime",
+  "file_path": "thunderbird_times",
+  "save_formats": ["html"],
+  "footer": "",
+  "pwa": true
+}
