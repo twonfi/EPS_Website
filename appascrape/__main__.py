@@ -1,9 +1,10 @@
-import os
 import json
-import datetime
+import os
 import re
-import requests
+from datetime import datetime, timezone
+
 import jinja2
+import requests
 from markupsafe import escape
 
 try:
@@ -63,8 +64,8 @@ if 'messages' in config['save']:
         html_text = templates['messages'].render(
             messages=messages,
             app_name=config['app'],
-            last_update=datetime.datetime.now().strftime('%A, %B %-d, %Y'
-                                                         ' at %-I:%M:%S %P'),
+            last_update=datetime.now(timezone.utc).strftime('%A, %B %-d, %Y'
+                                                            ' at %-I:%M:%S %P'),
             footer=config['footer'],
         )
         write_file(f'{file_path}/messages.html', html_text)
