@@ -50,7 +50,7 @@ if 'messages' in config['save']:
     messages = api('msg')
 
     if 'json' in config['save']['messages']:
-        write_file(f'{file_path}/messages.json', json.dumps(messages))
+        write_file(f'{file_path}/messages.json', str(messages))
 
     if 'html' in config['save']['messages']:
         for message in messages:
@@ -74,7 +74,7 @@ if 'calendar' in config['save']:
     calendar = api('a')
 
     if 'json' in config['save']['calendar']:
-        write_file(f'{file_path}/messages.json', json.dumps(calendar))
+        write_file(f'{file_path}/messages.json', str(calendar))
 
     if 'html' in config['save']['calendar']:
         print('HTML calendar not yet supported')  # placeholder
