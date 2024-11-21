@@ -3,8 +3,17 @@ body,
 html {
   height: 85%;
   margin: 0;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
+
+h1 {
+  font-size: 1em;
+}
+
+#h1-elginparksecondary\.com {
+  font-size: .8em;
+}
+
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)),
     url("scool.jpg");
@@ -145,7 +154,7 @@ html {
 }
 
 #textSpace {
-  top: 0px;
+  top: 0;
   height: inherit;
   width: inherit;
   margin-right: 15%;
@@ -411,16 +420,16 @@ html {
     transition: all 0.3s;
     cursor: pointer;
     float: right;
-   
+
   }
-  
+
   .button span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.3s;
   }
-  
+
   .button span:after {
     content: '\00bb';
     position: absolute;
@@ -429,11 +438,11 @@ html {
     right: -70px;
     transition: 0.3s;
   }
-  
+
   .button:hover span {
     padding-right: 37px;
   }
-  
+
   .button:hover span:after {
     opacity: 1;
     right: 0;
