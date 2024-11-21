@@ -19,9 +19,7 @@ jobs:
         run: python3 __main__.py
       - name: Commit and push
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions-user@github.com"
+          git config --global user.name "github-actions"
+          git config --global user.email "actions-user@github.com"
           git commit -am "Update Orca News"
           git push
-
-
