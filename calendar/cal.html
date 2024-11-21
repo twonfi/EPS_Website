@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init();
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elgin Park Secondary - Calendar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <style>
+      body {
+        background-image: url("https://thecustodian.ca/wp-content/uploads/2024/06/Elgin-Park-Secondary-School-4.jpg");
+        background-size: cover;
+        background-position: center;
+        background-clip: content-box;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+      }
+
+      nav ul {
+        position: relative;
+      }
+
+      nav ul li {
+        position: relative;
+      }
+
+      nav ul li:hover > ul {
+        display: block;
+      }
+
+      nav ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        color: black;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        min-width: 200px;
+      }
+
+      nav ul ul li {
+        padding: 10px;
+      }
+
+      nav ul ul li a {
+        color: black;
+      }
+
+      #calendar-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgba(52, 28, 95, 0.4); /* Updated to match Elgin Park color scheme with more transparency for better visibility */
+        border-radius: 8px;
+        color: white;
+        backdrop-filter: blur(8px); /* Adding blur effect to make the background less intrusive */
+      }
+
+      .fc-toolbar {
+        background-color: #9575cd; /* Lighter purple for better contrast */
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      .fc-daygrid-day {
+        border: 1px solid #d1c4e9; /* Softer light purple for grid borders */
+      }
+
+      .fc-event {
+        background-color: #9575cd !important; /* Lighter purple for events */
+        color: #ffffff !important;
+        border: none;
+      }
+
+      .fc-event-title {
+        white-space: normal !important; /* Allow event titles to wrap */
+      }
+
+      .fc-daygrid-event .fc-event-title {
+        word-break: break-word; /* Break long words for better wrapping */
+      }
+      .fc-toolbar {
+        background-color: #5c1387;
+        color: white;
+      }
+      .fc-toolbar h2 {
+        color: white;
+      }
+     .fc-button {
+        background-color: #5c1387;
+        border: none;
+      }
+     .fc-button:hover {
+        background-color: #45106c;
+      }
+    </style>
+  </head>
+
+  <body
+    class="bg-gray-100 text-gray-900"
+    data-aos-easing="ease-in-out"
+    data-aos-duration="1000"
+  >
+    <!-- Header -->
+    <header class="bg-purple-900 text-white" data-aos="fade-down">
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <img
+          src="https://elginparksecondary.com/elgin_logo.png"
+          alt="Elgin Park School Logo"
+          class="w-12 h-12 mr-4"
+        />
+        <h1 class="text-2xl font-bold">Elgin Park Secondary Calendar</h1>
+        <nav>
+          <ul class="flex space-x-4">
+            <style>
+              nav ul ul {
+                transition: all 0.3s ease;
+              }
+              nav ul ul {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                padding: 0;
+              }
+              nav ul li:hover > ul {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+              }
+              nav ul ul li {
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              }
+              nav ul ul li a {
+                padding: 8px 15px;
+                display: block;
+              }
+            </style>
+            <style>
+              nav ul ul {
+                transition: all 0.3s ease;
+              }
+              nav ul ul {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+              }
+              nav ul li:hover > ul {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+              }
+            </style>
+            <li><a href="#" class="hover:text-gray-300">Home</a></li>
+            <li>
+              <a href="#" class="hover:text-gray-300"
+                >Departments <i class="fas fa-chevron-down ml-1"></i
+              ></a>
+              <ul class="bg-white rounded shadow-md p-2">
+                <li><i class="fas fa-briefcase mr-2"></i>Business Education</li>
+                <li>
+                  <i class="fas fa-chalkboard-teacher mr-2"></i>Career Education
+                </li>
+                <li>
+                  <i class="fas fa-language mr-2"></i>English Language Learning
+                </li>
+                <li><i class="fas fa-palette mr-2"></i>Fine Arts</li>
+                <li><i class="fas fa-home mr-2"></i>Home Economics</li>
+                <li><i class="fas fa-book mr-2"></i>Language Arts</li>
+                <li><i class="fas fa-globe mr-2"></i>Languages</li>
+                <li><i class="fas fa-calculator mr-2"></i>Mathematics</li>
+                <li><i class="fas fa-running mr-2"></i>Physical Education</li>
+                <li><i class="fas fa-flask mr-2"></i>Sciences</li>
+                <li><i class="fas fa-landmark mr-2"></i>Social Studies</li>
+                <li><i class="fas fa-desktop mr-2"></i>Technology Education</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-300"
+                >Specialized Programs <i class="fas fa-chevron-down ml-1"></i
+              ></a>
+              <ul class="bg-white rounded shadow-md p-2">
+                <li>
+                  <i class="fas fa-graduation-cap mr-2"></i>Advanced Placement
+                </li>
+                <li><i class="fas fa-users mr-2"></i>Leadership</li>
+              </ul>
+            </li>
+            <li><a href="cal.html" class="hover:text-gray-300">Schedule</a></li>
+            <li><a href="#" class="hover:text-gray-300">Forms</a></li>
+            <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Calendar Section -->
+    <section class="py-16" data-aos="fade-up">
+      <div id="calendar-container">
+        <div id="calendar"></div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-purple-900 text-white text-center py-6"
+      data-aos="fade-up"
+    >
+      <p class="text-sm">
+        Elgin Park Secondary | Unceded and ancestral territories of the Katzie,
+        Semiahmoo, Kwantlen i forgot
+      </p>
+    </footer>
+
+    <script>
+      window.addEventListener("load", function () {
+        var calendarEl = document.getElementById("calendar");
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          headerToolbar: {
+            left: "prev,next today",
+            center: "title",
+            right: "dayGridMonth,timeGridWeek,timeGridDay",
+          },
+          events: async function (fetchInfo, successCallback, failureCallback) {
+            try {
+              const response = await fetch(
+                  // DO NOT USE IN PRODUCTION I'LL THINK OF BETTER WAY
+                  // (but it would probably be used anyways)
+                "https://api.codetabs.com/v1/proxy?quest=elginpark.appazur.com/api/a?age=30&ua=1&v=2"
+              );
+              const data = await response.json();
+
+              const events = data.map((event) => {
+                return {
+                  title: event.name,
+                  start:
+                    event.date + (event.start24 ? "T" + event.start24 : ""),
+                  end: event.end ? event.date + "T" + event.end : null,
+                };
+              });
+
+              successCallback(events);
+            } catch (error) {
+              console.error("Error fetching events:", error);
+              failureCallback(error);
+            }
+          },
+        });
+        calendar.render();
+      });
+    </script>
+  </body>
+</html>
