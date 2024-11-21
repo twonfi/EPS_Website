@@ -1,0 +1,22 @@
+{
+    "courses": [
+      {
+        "title": "Woodwork 9/10",
+        "grades": ["9", "10"],
+        "required": true,
+        "description": "This course is designed to build on the knowledge gained at the junior level. The student will be exposed to a wider variety of skills, tools, operational safety and tool maintenance. The knowledge gained will be applied in the design and manufacture of projects at a higher skill and maturity level. Accuracy and emphasis on detail is important in this course and will form a valuable part of the student's development."
+      },
+      {
+        "title": "Woodwork 11",
+        "grades": ["11"],
+        "required": true,
+        "description": "(Recommended: Tech. Ed. Woodwork 10) The course is designed to build on and expand the knowledge gained at the Technology Education Wood 10 level. The student will be exposed to a wider variety of skills, tools, operational safety and tool maintenance. The knowledge gained will be applied in the design and manufacture of projects at a higher skill and maturity level. Accuracy and emphasis on detail is important in this course and will form a valuable part of the student's development."
+      },
+      {
+        "title": "Woodwork 12",
+        "grades": ["12"],
+        "required": true,
+        "description": "(Recommended Prerequisite: Woodwork 11) This course is designed to build on the knowledge gained in Carpentry and Joinery 11. The student will be exposed to a wider variety of skills, tools, operational safety and tool maintenance. The knowledge gained will be applied in the design and manufacture of projects at a higher skill and maturity level. Accuracy and emphasis on detail is important in this course and will form a valuable part of the student's development."
+      }
+    ]
+}
