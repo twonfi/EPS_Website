@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init();
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elgin Park Secondary - Calendar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <link rel="stylesheet" href="cal.css">
+  </head>
+
+  <body
+    class="bg-gray-100 text-gray-900"
+    data-aos-easing="ease-in-out"
+    data-aos-duration="1000"
+  >
+    <!-- Header -->
+    <header class="bg-purple-900 text-white" data-aos="fade-down">
+      <div
+        class="container mx-auto flex items-center justify-between px-6 py-4"
+      >
+        <img
+          src="https://elginparksecondary.com/elgin_logo.png"
+          alt="Elgin Park School Logo"
+          class="w-12 h-12 mr-4"
+        />
+        <h1 class="text-2xl font-bold">Elgin Park Secondary Calendar</h1>
+        <nav>
+          <ul class="flex space-x-4">
+            <style>
+              nav ul ul {
+                transition: all 0.3s ease;
+              }
+              nav ul ul {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                padding: 0;
+              }
+              nav ul li:hover > ul {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+              }
+              nav ul ul li {
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+              }
+              nav ul ul li a {
+                padding: 8px 15px;
+                display: block;
+              }
+            </style>
+            <style>
+              nav ul ul {
+                transition: all 0.3s ease;
+              }
+              nav ul ul {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+              }
+              nav ul li:hover > ul {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+              }
+            </style>
+            <li><a href="#" class="hover:text-gray-300">Home</a></li>
+            <li>
+              <a href="#" class="hover:text-gray-300"
+                >Departments <i class="fas fa-chevron-down ml-1"></i
+              ></a>
+              <ul class="bg-white rounded shadow-md p-2">
+                <li><i class="fas fa-briefcase mr-2"></i>Business Education</li>
+                <li>
+                  <i class="fas fa-chalkboard-teacher mr-2"></i>Career Education
+                </li>
+                <li>
+                  <i class="fas fa-language mr-2"></i>English Language Learning
+                </li>
+                <li><i class="fas fa-palette mr-2"></i>Fine Arts</li>
+                <li><i class="fas fa-home mr-2"></i>Home Economics</li>
+                <li><i class="fas fa-book mr-2"></i>Language Arts</li>
+                <li><i class="fas fa-globe mr-2"></i>Languages</li>
+                <li><i class="fas fa-calculator mr-2"></i>Mathematics</li>
+                <li><i class="fas fa-running mr-2"></i>Physical Education</li>
+                <li><i class="fas fa-flask mr-2"></i>Sciences</li>
+                <li><i class="fas fa-landmark mr-2"></i>Social Studies</li>
+                <li><i class="fas fa-desktop mr-2"></i>Technology Education</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="hover:text-gray-300"
+                >Specialized Programs <i class="fas fa-chevron-down ml-1"></i
+              ></a>
+              <ul class="bg-white rounded shadow-md p-2">
+                <li>
+                  <i class="fas fa-graduation-cap mr-2"></i>Advanced Placement
+                </li>
+                <li><i class="fas fa-users mr-2"></i>Leadership</li>
+              </ul>
+            </li>
+            <li><a href="cal.html" class="hover:text-gray-300">Schedule</a></li>
+            <li><a href="#" class="hover:text-gray-300">Forms</a></li>
+            <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Calendar Section -->
+    <section class="py-16" data-aos="fade-up">
+      <div id="calendar-container">
+        <div id="calendar"></div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-purple-900 text-white text-center py-6"
+      data-aos="fade-up"
+    >
+      <p class="text-sm">
+        Elgin Park Secondary | Unceded and ancestral territories of the Katzie,
+        Semiahmoo, Kwantlen i forgot
+      </p>
+    </footer>
+    <script src="cal.js"></script>
+  </body>
+</html>
