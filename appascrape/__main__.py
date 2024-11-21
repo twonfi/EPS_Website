@@ -13,7 +13,7 @@ except FileNotFoundError:
 else:
     config = json.loads(config_json)
     api_url = f'https://{config['app']}.appazur.com/api'
-    file_path = f'{os.getcwd()}/{config['file_path']}'
+    file_path = os.path.abspath(config['file_path'])
 
 
 def api(endpoint: str, method: str = 'GET', return_json: bool = True) \
@@ -68,22 +68,11 @@ if 'messages' in config['save']:
 
 # Calendar
 if 'calendar' in config['save']:
-    calendar = api('msg')
+    calendar = api('a')
 
-    if 'json' in config['save']['messages']:
-        write_file(f'{file_path}/messages.json', str(messages))
+    if 'json' in config['save']['calendar']:
+        write_file(f'{file_path}/messages.json', str(calendar))
 
-    if 'html' in config['save']['messages']:
-        for message in messages:
-            # noinspection PyTypeChecker
-            message['text_with_br'] = re.sub('\r?\n', '<br>',
-                message['text'])
-
-        html_text = templates['messages'].render(
-            messages=messages,
-            app_name=config['app'],
-            last_update=datetime.datetime.now().strftime('%A, %B %-d, %Y'
-                                                         ' at %-I:%M:%S %P'),
-            footer=config['footer'],
-        )
-        write_file(f'{file_path}/messages.html', html_text)
+    if 'html' in config['save']['calendar']:
+        print('HTML calendar not yet supported')  # placeholder
+        ...
