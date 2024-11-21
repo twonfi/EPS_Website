@@ -65,7 +65,7 @@ if 'messages' in config['save']:
             messages=messages,
             app_name=config['app'],
             last_update=datetime.now(timezone.utc).strftime('%A, %B %-d, %Y'
-                                                            ' at %-I:%M:%S %P'),
+                                                            ' at %-I:%M:%S %p'),
             footer=config['footer'],
         )
         write_file(f'{file_path}/messages.html', html_text)
