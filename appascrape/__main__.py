@@ -13,7 +13,7 @@ except FileNotFoundError:
     raise FileNotFoundError('config.json not found; use config_template.json')
 else:
     config = json.loads(config_json)
-    api_url = f'https://{config['app']}.appazur.com/api'
+    api_url = f'https://{config["app"]}.appazur.com/api'
     file_path = os.path.abspath(config['file_path'])
 
 
