@@ -74,7 +74,7 @@ if 'calendar' in config['save']:
     calendar = api('a')
 
     if 'json' in config['save']['calendar']:
-        write_file(f'{file_path}/messages.json', str(calendar))
+        write_file(f'{file_path}/calendar.json', str(calendar))
 
     if 'html' in config['save']['calendar']:
         print('HTML calendar not yet supported')  # placeholder
