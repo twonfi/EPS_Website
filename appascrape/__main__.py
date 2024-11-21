@@ -33,7 +33,7 @@ def api(endpoint: str, method: str = 'GET', return_json: bool = True) \
 def write_file(path, content):
     with open(path, 'w', encoding='UTF-8') as f:
         f.write(content)
-    print(f'Wrote {len(bytes(content, 'UTF-8'))} bytes to {path} ')
+    print(f'Wrote {len(bytes(content, "UTF-8"))} bytes to {path} ')
 
 
 # Initialize Jinja and set everything up
