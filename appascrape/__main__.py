@@ -4,6 +4,7 @@ import datetime
 import re
 import requests
 import jinja2
+from markupsafe import escape
 
 try:
     with open('config.json') as file:
@@ -56,6 +57,8 @@ if 'messages' in config['save']:
             # noinspection PyTypeChecker
             message['text_with_br'] = re.sub('\r?\n', '<br>',
                 message['text'])
+            # noinspection PyTypeChecker
+            message['text'] = str(escape(message['text']))
 
         html_text = templates['messages'].render(
             messages=messages,
