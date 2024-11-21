@@ -6,16 +6,16 @@
 {% block main %}
     {% for message in messages %}
             {% if message['url'] %}
-                <a title="{{ message['text'] | safe }}" href="{{ message['url'] | safe }}" onclick="window.open('{{ message['url'] | safe }}', 'newwindow', 'width=550,height=600'); return false;" onmouseover="this.title='';"><div id="msg-{{ message['sid'] | safe }}" class="message">
+                <a title="{{ message['text'] | safe }}" href="{{ message['url'] | safe }}" onclick="window.open('{{ message['url'] | safe }}', 'newwindow', 'width=550,height=600'); return false;" onmouseover="this.title='';"><article id="msg-{{ message['sid'] | safe }}" class="message">
                     {% if message['atts'] %}<img src="{{ message['atts'][0]['url'] | safe }}" alt>{% endif %}
                     <div class="date">{{ message['date'] | safe }}</div>
                     <span class="msg-text">{{ message['text_with_br'] | safe }} </span><span class="msg-more" aria-hidden="true">[more]</span>
-                </div></a>
+                </article></a>
             {% else %}
-                <div id="msg-{{ message['sid'] | safe }}" class="message">
+                <article id="msg-{{ message['sid'] | safe }}" class="message">
                     <div class="date">{{ message['date'] | safe }}</div>
                     {{ message['text'] | safe }}
-                </div>
+                </article>
             {% endif %}
 
         <hr>
