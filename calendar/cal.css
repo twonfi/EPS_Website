@@ -54,3 +54,9 @@ nav ul ul li a {
 .fc-toolbar h2 {
   color: white;
 }
+.fc-event {
+  white-space: normal !important; /* Allow line wrapping in events */
+  height: auto !important;        /* Let events grow vertically */
+  overflow: hidden;               /* Hide anything that overflows */
+  max-height: 100px;              /* Prevent events from becoming too large */
+}

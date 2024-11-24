@@ -34,4 +34,10 @@ The **EPS Website** is the digital platform for Elgin Park School, designed to p
 
 This project is made possible thanks to the hard work and dedication of the following members of the **EPS Computer Club**:
 
+*Micah Ming Ren Hou*
+
+*John Li*
+
+*Richard Fang*
+
 * **Enter your name here if you want to be recognized**
