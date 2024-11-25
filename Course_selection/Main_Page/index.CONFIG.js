@@ -1,1 +1,0 @@
-export const COURSE_SELECTION_SEMESTER_2 = "Feb 1, 2023 00:00:00";
