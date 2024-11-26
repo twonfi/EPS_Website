@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://elginparksecondary.com/elSSGin/pods/schemas/departments.schema.json",
+  "title": "Departments",
+  "description": "Departments (course pages), containing sections, containing courses",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "Name of department",
+      "type": "string"
+    },
+    "sections": {
+      "description": "Section objects",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/section"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "sections"
+  ],
+  "definitions": {
+    "section": {
+      "description": "Section object",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Name of section",
+          "type": "string"
+        },
+        "youtube": {
+          "description": "YouTube video ID",
+          "type": "string"
+        },
+        "courses": {
+          "description": "Course objects",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/course"
+          }
+        }
+      },
+      "required": ["name", "courses"]
+    },
+    "course": {
+      "description": "Course object",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Name of course",
+          "type": "string"
+        },
+        "code": {
+          "description": "Course code, as it appears in MyEducation BC SIS",
+          "type": "string"
+        },
+        "grade": {
+          "description": "Grade level",
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 12
+        },
+        "elective": {
+          "description": "Whether the coures is an elective",
+          "type": "boolean"
+        },
+        "youtube": {
+          "description": "YouTube video ID",
+          "type": "string"
+        },
+        "desc": {
+          "description": "Course description",
+          "type": "string"
+        }
+      },
+      "required": ["name", "code", "grade", "elective", "desc"]
+    }
+  }
+}
