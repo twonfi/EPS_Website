@@ -58,9 +58,12 @@
         },
         "grade": {
           "description": "Grade level",
-          "type": "integer",
+          "type": ["integer", "array"],
           "minimum": 8,
-          "maximum": 12
+          "maximum": 12,
+          "items": {
+            "$ref": "#/definitions/grade"
+          }
         },
         "elective": {
           "description": "Whether the coures is an elective",
@@ -76,6 +79,12 @@
         }
       },
       "required": ["name", "code", "grade", "elective", "desc"]
+    },
+    "grade": {
+      "description": "Grade level",
+      "type": "number",
+      "minimum": 8,
+      "maximum": 12
     }
   }
 }
