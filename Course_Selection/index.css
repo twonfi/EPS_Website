@@ -31,7 +31,7 @@ html {
 }
 
 #soze{
-    height: 25%;
+    height:25%;
     display: flex;
     align-items: center;
     margin: auto;
@@ -49,7 +49,7 @@ html {
     font-family: "DM Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
     margin-right: 12%;
     margin-left: 12%;
-    margin-bottom 0px;
+    margin-bottom: 0%;
 }
 
 .p2 {
@@ -236,11 +236,10 @@ html {
 
 #video {
   float:left;
-  margin-left: 20px;
-  margin-right: 30px;
-  width: 400px;
-  height: 360px;
-  box-shadow: 2px 2px 4px;
+  margin-left: 2dvw;
+  margin-right: 3dvw;
+  width: 30dvw;
+  height: 27dvw;
 }
 
 #clear {
@@ -592,9 +591,11 @@ body, html {
 }
 
 #processInfo{
-    font-size: 18px;
+    font-size: 1.33dvw;
     margin-top: 100px;
     margin-bottom: 50px;
+    margin-left: 33dvw;
+    margin-right: 3%;
     text-align: left;
     font-family: arial;
     line-height: 1.5;
@@ -773,3 +774,63 @@ table{
   margin-left: 10%;
 }
 
+.question-container {
+  max-width: 80%; /* 80% of the viewport width */
+  margin: 0 auto;
+  padding: 2%;
+}
+
+.faq-item {
+  background-color: #fff;
+  margin: 2% 0;
+  border-radius: 1em;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  padding: 2% 3%;
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-radius: 0.5em;
+  transition: background-color 0.3s ease;
+  font-size: 1em; /* Relative font size for scalability */
+}
+
+.question:hover {
+  background-color: #f1f1f1;
+}
+
+.arrow {
+  margin-left: auto;
+  font-size: 1.5em; /* Font size relative to parent (scaled based on viewport) */
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.answer {
+  display: none;
+  padding: 2% 3%;
+  background-color: lavender;
+  /* border-left: 0.3em solid #2196f3; */
+  margin-top: 2%; /* Margin-top relative to parent container */
+  border-radius: 0.5em;
+}
+
+@media (max-width: 768px) {
+  .question-container {
+      max-width: 95%; /* Expand container width to 95% on smaller screens */
+      padding: 4%;
+  }
+}
+
+@media (max-width: 480px) {
+  .question {
+      font-size: 0.9em; /* Slightly smaller text on very small screens */
+      padding: 3% 4%;
+  }
+
+  .arrow {
+      font-size: 1.2em; /* Smaller arrow on small screens */
+  }
+}
