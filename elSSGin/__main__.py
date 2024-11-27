@@ -38,8 +38,8 @@ for dept_filename in os.scandir('pods/departments'):
 
     html_text = templates['departments'].render(
         dept=dept,
-        # last_update=datetime.now(timezone.utc).strftime('%A, %B %-d, %Y'
-        #                                                 ' at %-I:%M:%S %p'),
+        last_update=datetime.now(timezone.utc).strftime('%A, %B %-d, %Y'
+                                                        ' at %-I:%M:%S %p'),
     )
     write_file(os.path.abspath('../site/departments/' + re.sub(".json$",
         ".html", os.path.basename(dept_filename.path))), html_text)
