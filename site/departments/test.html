@@ -19,8 +19,9 @@
     </script>
 </head>
 <body>
+  <script>const FX_FOUC = undefined // May the console log message stay with us.</script>
   <nav id="nav">
-    <ul class="l1">
+    <menu class="l1">
       <a href="/home.html" title="Go home"><picture>
         <source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">
         <img src="/resources/images/logo/eps-logo.png" id="img1" alt>
@@ -54,7 +55,7 @@
         <li><button onclick="location.href='forms.html'">Forms</button></li>
         <li><button  onclick="location.href='contact.html'">Contact</button></li>
       </div>
-    </ul>
+    </menu>
   </nav>
   <main id="main">
     
@@ -73,13 +74,13 @@
       <h2>Zoo</h2>
       <div class="toc">
         <h3>Contents</h3>
-        <ul>
+        <menu>
           
             <li><a href="#Z00">Zoology</a></li>
           
             <li><a href="#ZOO--TAW"><i>World of Zoology: Birdflight</i></a></li>
           
-        </ul>
+        </menu>
       </div>
 
     
@@ -100,13 +101,13 @@
       <h2>Foo</h2>
       <div class="toc">
         <h3>Contents</h3>
-        <ul>
+        <menu>
           
             <li><a href="#Z00">Zoology</a></li>
           
             <li><a href="#ZOO--TAW"><i>Zoology: The Animals Within</i></a></li>
           
-        </ul>
+        </menu>
       </div>
 
     
@@ -136,7 +137,7 @@
       <img class="pp1" src="/resources/images/land-ack/semiahmoo/semiahmoo.png" alt="Seal of Semiahmoo First Nation">
     </div>
     <div id="edit-request">
-      <p>Noticed a mistake, or simply want to update your course or club page? <a id="edit-request-link" href="/edit-requests">Submit an edit request!</a></p>
+      <p>Noticed a mistake, or simply want to update your course or club page? <a id="edit-request-link" href="/edit-requests?url=">Submit an edit request!</a></p>
     </div>
     <div id="copyright">
       <p>Content © Elgin Park Secondary staff and student contributors. Website code © Elgin Park Computer Programming Club. All rights reserved.</p>

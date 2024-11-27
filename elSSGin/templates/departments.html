@@ -25,11 +25,11 @@
       <h2>{{ section["name"] | safe }}</h2>
       <div class="toc">
         <h3>Contents</h3>
-        <ul>
+        <menu>
           {% for course in section["courses"] %}
             <li><a href="#{{ course["code"] | safe }}">{{ course["name"] | safe}}</a></li>
           {% endfor %}
-        </ul>
+        </menu>
       </div>
 
     {% for course in section["courses"] %}
