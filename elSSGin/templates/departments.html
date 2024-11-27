@@ -35,6 +35,17 @@
     {% for course in section["courses"] %}
       <article id="{{ course["code"] }}" class="course">
         <h3>{{ course["name"] }}</h3>
+        <div class="course-icons">
+          <span class="grade{{ course["grade"] }}">{{ course["grade"] }}</span>
+          {% if course["elective"] %}
+            <span class="elec">Elective</span>
+          {% else %}
+            <span class="req">Required</span>
+          {% endif %}
+        </div>
+        <div class="course-code">
+          Course Code: {{ course["code"] }}
+        </div>
         <p>{{ course["desc"] }}</p>
       </article>
     </section>
