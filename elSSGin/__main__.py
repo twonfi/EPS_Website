@@ -38,5 +38,5 @@ for dept_filename in os.scandir('pods/departments'):
         #                                                 ' at %-I:%M:%S %p'),
         # if you're using this, from import datetime stuff first
     )
-    write_file(os.path.abspath(f'../site/departments/{re.sub('.json$', '.html',
+    write_file(os.path.abspath(f'../site/departments/{re.sub(".json$", ".html",
         os.path.basename(dept_filename.path))}'), html_text)
