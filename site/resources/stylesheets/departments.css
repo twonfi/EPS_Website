@@ -1,91 +1,116 @@
 /*@import url('/resources/stylesheets/base.css');*/
 
 main {
-    padding: 2%;
+  padding: 2%;
+}
+
+#dept-toc{
+  text-align: center;
+  li {
+    list-style-type: none;
+    display: inline-flex;
+    padding-left: 1%;
+    padding-right: 1%;
+
+  }
+  a {
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #40263B;
+    position: relative;
+    font-size: 22px;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    white-space: nowrap
+  }
 }
 
 .grade9{
-    margin-left: 2%;
-    text-align: center;
-    vertical-align:middle;
-    border-radius: 100%;
-    width: 2em;
-    line-height:2em;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: blue;
-    color: white;
-    padding: 11px 17px;
+  margin-left: 2%;
+  text-align: center;
+  vertical-align:middle;
+  border-radius: 100%;
+  width: 2em;
+  line-height:2em;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: blue;
+  color: white;
+  padding: 11px 17px;
 }
 
 .grade10{
-    margin-left: 2%;
-    text-align: center;
-    vertical-align:middle;
-    border-radius: 100%;
-    width: 2em;
-    line-height:2em;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 11px;
-    background-color: green;
-    color: white;
+  margin-left: 2%;
+  text-align: center;
+  vertical-align:middle;
+  border-radius: 100%;
+  width: 2em;
+  line-height:2em;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 11px;
+  background-color: green;
+  color: white;
 }
 
 .grade11{
-    margin-left: 2%;
-    text-align: center;
-    vertical-align:middle;
-    border-radius: 100%;
-    width: 2em;
-    line-height:2em;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: orange;
-    color: white;
-    padding: 11px;
+  margin-left: 2%;
+  text-align: center;
+  vertical-align:middle;
+  border-radius: 100%;
+  width: 2em;
+  line-height:2em;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: orange;
+  color: white;
+  padding: 11px;
 }
 
 .grade12{
-    margin-left: 2%;
-    text-align: center;
-    vertical-align:middle;
-    border-radius: 100%;
-    width: 2em;
-    line-height:2em;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: gold;
-    color: white;
-    padding: 11px;
+  margin-left: 2%;
+  text-align: center;
+  vertical-align:middle;
+  border-radius: 100%;
+  width: 2em;
+  line-height:2em;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: gold;
+  color: white;
+  padding: 11px;
 }
 
 .req{
-    margin-left: 2%;
-    text-align: center;
-    vertical-align:middle;
-    border-radius: 100%;
-    width: 2em;
-    line-height:2em;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: purple;
-    color: white;
-    padding: 11px;
+  margin-left: 2%;
+  text-align: center;
+  vertical-align:middle;
+  border-radius: 100%;
+  width: 2em;
+  line-height:2em;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: purple;
+  color: white;
+  padding: 11px;
 }
 
 .elec{
-    margin-left: 2%;
-    text-align: center;
-    vertical-align:middle;
-    border-radius: 100%;
-    width: 2em;
-    line-height:2em;
-    font-size: 20px;
-    font-weight: bold;
-    background-color: red;
-    color: white;
-    padding: 11px;
+  margin-left: 2%;
+  text-align: center;
+  vertical-align:middle;
+  border-radius: 100%;
+  width: 2em;
+  line-height:2em;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+  padding: 11px;
 }
 
 .downloadableContent{
@@ -109,5 +134,6 @@ main {
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
+  font-size: 2.8em;
 }

@@ -32,6 +32,10 @@
           "description": "Name of section",
           "type": "string"
         },
+        "id": {
+          "description": "ID (only lowercase, - and _)",
+          "type": "string"
+        },
         "youtube": {
           "description": "YouTube video ID",
           "type": "string"
@@ -44,7 +48,7 @@
           }
         }
       },
-      "required": ["name", "courses"]
+      "required": ["name", "id", "courses"]
     },
     "course": {
       "description": "Course object",

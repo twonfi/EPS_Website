@@ -1,0 +1,50 @@
+{
+  "name": "Quality Assurance",
+  "has-youtube": true,
+  "sections": [
+    {
+      "name": "Zoo",
+      "id": "zoo",
+      "youtube": "jNQXAC9IVRw",
+      "courses": [
+        {
+          "name": "Zoology",
+          "code": "Z00",
+          "grade": 9,
+          "elective": false,
+          "youtube": "VpgiGm4eiSo",
+          "desc": "Zoology is the study of animals"
+        },
+        {
+          "name": "<i>Zoology: The Animals Within</i>",
+          "code": "ZOO--TAW",
+          "grade": 9,
+          "elective": false,
+          "desc": "not a game by a company named after severe snowstorms and Dairy Queen treats served upside down"
+        }
+      ]
+    },
+    {
+      "name": "Foo",
+      "id": "foo",
+      "youtube": "jNQXAC9IVRw",
+      "courses": [
+        {
+          "name": "Zoology",
+          "code": "Z00",
+          "grade": 9,
+          "elective": false,
+          "youtube": "VpgiGm4eiSo",
+          "desc": "Zoology is the study of animals"
+        },
+        {
+          "name": "<i>Zoology: The Animals Within</i>",
+          "code": "ZOO--TAW",
+          "grade": 9,
+          "elective": false,
+          "desc": "not a game by a company named after severe snowstorms and Dairy Queen treats served upside down"
+        }
+      ]
+    }
+  ]
+}

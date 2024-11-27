@@ -13,7 +13,7 @@ print(datetime.now(timezone.utc).isoformat(), sys.version)
 def write_file(full_path, content):
     with open(full_path, 'w', encoding='UTF-8') as f:
         f.write(content)
-    print('Wrote %d bytes to %s ' % (len(bytes(content, "UTF-8")), path))
+    print('Wrote %d bytes to %s ' % (len(bytes(content, "UTF-8")), full_path))
 
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates/'))

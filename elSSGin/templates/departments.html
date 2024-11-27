@@ -12,12 +12,24 @@
 {% block main %}
   <h1>{{ dept["name"] }}</h1>
 
-  <div class="toc">
-    <h2>Contents</h2>
-    <ul>
-      {% for section in dept["sections"] %}
-        <li><a href="#{{ section["name"] | lower() | replace(" ", "-") | safe }}">{{ section["name"] | safe}}</a></li>
-      {% endfor %}
-    </ul>
+  <div id="dept-toc">
+    {% for section in dept["sections"] %}
+      <li><a href="#{{ section["id"] | safe }}">{{ section["name"] | safe}}</a></li>
+    {% endfor %}
   </div>
+
+  {% for section in dept["sections"] %}
+    <section id="{{ section["id"] | safe }}">
+      <h2>{{ section["name"] | safe }}</h2>
+      <div class="toc">
+        <h3>Contents</h3>
+        <ul>
+          {% for course in section["courses"] %}
+            <li><a href="#{{ course["code"] | safe }}">{{ course["name"] | safe}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  {% endfor %}
+
 {% endblock %}
