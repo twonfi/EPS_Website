@@ -1,5 +1,6 @@
 {
-    "woodwork_courses": [
+    "SectionTag":"ww",
+    "courses": [
       {
         "course_name": "Woodwork 9/10",
         "grade_levels": [9, 10],
