@@ -13,7 +13,7 @@ print(datetime.now(timezone.utc).isoformat(), sys.version)
 def write_file(full_path, content):
     with open(full_path, 'w', encoding='UTF-8') as f:
         f.write(content)
-    print(f'Wrote {len(bytes(content, "UTF-8"))} bytes to {path} ')
+    print('Wrote %d bytes to %s ' % (len(bytes(content, "UTF-8")), path))
 
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates/'))
@@ -42,5 +42,5 @@ for dept_filename in os.scandir('pods/departments'):
         #                                                 ' at %-I:%M:%S %p'),
         # if you're using this, from import datetime stuff first
     )
-    write_file(os.path.abspath(f'../site/departments/{re.sub(".json$", ".html",
-        os.path.basename(dept_filename.path))}'), html_text)
+    write_file(os.path.abspath('../site/departments/' + re.sub(".json$",
+        ".html", os.path.basename(dept_filename.path))), html_text)
