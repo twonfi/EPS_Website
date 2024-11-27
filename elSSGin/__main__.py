@@ -1,9 +1,13 @@
 import json
 import os
+import sys
 import re
 import shutil
+from datetime import datetime, timezone
 
 import jinja2
+
+print(datetime.now(timezone.utc).isoformat(), sys.version)
 
 
 def write_file(full_path, content):
