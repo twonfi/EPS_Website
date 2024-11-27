@@ -7,7 +7,8 @@
   "properties": {
     "name": {
       "description": "Name of department",
-      "type": "string"
+      "type": "string",
+      "examples": ["Business"]
     },
     "has-youtube": {
       "description": "Whether the department has any YouTube videos",
@@ -30,11 +31,13 @@
       "properties": {
         "name": {
           "description": "Name of section",
-          "type": "string"
+          "type": "string",
+          "examples": ["Computing"]
         },
         "id": {
           "description": "ID (only lowercase, - and _)",
-          "type": "string"
+          "type": "string",
+          "examples": ["computing"]
         },
         "youtube": {
           "description": "YouTube video ID",
@@ -56,11 +59,13 @@
       "properties": {
         "name": {
           "description": "Name of course",
-          "type": "string"
+          "type": "string",
+          "examples": ["Computer Programming 9"]
         },
         "code": {
           "description": "Course code, as it appears in MyEducation BC SIS",
-          "type": "string"
+          "type": "string",
+          "examples": ["ABC--123"]
         },
         "grade": {
           "description": "Grade level",
@@ -80,8 +85,9 @@
           "type": "string"
         },
         "desc": {
-          "description": "Course description",
-          "type": "string"
+          "description": "Course description. Use <p> (no closing tag) to separate large blocks of text",
+          "type": "string",
+          "examples": ["This course includes web design and development...<p>Students will..."]
         }
       },
       "required": ["name", "code", "grade", "elective", "desc"]
