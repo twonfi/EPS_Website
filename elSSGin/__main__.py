@@ -40,7 +40,6 @@ for dept_filename in os.scandir('pods/departments'):
         dept=dept,
         # last_update=datetime.now(timezone.utc).strftime('%A, %B %-d, %Y'
         #                                                 ' at %-I:%M:%S %p'),
-        # if you're using this, from import datetime stuff first
     )
     write_file(os.path.abspath('../site/departments/' + re.sub(".json$",
         ".html", os.path.basename(dept_filename.path))), html_text)
