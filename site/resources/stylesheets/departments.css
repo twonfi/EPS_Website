@@ -39,6 +39,7 @@ main {
   margin-right: 10%;
   padding-left: 1%;
   padding-right: 1%;
+  line-height: 1.5em;
   height: auto;
   border-style: solid;
   box-shadow: 8px 8px 8px 1px rgba(0, 0, 255, .2)
