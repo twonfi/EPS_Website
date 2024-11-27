@@ -61,6 +61,9 @@
     {% block main %}{% endblock %}
   </main>
   <footer id="footer">
+    <div id="edit-request">
+      <p>Noticed a mistake, or simply want to update your course or club page? <a id="edit-request-link" href="/edit-requests?url={% block url %}{% endblock %}">Submit an edit request!</a></p>
+    </div>
     <div id="land">
       <p>The students and staff at Elgin Park Secondary work, learn, and play on the unceded and ancestral territories of the Katzie, Semihamoo, Kwantlen and other Coast Salish Peoples. As responsible members of the Elgin community, we recognize the importance of taking the initiative to learn about and honour the history and traditions of the peoples whose lands we occupy.</p>
     </div>
@@ -68,9 +71,6 @@
       <img class="pp1" src="/resources/images/land-ack/kwantlen/kwantlen.png" alt="Seal of Kwantlen First Nation">
       <img class="pp1" src="/resources/images/land-ack/katzie/katzie.png" alt="Seal of Katzie First Nation">
       <img class="pp1" src="/resources/images/land-ack/semiahmoo/semiahmoo.png" alt="Seal of Semiahmoo First Nation">
-    </div>
-    <div id="edit-request">
-      <p>Noticed a mistake, or simply want to update your course or club page? <a id="edit-request-link" href="/edit-requests?url={% block url %}{% endblock %}">Submit an edit request!</a></p>
     </div>
     <div id="copyright">
       <p>Content © Elgin Park Secondary staff and student contributors. Website code © Elgin Park Computer Programming Club. All rights reserved.</p>
