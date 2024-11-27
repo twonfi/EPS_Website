@@ -146,11 +146,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
     img {
       max-width: 6%;
       padding-left: .5%;
       padding-right: .5%;
+      margin: auto;
     }
   }
 }

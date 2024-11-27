@@ -14,11 +14,11 @@
 {% block main %}
   <h1>{{ dept["name"] }}</h1>
 
-  <div id="dept-toc">
+  <menu id="dept-toc">
     {% for section in dept["sections"] %}
       <li><a href="#{{ section["id"] | safe }}">{{ section["name"] | safe}}</a></li>
     {% endfor %}
-  </div>
+  </menu>
 
   {% for section in dept["sections"] %}
     <section id="{{ section["id"] | safe }}">
