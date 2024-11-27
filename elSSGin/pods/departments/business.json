@@ -1,5 +1,6 @@
 {
   "name": "Business Education",
+  "has-youtube": true,
   "sections": [
     {
       "name": "Business",

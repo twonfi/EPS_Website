@@ -9,6 +9,10 @@
       "description": "Name of department",
       "type": "string"
     },
+    "has-youtube": {
+      "description": "Whether the department has any YouTube videos",
+      "type": "boolean"
+    },
     "sections": {
       "description": "Section objects",
       "type": "array",
@@ -17,10 +21,8 @@
       }
     }
   },
-  "required": [
-    "name",
-    "sections"
-  ],
+  "required": ["name", "has-youtube", "sections"],
+
   "definitions": {
     "section": {
       "description": "Section object",

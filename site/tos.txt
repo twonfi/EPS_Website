@@ -1,0 +1,4 @@
+TODO: add a ToS
+
+This site uses the free, libre, and open-source library lite-youtube-embed, under the Apache License, version 2.0.
+More information is available at https://elginparksecondary.com/resources/lite-youtube-embed/LICENSE.

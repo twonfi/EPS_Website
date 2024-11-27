@@ -1,0 +1,25 @@
+/*@import url('/resources/stylesheets/base.css');*/
+
+table,td,tr {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+td {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  width: 30%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+table{
+  border-style: none;
+  width: 100%;
+}
+
+#table1{
+  margin-right: 10%;
+  margin-left: 10%;
+}

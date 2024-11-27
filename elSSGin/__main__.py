@@ -1,30 +1,42 @@
 import json
 import os
 import re
-from datetime import datetime, timezone
+import shutil
 
 import jinja2
-import requests
-from markupsafe import escape
-
-try:
-    with open('config.json') as file:
-        config_json = file.read()
-except FileNotFoundError:
-    raise FileNotFoundError('config.json not found; use config_template.json')
-else:
-    config = json.loads(config_json)
-    file_path = os.path.abspath(config['file_path'])
 
 
-def write_file(path, content):
-    with open(file_path + path, 'w', encoding='UTF-8') as f:
+def write_file(full_path, content):
+    with open(full_path, 'w', encoding='UTF-8') as f:
         f.write(content)
     print(f'Wrote {len(bytes(content, "UTF-8"))} bytes to {path} ')
 
 
-# Initialize Jinja and set everything up
-jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('pods/'))
+jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates/'))
 templates = {
-    'messages': jinja_env.get_template('messages.html'),
+    'departments': jinja_env.get_template('departments.html'),
 }
+
+# Delete existing files, so that deleted data doesn't resurface
+for directory in ['departments']:
+    for file in os.scandir(os.path.abspath('../site/' + directory)):
+        path = os.path.join(directory, file.path)
+        if os.path.isfile(path):
+            os.remove(path)
+        elif os.path.isdir(path):
+            shutil.rmtree(path)
+print('Deleted old files')
+
+# Departments
+for dept_filename in os.scandir('pods/departments'):
+    with open(dept_filename.path, 'r') as file:
+        dept = json.loads(file.read())
+
+    html_text = templates['departments'].render(
+        dept=dept,
+        # last_update=datetime.now(timezone.utc).strftime('%A, %B %-d, %Y'
+        #                                                 ' at %-I:%M:%S %p'),
+        # if you're using this, from import datetime stuff first
+    )
+    write_file(os.path.abspath(f'../site/departments/{re.sub('.json$', '.html',
+        os.path.basename(dept_filename.path))}'), html_text)

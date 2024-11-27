@@ -1,0 +1,113 @@
+/*@import url('/resources/stylesheets/base.css');*/
+
+main {
+    padding: 2%;
+}
+
+.grade9{
+    margin-left: 2%;
+    text-align: center;
+    vertical-align:middle;
+    border-radius: 100%;
+    width: 2em;
+    line-height:2em;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    padding: 11px 17px;
+}
+
+.grade10{
+    margin-left: 2%;
+    text-align: center;
+    vertical-align:middle;
+    border-radius: 100%;
+    width: 2em;
+    line-height:2em;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 11px;
+    background-color: green;
+    color: white;
+}
+
+.grade11{
+    margin-left: 2%;
+    text-align: center;
+    vertical-align:middle;
+    border-radius: 100%;
+    width: 2em;
+    line-height:2em;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: orange;
+    color: white;
+    padding: 11px;
+}
+
+.grade12{
+    margin-left: 2%;
+    text-align: center;
+    vertical-align:middle;
+    border-radius: 100%;
+    width: 2em;
+    line-height:2em;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: gold;
+    color: white;
+    padding: 11px;
+}
+
+.req{
+    margin-left: 2%;
+    text-align: center;
+    vertical-align:middle;
+    border-radius: 100%;
+    width: 2em;
+    line-height:2em;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: purple;
+    color: white;
+    padding: 11px;
+}
+
+.elec{
+    margin-left: 2%;
+    text-align: center;
+    vertical-align:middle;
+    border-radius: 100%;
+    width: 2em;
+    line-height:2em;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    padding: 11px;
+}
+
+.downloadableContent{
+  padding-top: 8px;
+  line-height: 30px;
+  border-style:solid;
+  border-radius: 10px;
+  border-color: black;
+  text-align: center;
+  margin-left: 2%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 20px;
+  float: left;
+  width: 404px;
+
+}
+
+.downloadLine{
+  border-top: solid 3px;
+}
+
+h1 {
+    text-align: center;
+}

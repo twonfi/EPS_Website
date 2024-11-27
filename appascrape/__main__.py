@@ -15,7 +15,7 @@ except FileNotFoundError:
 else:
     config = json.loads(config_json)
     api_url = f'https://{config["app"]}.appazur.com/api'
-    file_path = os.path.abspath(config['file_path'])
+    file_path = os.path.abspath(config['path'])
 
 
 def api(endpoint: str, method: str = 'GET', return_json: bool = True) \

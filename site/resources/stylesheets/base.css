@@ -1,0 +1,290 @@
+body, html {
+  height: 85%;
+  margin: 0;
+  font-family:Arial, Helvetica, sans-serif;
+  background-image: url('/resources/images/bg.jpg');
+}
+
+.center {
+    text-align: center;
+}
+
+.p1{
+	font-size:50px;
+}
+
+#img1 {
+	padding-top: 12px;
+    padding-left: 12px;
+	height: 65px;
+    width: 135px;
+    position: absolute;
+}
+
+#img2 {
+	padding-top: 12px;
+    padding-left: 12px;
+	height: 65px;
+    width: 135px;
+    position: relative;
+    float: left;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+
+#img3{
+	padding-top: 12px;
+    padding-left: 12px;
+	height: 65px;
+    width: 135px;
+    position: relative;
+    float: right;
+    margin-right: 3%;
+    margin-top: 1%;
+}
+
+#navbar {
+	background-color: #40263B;
+    height: 90px;
+    width: 100%;
+    border-bottom-style: solid;
+    border-width: 8px;
+    border-color: #4D42B3;
+    position: sticky;
+    top: 0; /* required */
+    overflow: auto;
+}
+
+main {
+    margin-top: inherit;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    height: auto;
+    width: inherit;
+    top: 0;
+    margin-right: 12%;
+    margin-left: 12%;
+    background-color: white;
+    overflow: clip;
+}
+#p1 {
+    color: black;
+    padding-top: 2%;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+
+#p2{
+  color: black;
+  font-size: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-weight: bold;
+}
+
+.navB{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.navbarItem1 {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    margin-top:24px;
+    margin-left: 1%;
+    display: inline-block;
+}
+
+#article1Title{
+    font-size: 30px;
+    color: #40263B;
+}
+
+#article1{
+    font-size: 30px;
+    color: #40263B;
+}
+
+#processInfo{
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: justify;
+    margin-right: 50%;
+    line-height: 1.5;
+}
+
+#choosingCourses{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+#theGraduationProgram{
+    font-size: 20px;
+    font-weight: 50;
+}
+
+footer {
+  background-color: white;
+  color: #767676;
+  font-family: "DM Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  margin: 0;
+  padding-top: 1%;
+  padding-bottom: .1%;
+  p {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  #first-nation-seals {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    img {
+      max-width: 6%;
+      padding-left: .5%;
+      padding-right: .5%;
+    }
+  }
+}
+
+.l1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #40263b;
+  height: 90px;
+  width: 100%;
+  border-bottom-style: solid;
+    border-width: 8px;
+    border-color: #4D42B3;
+}
+
+.l1 li{
+  float: left;
+}
+
+li button,
+.dropbtn1 {
+  border: none;
+  padding: 0 15px;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  cursor:pointer;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #40263b;
+  height: 90px;
+  width: 100%;
+}
+
+li.dropdown {
+  transition: ease-in-out 0.5s;
+  display: inline-block;
+}
+
+.dropdown-content {
+  margin-left: 20px;
+  transition: ease-in-out 0.5s;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: inherit;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  transition: ease-in-out 0.5s;
+  display: block;
+}
+
+.dropdown:active .dropdown-content {
+  transition: ease-in-out 0.5s;
+  display: block;
+}
+
+.dropdown:focus .dropdown-content {
+  transition: ease-in-out 0.5s;
+  display: block;
+}
+
+.dropdown-content a{
+  transition: ease-in-out 0.5s;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-content a:hover {
+  transition: ease-in-out 0.5s;
+  color: black;
+  background-color: #f1f1f1;
+}
+
+li a div,
+.dropbtn2 {
+  margin-left: 25px;
+  margin-right: 25px;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 20px;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  transition: ease-in-out 0.5s;
+}
+
+.dropdown-content2 {
+  transition: ease-in-out 0.5s;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: inherit;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none;
+}
+
+.dropdown-content2 a {
+  transition: ease-in-out 0.5s;
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-content2 a:hover {
+  transition: ease-in-out 0.5s;
+  color: black;
+  background-color: #f1f1f1;
+}
+
+.db1:hover .dropdown-content2 {
+  transition: ease-in-out 0.5s;
+  display: block;
+}
+
+.NavItem {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-size: x-large;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+}
