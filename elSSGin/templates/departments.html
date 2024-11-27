@@ -29,7 +29,14 @@
           {% endfor %}
         </ul>
       </div>
+
+    {% for course in section["courses"] %}
+      <article class="course">
+        <h3>{{ course["name"] }}</h3>
+        <p>{{ course["desc"] }}</p>
+      </article>
     </section>
+    {% endfor %}
   {% endfor %}
 
 {% endblock %}

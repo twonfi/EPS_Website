@@ -29,6 +29,18 @@ main {
   }
 }
 
+.course {
+  width: inherit;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 1%;
+  padding-right: 1%;
+  height: auto;
+  border-style: solid;
+  box-shadow: 8px 8px 8px 1px rgba(0, 0, 255, .2)
+}
+
 .grade9{
   margin-left: 2%;
   text-align: center;
