@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% block url %}{% endblock %}
+
 {% block title %}{{ dept["name"] }} - Elgin Park Secondary{% endblock %}
 {% block stylesheet %}departments.css{% endblock %}
 {% if dept["has-youtube"] %}
@@ -31,7 +33,7 @@
       </div>
 
     {% for course in section["courses"] %}
-      <article class="course">
+      <article id="{{ course["code"] }}" class="course">
         <h3>{{ course["name"] }}</h3>
         <p>{{ course["desc"] }}</p>
       </article>

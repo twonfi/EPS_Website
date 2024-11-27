@@ -19,6 +19,7 @@
     </script>
 </head>
 <body>
+  <script>const FX_FOUC = undefined // May the console log message stay with us.</script>
   <nav id="nav">
     <ul class="l1">
       <a href="/home.html" title="Go home"><picture>
@@ -69,7 +70,7 @@
       <img class="pp1" src="/resources/images/land-ack/semiahmoo/semiahmoo.png" alt="Seal of Semiahmoo First Nation">
     </div>
     <div id="edit-request">
-      <p>Noticed a mistake, or simply want to update your course or club page? <a id="edit-request-link" href="/edit-requests">Submit an edit request!</a></p>
+      <p>Noticed a mistake, or simply want to update your course or club page? <a id="edit-request-link" href="/edit-requests?url={% block url %}{% endblock %}">Submit an edit request!</a></p>
     </div>
     <div id="copyright">
       <p>Content © Elgin Park Secondary staff and student contributors. Website code © Elgin Park Computer Programming Club. All rights reserved.</p>
