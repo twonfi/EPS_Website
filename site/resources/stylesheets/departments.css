@@ -6,6 +6,7 @@ main {
 
 #dept-toc{
   text-align: center;
+  padding-left: 0;
   li {
     list-style-type: none;
     display: inline-flex;
