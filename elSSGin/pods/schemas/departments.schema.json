@@ -67,11 +67,9 @@
           "type": "string",
           "examples": ["ABC--123"]
         },
-        "grade": {
-          "description": "Grade level",
-          "type": ["integer", "array"],
-          "minimum": 8,
-          "maximum": 12,
+        "grades": {
+          "description": "Grade levels",
+          "type": ["array"],
           "items": {
             "$ref": "#/definitions/grade"
           }
@@ -90,7 +88,7 @@
           "examples": ["This course includes web design and development...<p>Students will..."]
         }
       },
-      "required": ["name", "code", "grade", "elective", "desc"]
+      "required": ["name", "code", "grades", "elective", "desc"]
     },
     "grade": {
       "description": "Grade level",

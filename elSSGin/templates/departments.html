@@ -36,7 +36,9 @@
       <article id="{{ course["code"] }}" class="course">
         <h3>{{ course["name"] }}</h3>
         <div class="course-icons">
-          <span class="grade{{ course["grade"] }}">{{ course["grade"] }}</span>
+          {% for grade in course["grades"] %}
+            <span class="grade{{ grade }}">{{ grade }}</span>
+          {% endfor %}
           {% if course["elective"] %}
             <span class="elec">Elective</span>
           {% else %}
