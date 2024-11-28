@@ -46,6 +46,9 @@
         <div class="course-code">
           Course Code: {{ course["code"] }}
         </div>
+        {% if course["youtube"] %}
+          <lite-youtube class="youtube-embed" videoid="{{ course["youtube"] }}" playlabel="Video for {{ course["name"] }}"></lite-youtube>
+        {% endif %}
         <p>{{ course["desc"] }}</p>
       </article>
     </section>
