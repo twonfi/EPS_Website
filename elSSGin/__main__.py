@@ -25,7 +25,7 @@ templates = {
 for directory in ['departments']:
     for file in os.scandir(os.path.abspath('../site/' + directory)):
         path = os.path.join(directory, file.path)
-        if os.path.isfile(path):
+        if os.path.isfile(path) and file.path[-1] != '_':
             os.remove(path)
         elif os.path.isdir(path):
             shutil.rmtree(path)
