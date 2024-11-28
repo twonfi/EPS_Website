@@ -1,14 +1,18 @@
 [
   {
     "name": "Computer Programming Club",
+    "id": "computer_programming",
     "meeting-days": ["Monday after school", "Wednesday after school"],
     "teams-code": "PLACEHOLDER",
-    "desc": "The Computer Programming Club is for anyone interested in programming, web design..."
+    "desc": "The Computer Programming Club is for anyone interested in programming, web design...",
+    "claimed": true
   },
   {
     "name": "Create Change Club",
+    "id": "create_change",
     "meeting-days": ["Tuesday at lunch"],
     "teams-code": "PLACEHOLDER",
-    "desc": "Join the Create Change Club to help the community and school..."
+    "desc": "Join the Create Change Club to help the community and school...",
+    "claimed": false
   }
 ]

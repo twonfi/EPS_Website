@@ -18,8 +18,13 @@
           "type": "string",
           "examples": ["Computer Programming Club"]
         },
+        "id": {
+          "description": "Club ID (a-z, -, _)",
+          "type": "string",
+          "examples": ["computer_programming"]
+        },
         "meeting-days": {
-          "description": "Array of meeting days, if clubs use fixed-day meetings",
+          "description": "Array of meeting days, if club uses fixed-day meetings",
           "type": "array",
           "examples": [["Monday after school", "Wednesday after school"]]
         },
@@ -30,9 +35,13 @@
         "desc": {
           "type": "string",
           "examples": ["The Computer Programming Club is for anyone interested in programming, web design..."]
+        },
+        "claimed": {
+          "description": "Whether the first edit request for this club was made (club is considered \"claimed\")",
+          "type": "boolean"
         }
       },
-      "required": ["name", "teams-code", "desc"]
+      "required": ["name", "id", "teams-code", "desc", "claimed"]
     }
   }
 }

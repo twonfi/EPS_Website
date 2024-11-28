@@ -3,6 +3,41 @@
   <component name="JsonSchemaMappingsProjectConfiguration">
     <state>
       <map>
+        <entry key="Clubs">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="Clubs" />
+              <option name="relativePathToSchema" value="elSSGin/pods/schemas/clubs.schema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="elSSGin/pods/clubs.json" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
+        <entry key="Departments">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="Departments" />
+              <option name="relativePathToSchema" value="elSSGin/pods/schemas/departments.schema.json" />
+              <option name="schemaVersion" value="JSON Schema 202,012" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="directory" value="true" />
+                    <option name="path" value="elSSGin/pods/departments" />
+                    <option name="mappingKind" value="Directory" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
         <entry key="JSON Schema 2020-12">
           <value>
             <SchemaInfo>
@@ -14,25 +49,6 @@
                 <list>
                   <Item>
                     <option name="path" value="elSSGin/pods/schemas/departments.schema.json" />
-                  </Item>
-                </list>
-              </option>
-            </SchemaInfo>
-          </value>
-        </entry>
-        <entry key="departments.schema">
-          <value>
-            <SchemaInfo>
-              <option name="generatedName" value="New Schema" />
-              <option name="name" value="departments.schema" />
-              <option name="relativePathToSchema" value="elSSGin/pods/schemas/departments.schema.json" />
-              <option name="schemaVersion" value="JSON Schema 202,012" />
-              <option name="patterns">
-                <list>
-                  <Item>
-                    <option name="directory" value="true" />
-                    <option name="path" value="elSSGin/pods/departments" />
-                    <option name="mappingKind" value="Directory" />
                   </Item>
                 </list>
               </option>
