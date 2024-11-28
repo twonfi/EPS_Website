@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Computer Programming Club",
+    "meeting-days": ["Monday after school", "Wednesday after school"],
+    "teams-code": "PLACEHOLDER",
+    "desc": "The Computer Programming Club is for anyone interested in programming, web design..."
+  },
+  {
+    "name": "Create Change Club",
+    "meeting-days": ["Tuesday at lunch"],
+    "teams-code": "PLACEHOLDER",
+    "desc": "Join the Create Change Club to help the community and school..."
+  }
+]

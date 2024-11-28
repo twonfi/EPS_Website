@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://elginparksecondary.com/elSSGin/pods/schemas/clubs.schema.json",
+  "title": "Clubs",
+  "description": "Top-level club list",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/clubs"
+  },
+
+  "definitions": {
+    "clubs": {
+      "description": "Club object",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Club name",
+          "type": "string",
+          "examples": ["Computer Programming Club"]
+        },
+        "meeting-days": {
+          "description": "Array of meeting days, if clubs use fixed-day meetings",
+          "type": "array",
+          "examples": [["Monday after school", "Wednesday after school"]]
+        },
+        "teams-code": {
+          "description": "Code of club team in Microsoft Teams",
+          "type": "string"
+        },
+        "desc": {
+          "type": "string",
+          "examples": ["The Computer Programming Club is for anyone interested in programming, web design..."]
+        }
+      },
+      "required": ["name", "teams-code", "desc"]
+    }
+  }
+}
