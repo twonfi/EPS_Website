@@ -1,10 +1,10 @@
 main {
     /*font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;*/
     line-height: 1.65;
-    /*@media (prefers-color-scheme: dark) {*/
-    /*    background-color: #262626;*/
-    /*    color: white;*/
-    /*}*/
+    @media (prefers-color-scheme: dark) {
+        background-color: #262626;
+        color: white;
+    }
 }
 
 main {
@@ -21,27 +21,31 @@ footer {
 
 main a:link {
     color: black;
-    /*@media (prefers-color-scheme: dark) {*/
-    /*    color: white;*/
-    /*}*/
+    @media (prefers-color-scheme: dark) {
+        color: white;
+    }
 
     text-decoration-line: none;
     .msg-more {
         text-decoration-line: underline;
         color: #372FDB;
-        /*@media (prefers-color-scheme: dark) {*/
-        /*    color: #8397EC;*/
-        /*}*/
+        @media (prefers-color-scheme: dark) {
+            color: #8397EC;
+        }
     }
 }
 
 main a:visited {
     color: black;
+    @media (prefers-color-scheme: dark) {
+        color: white;
+    }
+
     .msg-more {
         color: #5D13C3;
-        /*@media (prefers-color-scheme: dark) {*/
-        /*    color: #A781F1;*/
-        /*}*/
+        @media (prefers-color-scheme: dark) {
+            color: #A781F1;
+        }
     }
 }
 
@@ -50,9 +54,9 @@ main a:visited {
 .date {
     color: #535353;
     font-size: .9em;
-    /*@media (prefers-color-scheme: dark) {*/
-    /*    color: #B3B3B3;*/
-    /*}*/
+    @media (prefers-color-scheme: dark) {
+        color: #B3B3B3;
+    }
 }
 
 article img {
