@@ -1,2 +1,7 @@
-
+# /
 .DS_Store
+site/.htaccess
+
+# /site
+site/departments/*
+!site/departments/_

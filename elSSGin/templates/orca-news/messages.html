@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}Orca News Messages - Elgin Park Secondary{% endblock %}
-{% block stylesheet %}messages.css{% endblock %}
+{% block url %}{% endblock %}
+
+{% block title %}News &amp; Messages - Elgin Park Secondary{% endblock %}
+{% block stylesheet %}orca-news/messages.css{% endblock %}
 
 {% block main %}
     {% for message in messages %}
@@ -20,8 +22,4 @@
 
         <hr>
     {% endfor %}
-{% endblock %}
-
-{% block footer %}
-    Last updated {{ last_update | safe }} UTC.
 {% endblock %}
