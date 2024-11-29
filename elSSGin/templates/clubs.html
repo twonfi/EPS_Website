@@ -26,7 +26,7 @@
       <h2>{{ club["name"] | safe }}</h2>
       <span class="club-info">
         {% if not club["claimed"] %}
-          <a class="club-claim-link" href="/edit-requests?url=https://elginparksecondary.com/clubs#{{ club["id"] }}">Request an edit</a>
+          <a class="club-claim-link" href="/edit-requests?url=https://elginparksecondary.com/clubs">Request an edit</a>
           <br>
         {% endif %}
         Sponsored by {{ club["sponsor"] }}<br>Teams code: {{ club["teams-code"] }}<br>
