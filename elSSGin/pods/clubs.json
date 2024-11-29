@@ -1,5 +1,13 @@
 [
   {
+    "name": "Biking Club",
+    "id": "biking",
+    "meeting-days": ["Thursday at lunch"],
+    "sponsor": "TBA",
+    "desc": "EPS Biking Club is all about cycling. Come ride with us!",
+    "claimed": false
+  },
+  {
     "name": "Computer Programming Club",
     "id": "computer_programming",
     "teams-code": "PLACEHOLDER",
