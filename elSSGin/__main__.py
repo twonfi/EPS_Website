@@ -37,6 +37,12 @@ for directory in ['departments']:
             shutil.rmtree(path)
 print('Deleted old files')
 
+# 404
+write_file(
+    file_path + '/404.html',
+    jinja_env.get_template('editable/404.html').render()
+)
+
 # Departments
 for dept_filename in os.scandir('pods/departments'):
     with open(dept_filename.path, 'r') as file:

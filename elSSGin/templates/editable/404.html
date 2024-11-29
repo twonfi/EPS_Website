@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block url %}{% endblock %}
+
+{% block title %}Not Found - Elgin Park Secondary{% endblock %}
+{% block stylesheet %}base.css{% endblock %}
+{% block head %}
+  <style>
+    main {
+      text-align: center;
+    }
+  </style>
+{% endblock %}
+
+{% block main %}
+  <!-- 4(orca circle)4 image. needs to be SVG
+  FIXME: make this thing better -->
+  <h1>Couldn't find it</h1>
+  <p>The requested URL was not found on our server. It was either deleted, or didn't exist in the first place.
+  <p>Try using the navbar to find what you're looking for.</p>
+{% endblock %}
