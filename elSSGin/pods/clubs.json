@@ -3,6 +3,7 @@
     "name": "Biking Club",
     "id": "biking",
     "meeting-days": ["Thursday at lunch"],
+    "meeting-room": "Drama",
     "sponsor": "TBA",
     "desc": "EPS Biking Club is all about cycling. Come ride with us!",
     "claimed": false
