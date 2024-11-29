@@ -11,7 +11,7 @@
 
 {% block main %}
   <h1>Clubs</h1>
-    <p>Elgin Park has over <b>26 clubs</b>, letting you do what you love, while ensuring that you'll never be bored again!</p>
+    <p>Elgin Park has over <b>26 clubs</b>, from anime cosplay to helping out in the community, letting you do what you love at school!</p>
     <div id="toc">
       <ul>
         {% for club in clubs %}
@@ -35,5 +35,6 @@
       </span>
       <p>{{ club["desc"] | safe }}</p>
     </article>
+    <!-- TODO: add "start your own club" -->
   {% endfor %}
 {% endblock %}
