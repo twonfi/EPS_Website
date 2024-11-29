@@ -1,0 +1,8 @@
+/*
+  Link: /resources/stylesheets/base.css; rel=preload; as=style
+
+/departments/*
+  Link: /resources/stylesheets/departments.css; rel=preload; as=style
+
+/clubs
+  Link: /resources/stylesheets/clubs.css; rel=preload; as=style
