@@ -1,0 +1,37 @@
+{
+    "SectionTag":"ww",
+    "courses": [
+      {
+        "course_name": "Woodwork 9/10",
+        "grade_levels": [9, 10],
+        "elective": true,
+        "course_codes": ["MADW-09--S", "MWWK-10--S"],
+        "description": "This course is designed to build on the knowledge gained at the junior level. The student will be exposed to a wider variety of skills, tools, operational safety and tool maintenance. The knowledge gained will be applied in the design and manufacture of projects at a higher skill and maturity level. Accuracy and emphasis on detail is important in this course and will form a valuable part of the student's development."
+      },
+      {
+        "course_name": "Woodwork 11",
+        "grade_levels": [11],
+        "elective": true,
+        "course_codes": ["MWWK-11-S"],
+        "prerequisite": "Recommended: Tech. Ed. Woodwork 10",
+        "description": "The course is designed to build on and expand the knowledge gained at the Technology Education Wood 10 level. The student will be exposed to a wider variety of skills, tools, operational safety and tool maintenance. The knowledge gained will be applied in the design and manufacture of projects at a higher skill and maturity level. Accuracy and emphasis on detail is important in this course and will form a valuable part of the student's development."
+      },
+      {
+        "course_name": "Woodwork 12",
+        "grade_levels": [12],
+        "elective": true,
+        "course_codes": ["MWWK-12--S"],
+        "prerequisite": "Recommended: Woodwork 11",
+        "description": "This course is designed to build on the knowledge gained in Carpentry and Joinery 11. The student will be exposed to a wider variety of skills, tools, operational safety and tool maintenance. The knowledge gained will be applied in the design and manufacture of projects at a higher skill and maturity level. Accuracy and emphasis on detail is important in this course and will form a valuable part of the student's development."
+      },
+      {
+        "course_name": "Furniture & Cabinetry 12",
+        "grade_levels": [12],
+        "elective": true,
+        "course_codes": ["MTFAC12--S"],
+        "prerequisite": "Recommended: Woodwork 11 or Woodwork 12",
+        "description": "This specialty course will specifically focus on the design and creation of advanced woodcraft projects. Students will be expected to challenge themselves in creating several artistic projects in the following possible areas: wood turning, intarsia, carving, and scroll work. The student's artistic creation could be a stand-alone project or an enhancement of a value-added piece of furniture or cabinet."
+      }
+    ]
+  }
+  
