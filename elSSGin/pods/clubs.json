@@ -2,16 +2,20 @@
   {
     "name": "Computer Programming Club",
     "id": "computer_programming",
-    "meeting-days": ["Monday after school", "Wednesday after school"],
     "teams-code": "PLACEHOLDER",
+    "meeting-days": ["Monday after school", "Wednesday after school"],
+    "meeting-room": "PLACEHOLDER",
+    "sponsor": "Mr. Tsang",
     "desc": "The Computer Programming Club is for anyone interested in programming, web design...",
     "claimed": true
   },
   {
     "name": "Create Change Club",
     "id": "create_change",
-    "meeting-days": ["Tuesday at lunch"],
     "teams-code": "PLACEHOLDER",
+    "sponsor": "Mr. Ellett",
+    "meeting-days": ["Tuesday at lunch"],
+    "meeting-room": "PLACEHOLDER",
     "desc": "Join the Create Change Club to help the community and school...",
     "claimed": false
   }

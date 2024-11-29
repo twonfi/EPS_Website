@@ -21,6 +21,7 @@ def write_file(full_path, content):
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates/'))
 templates = {
     'departments': jinja_env.get_template('departments.html'),
+    'clubs': jinja_env.get_template('clubs.html'),
     'messages': jinja_env.get_template('orca-news/messages.html'),
 }
 
@@ -48,6 +49,17 @@ for dept_filename in os.scandir('pods/departments'):
     )
     write_file(os.path.abspath('%s/departments/' % file_path + re.sub(".json$",
         ".html", os.path.basename(dept_filename.path))), html_text)
+
+# Clubs
+with open('pods/clubs.json', 'r') as file:
+    clubs = json.loads(file.read())
+
+html_text = templates['clubs'].render(
+    clubs=clubs,
+    last_update=datetime.now(timezone.utc).strftime('%A, %B %-d, %Y'
+                                                    ' at %-I:%M:%S %p'),
+)
+write_file(os.path.abspath('%s/clubs.html') % file_path, html_text)
 
 
 # Orca News

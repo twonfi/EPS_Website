@@ -1,7 +1,10 @@
 # /
 .DS_Store
+# this is used for a local testing server, we should still use cf pages --twonfi
 site/.htaccess
 
 # /site
 site/departments/*
+site/clubs.html
+# "keepers". they MUST exist, to prevent dir not found failing build
 !site/departments/_

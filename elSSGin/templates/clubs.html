@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block url %}{% endblock %}
+
+{% block title %}Clubs - Elgin Park Secondary{% endblock %}
+{% block stylesheet %}clubs.css{% endblock %}
+{% block head %}
+    <link rel="stylesheet preload" type="text/css" as="style" href="/resources/lite-youtube-embed/src/lite-yt-embed.css">
+    <script rel="preload" src="/resources/lite-youtube-embed/src/lite-yt-embed.js"></script>
+{% endblock %}
+
+{% block main %}
+  <h1>Clubs</h1>
+    <p>Elgin Park has over <b>26 clubs</b>, letting you do what you love, while ensuring that you'll never be bored again!</p>
+    <div id="toc">
+      <ul>
+        {% for club in clubs %}
+          <li><a href="#{{ club["id"] }}">{{ club["name"] | safe}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+
+  {% for club in clubs %}
+    <article id="{{ club["id"] }}" class="club">
+      <h2>{{ club["name"] | safe }}</h2>
+      <span class="club-info">
+        {% if not club["claimed"] %}
+          <a class="club-claim-link" href="/edit-requests?url=https://elginparksecondary.com/clubs">Claim this club</a> to edit it
+          <br>
+        {% endif %}
+        Sponsored by {{ club["sponsor"] }}<br>Teams code: {{ club["teams-code"] }}<br>
+        {% if club["meeting-days"] %}{% for day in club["meeting-days"] %}{{ day }}, {% endfor %}in {% endif %}
+        Room {{ club["meeting-room"] }}
+      </span>
+      <p>{{ club["desc"] | safe }}</p>
+    </article>
+  {% endfor %}
+{% endblock %}
