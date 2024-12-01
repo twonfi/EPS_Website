@@ -8,5 +8,8 @@ site/.htaccess
 site/departments/*
 site/clubs.html
 site/404.html
+site/orca-news/*
+site/.wrangler/
 # "keepers". they MUST exist, to prevent dir not found failing build
 !site/departments/_
+!site/orca-news/_
