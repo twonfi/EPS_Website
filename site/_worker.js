@@ -1,5 +1,5 @@
 export default {
-  async fetch(request, env, ctx) {
+  async fetch(request, env) {
     if (!new URL(request.url).pathname.startsWith('/orca-news/data')) {
       return env.ASSETS.fetch(request);
     }
