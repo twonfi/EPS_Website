@@ -1,5 +1,6 @@
 # /
 .DS_Store
+email-templates/
 # this is used for a local testing server, we should still use cf pages --twonfi
 site/.htaccess
 
