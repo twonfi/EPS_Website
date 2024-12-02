@@ -4,6 +4,7 @@ email-templates/
 */orca-news/*
 .wrangler/
 node_modules/.cache/
+node_modules/.mf/
 # this is used for a local testing server, we should still use cf pages
 site/.htaccess
 
