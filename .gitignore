@@ -1,6 +1,9 @@
 # /
 .DS_Store
 email-templates/
+*/orca-news/*
+.wrangler/
+node_modules/.cache/
 # this is used for a local testing server, we should still use cf pages
 site/.htaccess
 
@@ -8,8 +11,6 @@ site/.htaccess
 site/departments/*
 site/clubs.html
 site/404.html
-*/orca-news/*
-.wrangler/
 site/.wrangler/
 # "keepers". they MUST exist, to prevent dir not found failing build
 !site/departments/_
