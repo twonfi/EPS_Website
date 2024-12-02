@@ -56,4 +56,5 @@ getData().then((data) => {
     }
   }
   document.getElementById('loading-message').remove();
+  // TODO: change footer message
 });
