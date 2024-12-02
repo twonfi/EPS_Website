@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block url %}{% endblock %}
+
+{% block title %}News &amp; Messages - Elgin Park Secondary{% endblock %}
+{% block stylesheet %}orca-news/messages.css{% endblock %}
+{% block head %}
+  <noscript><style>#loading-text { display: none; }</style></noscript>
+{% endblock %}
+
+{% block main %}
+  <h1 class="msg-divider" style="text-align: center;">News & Messages</h1>
+  <div id="loading-message">
+    <span id="loading-text">Please wait...</span>
+    <noscript>This page requires JavaScript.</noscript>
+    <script rel="preload" src="/resources/scripts/orca-news/messages.js"></script>
+  </div>
+{% endblock %}

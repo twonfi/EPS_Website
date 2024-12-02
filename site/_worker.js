@@ -41,9 +41,9 @@ export default {
     try {
       const response = await fetch(proxyRequest);
       const responseHeaders = new Headers(response.headers);
-      responseHeaders.set("Access-Control-Allow-Origin", "*");
-      responseHeaders.set("Access-Control-Allow-Credentials", "true");
-      responseHeaders.set("Access-Control-Allow-Methods", "*");
+      responseHeaders.set("Access-Control-Allow-Origin", "*")
+      responseHeaders.set("Access-Control-Allow-Methods", "GET,OPTIONS");
+      responseHeaders.set("Cache-Control", "no-cache");
 
       return new Response(response.body, {
         status: response.status,
