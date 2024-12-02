@@ -21,6 +21,7 @@ templates = {
     'departments': jinja_env.get_template('departments.html'),
     'clubs': jinja_env.get_template('clubs.html'),
     'messages': jinja_env.get_template('editable/orca-news/messages.html'),
+    'edit-requests': jinja_env.get_template('editable/edit-requests.html')
 }
 
 file_path = '../site'
@@ -65,8 +66,11 @@ html_text = templates['clubs'].render(
 )
 write_file(os.path.abspath('%s/clubs.html') % file_path, html_text)
 
+# Edit requests
+write_file('%s/edit-requests.html' % file_path,
+    templates['edit-requests'].render())
 
 # Orca News stubs
 # Messages
-html_text = templates['messages'].render()
-write_file('%s/orca-news/messages.html' % file_path, html_text)
+write_file('%s/orca-news/messages.html' % file_path,
+    templates['messages'].render())

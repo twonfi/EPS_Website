@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block url %}{% endblock %}
+
+{% block title %}Not Found - Elgin Park Secondary{% endblock %}
+{% block stylesheet %}base.css{% endblock %}
+{% block head %}
+  <style>
+    main {
+      text-align: center;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 20pt;
+      display: inline flex;
+      li {
+        margin: auto 20px;
+      }
+    }
+  </style>
+  <meta name="robots" content="noindex">
+{% endblock %}
+
+{% block main %}
+  <h1>Edit requests</h1>
+  <ul title="Edit request forms">
+    <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=z-m0CBOBDUK6B1L31N-KzUVuAddiQCVNkLvgeAZm3wlUOFk3OTVHMUNVSU5RMTVXWllMVDhaU1BJMi4u&rf45a672b1ed743bc86b7c2d4a93c1311" id="form-login-link">Staff & students</a></li>
+    <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=z-m0CBOBDUK6B1L31N-KzUVuAddiQCVNkLvgeAZm3wlUMExVSUxPTUZTNlhFWTJHVUtNT01RWVpMQS4u&rf45a672b1ed743bc86b7c2d4a93c1311" id="form-no-login-link">Parents & visitors</a></li>
+  </ul>
+{% endblock %}

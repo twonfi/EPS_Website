@@ -12,6 +12,7 @@ site/.htaccess
 site/departments/*
 site/clubs.html
 site/404.html
+site/edit-requests.html
 site/.wrangler/
 # "keepers". they MUST exist, to prevent dir not found failing build
 !site/departments/_
