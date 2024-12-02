@@ -13,6 +13,7 @@ getData().then((data) => {
     if (MESSAGE['atts'].length) {
       const messageAttachment = document.createElement('img');
       messageAttachment.setAttribute('src', MESSAGE['atts'][0]['url']);
+      messageAttachment.setAttribute('loading', 'lazy');
       messageAttachment.setAttribute('alt', '');
       messageArticle.appendChild(messageAttachment);
     }
