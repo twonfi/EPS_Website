@@ -22,6 +22,7 @@ Before you edit, set the schemas (`elSSGin/pods/schemas`) in your IDE or editor.
 3. Read the request
    - Requests sent through the staff & students form should be more trusted, as it requires SD36 login
    - First submitted, first handled
+   - **Do not delete old requests. They are to be kept for tracking purposes.**
 4. Respond
    - Staff & students form: download as Excel spreadsheet, and find the email. If requester chose Teams, start a chat and entet the email address as the name.
    - Parents & visitors form: Email is in the form as a field
