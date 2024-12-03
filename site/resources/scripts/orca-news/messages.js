@@ -25,7 +25,12 @@ getData().then((data) => {
 
     const messageText = document.createElement('span');
     messageText.setAttribute('class', 'msg-text');
-    messageText.innerHTML = MESSAGE['text'].replace(/\r\n|\r|\n/g, '<br>') + ' ';
+    // XSS
+    let messageInnerHTML = MESSAGE['text']
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;');
+    messageText.innerHTML = messageInnerHTML.replace(/\r\n|\r|\n/g, '<br>') + ' ';
     messageArticle.appendChild(messageText);
 
     if (MESSAGE['url']) {
