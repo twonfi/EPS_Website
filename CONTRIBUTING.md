@@ -1,5 +1,5 @@
 # Contribution Guide
-This is pretty much a tutorial on setting up your local development environment.
+## Wrangler environment setup
 
 1. Get `node` and `npm`
 2. Clone the repository (if you haven't already done so)
@@ -9,3 +9,13 @@ This is pretty much a tutorial on setting up your local development environment.
 6. Profit
 
 Make sure to only use Wrangler, which is pretty much a local Cloudflare Pages, so that Pages redirects and Workers work correctly.
+
+## Editing data
+Department and club data is stored in `elSSGin/pods`; every JSON data file is called a "pod".
+
+Before you edit, set the schemas (`elSSGin/pods/schemas`) in your IDE or editor. **Don't break the site. Don't edit without the schema.**
+
+## Handling edit requests
+1. If you don't have access to the forms, ask in the Computer Programming Club team on Teams for access to form data
+2. Wait for requests
+   - You'll be emailed when a new request is submitted
