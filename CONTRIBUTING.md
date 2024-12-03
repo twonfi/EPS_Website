@@ -18,18 +18,18 @@ Before you edit, set the schemas (`elSSGin/pods/schemas`) in your IDE or editor.
 ## Handling edit requests
 1. If you don't have access to the forms, ask in the Computer Programming Club team on Teams for access to form data
 2. Wait for requests
-   - You'll be emailed when a new request is submitted
+    - You'll be emailed when a new request is submitted
 3. Read the request
-   - Requests sent through the staff & students form should be more trusted, as it requires SD36 login
-   - First submitted, first handled
-   - **Do not delete old requests. They are to be kept for tracking purposes.**
+    - Requests sent through the staff & students form should be more trusted, as it requires SD36 login
+    - First submitted, first handled
+    - **Do not delete old requests. They are to be kept for tracking purposes.**
 4. Implement
-   - Edit the files
-   - Increase the edit request counter
-   - Use the following commit message:
-     - Implement edit request #_{{ ID }}_
-   - **Do not include name, email, or any other info other than ID**
+    - Edit the files
+    - Increase the edit request counter
+    - Use the following commit message:
+        - Implement edit request #_{{ ID }}_
+    - **Do not include name, email, or any other info other than ID**
 5. Respond
-   - Staff & students form: download as Excel spreadsheet and find the email. If requester chose Teams, start a chat and enter the email address as the name.
-   - Parents & visitors form: Email is in the form as a field
-   - Use the [edit request templates in the wiki](https://github.com/Bouney/EPS_Website/wiki/Edit-request-templates)
+    - Staff & students form: download as Excel spreadsheet and find the email. If requester chose Teams, start a chat and enter the email address as the name.
+    - Parents & visitors form: Email is in the form as a field
+    - Use the [edit request templates in the wiki](https://github.com/Bouney/EPS_Website/wiki/Edit-request-templates)
