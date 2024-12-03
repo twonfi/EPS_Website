@@ -29,7 +29,10 @@ getData().then((data) => {
     let messageInnerHTML = MESSAGE['text']
         .replaceAll('&', '&amp;')
         .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;');
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#x27;')
+        .replaceAll('/', '&#x2F;);
     messageText.innerHTML = messageInnerHTML.replace(/\r\n|\r|\n/g, '<br>') + ' ';
     messageArticle.appendChild(messageText);
 
