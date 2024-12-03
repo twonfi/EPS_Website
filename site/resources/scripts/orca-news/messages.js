@@ -27,7 +27,6 @@ getData().then((data) => {
     messageText.setAttribute('class', 'msg-text');
     messageText.innerHTML = MESSAGE['text'].replace(/\r\n|\r|\n/g, '<br>') + ' ';
     messageArticle.appendChild(messageText);
-    console.log(messageArticle);
 
     if (MESSAGE['url']) {
       const topLevelLink = document.createElement('a');
