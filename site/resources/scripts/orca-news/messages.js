@@ -32,7 +32,7 @@ getData().then((data) => {
         .replaceAll('>', '&gt;')
         .replaceAll('"', '&quot;')
         .replaceAll("'", '&#x27;')
-        .replaceAll('/', '&#x2F;);
+        .replaceAll('/', '&#x2F;');
     messageText.innerHTML = messageInnerHTML.replace(/\r\n|\r|\n/g, '<br>') + ' ';
     messageArticle.appendChild(messageText);
 
