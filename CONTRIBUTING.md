@@ -30,5 +30,5 @@ Before you edit, set the schemas (`elSSGin/pods/schemas`) in your IDE or editor.
    - Edit the files
    - Increase the edit request counter
    - Use the following commit message:
-     - Implement edit request #{{ ID }}
-   - **Do not include name, email, or any other info other than ID
+     - Implement edit request #__{{ ID }}__
+   - **Do not include name, email, or any other info other than ID**
