@@ -1,6 +1,6 @@
 // Function to create HTML content from JSON data
 function generateHTML(data) {
-    const contentDiv = document.getElementById("content");
+    const contentDiv = document.getElementById("layout1");
   
     // Loop through each section
     data.forEach(section => {
