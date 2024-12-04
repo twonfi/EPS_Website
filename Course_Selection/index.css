@@ -633,7 +633,7 @@ body, html {
 }
 
 li button,
-.dropbtn1 {
+.nav-item-outer {
   border: none;
   padding: 0px 15px;
   display: inline-block;
@@ -696,7 +696,7 @@ li.dropdown {
 }
 
 li a div,
-.dropbtn2 {
+.nav-item-inner {
   margin-left: 25px;
   margin-right: 25px;
   border: none;
