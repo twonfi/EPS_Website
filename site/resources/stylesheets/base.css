@@ -208,6 +208,10 @@ li.dropdown {
   display: inline-block;
 }
 
+.dropdown-text {
+  cursor: s-resize !important;
+}
+
 .dropdown-content {
   margin-left: 20px;
   transition: ease-in-out 0.5s;
