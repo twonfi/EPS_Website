@@ -2,6 +2,8 @@
 
 ![1.00](https://elginparksecondary.com/elgin_logo.png)
 
+**A preview of the site is available**: https://eps-website-elssgin-twonfi.pages.dev
+
 Welcome to the **EPS Website** repository! This repository contains the official source code for the Elgin Park Secondary website, at [ElginParkSecondary.com](https://elginparksecondary.com), proudly developed and maintained by the **EPS Computer Programming Club**.
 
 ***
