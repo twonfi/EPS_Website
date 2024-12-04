@@ -133,9 +133,7 @@
   {
     "SectionName": "Robotics",
     "SectionTag": "rob",
-    "SectionContentBrief": [
-      "Electronics and Robotics 9-12"
-    ],
+    "SectionContentBrief": ["Electronics and Robotics 9-12"],
     "VideoLink": "https://www.youtube.com/embed/2Mm7FEVzY-0",
     "courses": [
       {

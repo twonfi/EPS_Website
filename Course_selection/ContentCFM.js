@@ -6,10 +6,10 @@ function generateHTML(data) {
     data.forEach(section => {
       const sectionElement = document.createElement("section");
       sectionElement.id = section.SectionTag;
-  
+    
       // Create and append the Section Title
       const h1 = document.createElement("h1");
-      h1.textContent = section.SectionContentBrief.join(', ');
+      h1.textContent = section.SectionName;
       sectionElement.appendChild(h1);
   
       // Create and append the "Contents" header
