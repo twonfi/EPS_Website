@@ -1,5 +1,6 @@
 [
   {
+    "SectionName": "Woodwork",
     "SectionTag": "ww",
     "SectionContentBrief": ["Woodwork 9/10,11,12", "Furniture & Cabinetry 12"],
     "VideoLink": "https://www.youtube.com/embed/N8klwje-dkc",
@@ -38,6 +39,7 @@
     ]
   },
   {
+    "SectionName": "Metalwork",
     "SectionTag": "mw",
     "SectionContentBrief": ["Metalwork 9/10,11,12", "Machining & Welding 12", "Art Metal & Jewelry 12"],
     "VideoLink": "https://www.youtube.com/embed/N6vdehj2lK8",
@@ -83,6 +85,7 @@
     ]
   },
   {
+    "SectionName": "Automotive",
     "SectionTag": "au",
     "SectionContentBrief": ["Power Technology 9", "Automotive Power Technology and Bicycles 10", "Automotive Technology 11-12", "Engine & Drive Train 12"],
     "VideoLink": "https://www.youtube.com/embed/V-MrJJXVV6M",
@@ -128,6 +131,7 @@
     ]
   },
   {
+    "SectionName": "Robotics",
     "SectionTag": "rob",
     "SectionContentBrief": [
       "Electronics and Robotics 9-12"
@@ -143,6 +147,7 @@
     ]
   },
   {
+    "SectionName": "Drafting",
     "SectionTag": "dr",
     "SectionContentBrief": [
       "Drafting 9/10, 11-12",
