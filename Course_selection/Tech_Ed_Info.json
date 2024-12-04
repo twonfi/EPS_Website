@@ -84,33 +84,28 @@
   },
   {
     "SectionTag": "au",
-    "SectionContentBrief": [
-      "Power Technology 9",
-      "Automotive Power Technology and Bicycles 10",
-      "Automotive Technology 11-12",
-      "Engine & Drive Train 12"
-    ],
+    "SectionContentBrief": ["Power Technology 9", "Automotive Power Technology and Bicycles 10", "Automotive Technology 11-12", "Engine & Drive Train 12"],
     "VideoLink": "https://www.youtube.com/embed/V-MrJJXVV6M",
     "courses": [
       {
         "course_name": "Power Technology 9",
         "grade_levels": [9],
         "elective": true,
-        "course_code": "MADPT09--S",
+        "course_code": ["MADPT09--S"],
         "description": "Power Technology 9 provides knowledge of power and energy transmission in mechanical devices. Two- and four-cycle engines are used to demonstrate operations, maintenance, and overhauling. Projects explore energy systems like solar, wind, hydro, and more, emphasizing their impact on society, resources, and the environment."
       },
       {
         "course_name": "Automotive Power Technology and Bicycles 10",
         "grade_levels": [10],
         "elective": true,
-        "course_code": "MTPOW10--S",
+        "course_code": ["MTPOW10--S"],
         "description": "This course extends concepts from Power Technology 9 with more hands-on projects. Students work on go-carts or mini-bikes while exploring energy systems. Key topics include operation and maintenance of two- and four-cycle engines and automotive power systems."
       },
       {
         "course_name": "Automotive Technology 11",
         "grade_levels": [11],
         "elective": true,
-        "course_code": "MTAUT11--S",
+        "course_code": ["MTAUT11--S"],
         "prerequisite": "Recommended: Power Tech 10",
         "description": "Designed to teach vehicle maintenance skills. Topics include safety shop practices, tools, tires, brakes, engines, and basic electrical systems. Emphasis is placed on practical labs and shop work."
       },
@@ -118,7 +113,7 @@
         "course_name": "Automotive Technology 12",
         "grade_levels": [12],
         "elective": true,
-        "course_code": "MTAUT12--S",
+        "course_code": ["MTAUT12--S"],
         "prerequisite": "Recommended: Automotive Technology 11",
         "description": "Advanced course expanding on Automotive Technology 11 concepts. Students work on detailed automotive systems and gain deeper knowledge of internal vehicle operations and modern diagnostics."
       },
@@ -126,7 +121,7 @@
         "course_name": "Engine & Drive Train 12",
         "grade_levels": [12],
         "elective": true,
-        "course_code": "MTEAD12--S",
+        "course_code": ["MTEAD12--S"],
         "prerequisite": "Automotive Technology 12",
         "description": "Focuses on diagnosing, maintaining, and repairing advanced automotive systems. Topics include engine rebuilding, drivetrain mechanics, modifications, and electronics diagnostics, including CAN-bus systems."
       }
