@@ -29,6 +29,11 @@ function generateHTML(data) {
       // Embed the video
       const center = document.createElement("center");
       const iframe = document.createElement("iframe");
+if (section.VideoLink) {
+  iframe.src = section.VideoLink;
+} else {
+  console.warn('Missing video link for section:', section.SectionName);
+}
       iframe.width = "560";
       iframe.height = "315";
       iframe.src = section.VideoLink;
@@ -96,12 +101,11 @@ function generateHTML(data) {
   
   // Fetch the JSON data from the file
   fetch('Tech_Ed_Info.json')
-    .then(response => response.json())
-    .then(data => {
-      // Generate the HTML content from the fetched JSON data
-      generateHTML(data);
-    })
-    .catch(error => {
-      console.error('Error loading the JSON file:', error);
-    });
-  
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);  // Add this line to check the structure of your data
+    generateHTML(data);
+  })
+  .catch(error => {
+    console.error('Error loading the JSON file:', error);
+  });
