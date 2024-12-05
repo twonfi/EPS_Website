@@ -6,7 +6,7 @@ main {
   line-height: 1.7em;
 }
 
-.club {
+article, .club {
   width: inherit;
   margin-top: 5%;
   margin-left: 10%;
@@ -17,6 +17,15 @@ main {
   height: auto;
   border-style: solid;
   box-shadow: 8px 8px 8px 1px rgba(0, 0, 255, .2)
+}
+
+#start-your-own-club {
+  text-align: center;
+  border-style: dashed;
+  border-color: #505050;
+  #start-club-text {
+    margin-bottom: 1.9em;
+  }
 }
 
 article {
