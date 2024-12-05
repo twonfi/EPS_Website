@@ -10,44 +10,112 @@
 
 {% block main %}
   <h1>Contact Elgin Park</h1>
-  <h2 id="edit-requests">Contact ElginParkSecondary.com administrators</h2>
-  <p>Please submit an <a href="/edit-requests">edit request</a> to contact the administrators for ElginParkSecondary.com.</p>
+  <ul aria-label="Table of contents">
+    <li><a href="#edit-requests">ElginParkSecondary.com administrators</a></li>
+    <li><a href="#students">Students</a></li>
+    <li><a href="#school">School contact information</a></li>
+    <li><a href="#about">About ElginParkSecondary.com</a></li>
+  </ul>
 
-  <h2 id="students">Students: Find your alpha counsellor</h2>
-  <table>
-    <caption>Elgin Park counsellors</caption>
-    <tr>
-      <th>Counsellor</th><th>Your last name</th><th>Email / Teams & appointments</th>
-    </tr>
-    <tbody>
+  <section><h2 id="edit-requests">Contact ElginParkSecondary.com administrators</h2>
+    <p>Please submit an <a href="/edit-requests">edit request</a> to contact the administrators for ElginParkSecondary.com.</p>
+  </section>
+
+  <section><h2 id="students">Students: Find your alpha counsellor</h2>
+    <table>
+      <caption>Elgin Park counsellors</caption>
       <tr>
-        <td>Findlay, Christa</td><td>A–Do</td>
-        <td>
-          <a href="mailto:findlay_c@surreyschools.ca">findlay_c@surreyschools.ca</a><hr>
-          <a href="https://calendly.com/findlay_c">Book an appointment with Findlay</a>
-        </td>
+        <th>Counsellor</th><th>Your last name</th><th>Email / Teams & appointments</th>
       </tr>
-      <tr>
-        <td>Hogan, Liesa</td><td>Dr–J</td>
-        <td>
-          <a href="mailto:hogan_l@surreyschools.ca">hogan_l@surreyschools.ca</a><hr>
-          <a href="https://calendly.com/hogan_l">Book an appointment with Hogan</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Tomnuk, Darcie</td><td>K–Ra</td>
-        <td>
-          <a href="mailto:tomnuk_d@surreyschools.ca">tomnuk_d@surreyschools.ca</a><hr>
-          <a href="https://calendly.com/tomnuk_d">Book an appointment with Tomnuk</a>
-        </td>
-      </tr>
-      <tr>
-        <td>Gill, Mini</td><td>Re–Z</td>
-        <td>
-          <a href="mailto:gill_mini@surreyschools.ca">gill_mini@surreyschools.ca</a><hr>
-          <a href="https://calendly.com/gill_mini">Book an appointment with Gill</a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      <tbody>
+        <tr>
+          <td>Findlay, Christa</td><td>A–Do</td>
+          <td>
+            <a href="mailto:findlay_c@surreyschools.ca">findlay_c@surreyschools.ca</a><hr>
+            <a href="https://calendly.com/findlay_c">Book an appointment with Findlay</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Hogan, Liesa</td><td>Dr–J</td>
+          <td>
+            <a href="mailto:hogan_l@surreyschools.ca">hogan_l@surreyschools.ca</a><hr>
+            <a href="https://calendly.com/hogan_l">Book an appointment with Hogan</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Tomnuk, Darcie</td><td>K–Ra</td>
+          <td>
+            <a href="mailto:tomnuk_d@surreyschools.ca">tomnuk_d@surreyschools.ca</a><hr>
+            <a href="https://calendly.com/tomnuk_d">Book an appointment with Tomnuk</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Gill, Mini</td><td>Re–Z</td>
+          <td>
+            <a href="mailto:gill_mini@surreyschools.ca">gill_mini@surreyschools.ca</a><hr>
+            <a href="https://calendly.com/gill_mini">Book an appointment with Gill</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section><h2 id="school">School contact information</h2>
+    <address>
+      <b>Elgin Park Secondary School</b><br>
+      13484 24 Ave<br>Surrey, BC V4A 2G5<br>
+      Email: <a href="mailto:elginpark@surreyschools.ca">elginpark@surreyschools.ca</a><br>
+      Phone: <a href="tel:+16045386678">(604) 538-6678</a><br>
+      Fax: <a href="tel:+16045386491">(604) 538-6491</a><br>
+    </address>
+  </section>
+
+  <section><h2 id="about">About ElginParkSecondary.com</h2>
+    <p>ElginParkSecondary.com was created by Elgin Park Secondary Computer Programming Club.</p>
+    <p>
+      We would like to extend a special thanks to Mr. Tsang for funding this project and being our club sponsor,
+      and Mr. Webb for being the founding sponsor of our club. Big thanks to Mr. Ingram for putting together all the beautiful videos!
+      Additionally, thank you to all the counsellor and administration team for allowing the opportunity for a project of this magnitude.
+      Thank you all staff of Elgin Park Secondary! (2022–23)
+    </p>
+    <p>Managed and created by Matthew Molski (Leader, 2020–23), Henry Zhao (Leader, 2023–24) and the following members:</p>
+    <ul aria-label="Computer Programming Club website members">
+      {#
+        Don't overcomplicate this.
+        Closing </li> tags can be omitted, as long as it follows another <li>,
+        or if there is no more content in its parent.
+
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
+      #}
+      <li>Yavuz Yavasca
+      <li>Wyatt Howell
+      <li>Joshua Timothy Grant
+      <li>Binod Singh Dayal
+      <li>Ryan Czajkowski
+      <li>Mohanbir Singh Gill
+      <li>Jenson Bender
+      <li>Goldon – Zitong Gao
+      <li>Xander Carelli
+      <li>Michael Pei
+      <li>Tiger Wang
+      <li>Jenny Lin
+      <li>Joe Hu
+      <li>John Li
+      <li>Kevin Wu
+      <li>David Zhu
+      <li>Annika Svardfeldt
+      <li>Kaity St. Cyr
+      <li>Simon Kurono
+      <!-- 2024 -->
+      <li>Micah Ming Ren Hou
+      <li>John Li
+      <li>Rf
+    </ul>
+
+    <picture>
+      <source srcset="/resources/images/club-group-photo/group.webp" type="image/webp">
+      <img src="/resources/images/club-group-photo/group.jpg" loading="lazy" width="90%"
+           alt="Computer Programming Club group photo">
+    </picture>
+  </section>
 {% endblock %}

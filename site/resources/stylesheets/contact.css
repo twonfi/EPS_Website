@@ -1,4 +1,8 @@
-p {
+main {
+  line-height: 1.4em;
+}
+
+p, ul, address {
   margin-left: 1.5vw;
   margin-right: 1.5vw;
 }
@@ -29,4 +33,16 @@ table {
   hr {
     width: 90%;
   }
+}
+
+address {
+  font-style: normal;
+  line-height: 1.6em;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
