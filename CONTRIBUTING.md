@@ -26,6 +26,10 @@ Make sure to only use Wrangler, which is pretty much a local Cloudflare Pages, s
 
 Make sure to use %s strings (`'hello %s' % var`); CF Pages runs a rather old version of Python.
 
+The build script can also be run with `--dev-build`, which will prevent the site from being indexed
+and add debugging information to the footer of every page. This can be run with the
+"Build elSSGin site with --dev-build" config in PyCharm, or with `python __main__.py --dev-build`.
+
 When in doubt, don't push it to main; use a new branch, and preview the page at
 `https://{{ first 8 chars of commit hash }}.eps-website.pages.dev`
 
