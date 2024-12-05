@@ -24,12 +24,14 @@
     <section id="{{ section["id"] | safe }}">
       <h2>{{ section["name"] | safe }}</h2>
       <div class="toc">
-        <h3>Contents</h3>
-        <menu>
-          {% for course in section["courses"] %}
-            <li><a href="#{{ course["code"] | safe }}">{{ course["name"] | safe}}</a></li>
-          {% endfor %}
-        </menu>
+        <figure>
+          <figcaption><h3>Contents</h3></figcaption>
+          <menu>
+            {% for course in section["courses"] %}
+              <li><a href="#{{ course["code"] | safe }}">{{ course["name"] | safe}}</a></li>
+            {% endfor %}
+          </menu>
+        </figure>
       </div>
 
     {% for course in section["courses"] %}
