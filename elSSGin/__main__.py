@@ -7,7 +7,16 @@ from datetime import datetime, timezone
 
 import jinja2
 
-print(datetime.now(timezone.utc).isoformat(), sys.version)
+debug_info = datetime.now(timezone.utc).isoformat(), sys.version
+
+print(debug_info)
+
+# Add noindex if run with --dev-build
+if len(sys.argv) > 1 and sys.argv[1] == '--dev-build':
+    dev_build = True
+    print('Building with --dev-build: noindex and debug information added.')
+else:
+    dev_build = False
 
 
 def write_file(full_path, content):
@@ -24,6 +33,24 @@ templates = {
     'edit-requests': jinja_env.get_template('editable/edit-requests.html'),
     'contact': jinja_env.get_template('editable/contact.html'),
 }
+
+def bob(template: jinja2.Template, params: dict = None) -> str:
+    """Bob the builder, actually a renderer.
+
+    :param template: Template object
+    :type template: jinja2.Template
+    :param params: Parameters to pass to template
+    :type params: dict
+    :return: str
+    """
+    if params is None:
+        params = {}
+    return template.render(
+        dev_build=dev_build, debug_info=debug_info,
+        last_update=datetime.now(timezone.utc).strftime('%A, %B %-d, %Y'
+                                                        ' at %-I:%M:%S %p'),
+        **params
+    )
 
 file_path = '../site'
 
@@ -48,11 +75,9 @@ for dept_filename in os.scandir('pods/departments'):
     with open(dept_filename.path, 'r') as file:
         dept = json.loads(file.read())
 
-    html_text = templates['departments'].render(
-        dept=dept,
-        last_update=datetime.now(timezone.utc).strftime('%A, %B %-d, %Y'
-                                                        ' at %-I:%M:%S %p'),
-    )
+    html_text = bob(templates['departments'], {
+        'dept': dept,
+    })
     write_file(os.path.abspath('%s/departments/' % file_path + re.sub(".json$",
         ".html", os.path.basename(dept_filename.path))), html_text)
 
@@ -60,22 +85,18 @@ for dept_filename in os.scandir('pods/departments'):
 with open('pods/clubs.json', 'r') as file:
     clubs = json.loads(file.read())
 
-html_text = templates['clubs'].render(
-    clubs=clubs,
-    last_update=datetime.now(timezone.utc).strftime('%A, %B %-d, %Y'
-                                                    ' at %-I:%M:%S %p'),
-)
+html_text = bob(templates['clubs'])
 write_file(os.path.abspath('%s/clubs.html') % file_path, html_text)
 
 # Edit requests
 write_file('%s/edit-requests.html' % file_path,
-    templates['edit-requests'].render())
+    bob(templates['edit-requests']))
 
 # Contact
 write_file('%s/contact.html' % file_path,
-    templates['contact'].render())
+    bob(templates['contact']))
 
 # Orca News stubs
 # Messages
 write_file('%s/orca-news/messages.html' % file_path,
-    templates['messages'].render())
+    bob(templates['messages']))

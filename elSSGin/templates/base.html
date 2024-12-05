@@ -22,6 +22,9 @@
     "url" : "https://elginparksecondary.com/"
     }
   </script>
+  {% if dev_build %}
+    <meta name="robots" content="noindex">
+  {% endif %}
   {% block head %}{% endblock %}
 </head>
 <body>
@@ -75,6 +78,10 @@
     {% block main %}{% endblock %}
   </main>
   <footer id="footer">
+    {% if dev_build %}
+      <p>{{ debug_info }}</p>
+    {% endif %}
+    <div id="dev-build"></div>
     <div id="edit-request">
       <p>Noticed a mistake, or simply want to update your course or club page? <a id="edit-request-link" href="/edit-requests">Submit an edit request!</a></p>
       <script src="/resources/scripts/edit-request-url.js"></script>
