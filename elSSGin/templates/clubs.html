@@ -11,7 +11,7 @@
 
 {% block main %}
   <h1>Clubs</h1>
-    <p>Elgin Park has over <b>26 clubs</b>, from anime cosplay to helping out in the community, letting you do what you love at school!</p>
+    <p>Elgin Park has over <b>{{ clubs | length }} clubs</b>, from anime cosplay to helping out in the community, letting you do what you love at school!</p>
     <div id="toc">
       <ul aria-label="Clubs">
         {% for club in clubs %}
