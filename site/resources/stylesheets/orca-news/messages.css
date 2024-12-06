@@ -43,12 +43,12 @@ main a:visited {
 }
 
 #some-messages-unavailable a {
-    text-decoration-line: underline;
-    color: #372FDB;
-    @media (prefers-color-scheme: dark) {
-      color: #8397EC;
-    }
+  text-decoration-line: underline;
+  color: #372FDB;
+  @media (prefers-color-scheme: dark) {
+    color: #8397EC;
   }
+}
 
 /* page-specific */
 .date {
