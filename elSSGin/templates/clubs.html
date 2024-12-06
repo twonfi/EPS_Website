@@ -22,7 +22,7 @@
 
 
   {% for club in clubs %}
-    <article id="{{ club["id"] }}" class="club">
+    <article id="{{ club["id"] }}" class="club" aria-label="{{ club["name"] }}">
       <h2>{{ club["name"] | safe }}</h2>
       <span class="club-info">
         {% if not club["claimed"] %}
@@ -37,7 +37,7 @@
       {% if club["desc"] %}<p>{{ club["desc"] | safe }}</p>{% endif %}
     </article>
   {% endfor %}
-  <article id="start-your-own-club">
+  <article id="start-your-own-club" aria-label="Start your own club">
     <div id="start-club-text">
       <h2>Start your own club</h2>
       <p>Don't see a club you're interested in? Start your own!</p>
