@@ -29,7 +29,8 @@
           <a class="club-claim-link" href="/edit-requests?url=https://elginparksecondary.com/clubs">Request an edit</a>
           <br>
         {% endif %}
-        Sponsored by {{ club["sponsor"] }}<br>Teams code: {{ club["teams-code"] }}<br>
+        Sponsored by {{ club["sponsor"] }}<br>
+        {% if club["teams-code"] %}Teams code: {{ club["teams-code"] }}<br>{% endif %}
         {% if club["meeting-days"] %}{% for day in club["meeting-days"] %}{{ day }}, {% endfor %}in {% endif %}
         Room {{ club["meeting-room"] }}
       </span>
