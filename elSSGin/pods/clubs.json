@@ -4,8 +4,7 @@
     "id": "biking",
     "meeting-days": ["Thursday at lunch"],
     "meeting-room": "Drama",
-    "sponsor": "TBA",
-    "claimed": false
+    "sponsor": "TBA"
   },
   {
     "name": "Computer Programming Club",
@@ -14,8 +13,7 @@
     "meeting-days": ["Monday after school", "Wednesday after school"],
     "meeting-room": "PLACEHOLDER",
     "sponsor": "Mr. Tsang",
-    "desc": "The Computer Programming Club is for anyone interested in programming, web design...",
-    "claimed": true
+    "desc": "The Computer Programming Club is for anyone interested in programming, web design..."
   },
   {
     "name": "Create Change Club",
@@ -23,7 +21,6 @@
     "teams-code": "PLACEHOLDER",
     "sponsor": "Mr. Ellett",
     "meeting-days": ["Tuesday at lunch"],
-    "meeting-room": "PLACEHOLDER",
-    "claimed": false
+    "meeting-room": "PLACEHOLDER"
   }
 ]

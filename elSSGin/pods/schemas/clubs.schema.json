@@ -43,13 +43,9 @@
         "desc": {
           "type": "string",
           "examples": ["The Computer Programming Club is for anyone interested in programming, web design..."]
-        },
-        "claimed": {
-          "description": "Whether the first edit request for this club was made (club is considered \"claimed\")",
-          "type": "boolean"
         }
       },
-      "required": ["name", "id", "meeting-room", "sponsor", "claimed"]
+      "required": ["name", "id", "meeting-room", "sponsor"]
     }
   }
 }
