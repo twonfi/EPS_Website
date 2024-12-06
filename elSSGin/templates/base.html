@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <title>{% block title %}ElginParkSecondary.com: Elgin Park's Digital Home{% endblock %}</title>
   <link rel="stylesheet preload" type="text/css" as="style" href="/resources/stylesheets/base.css">
-  <link rel="stylesheet preload" type="text/css" as="style" href="/resources/stylesheets/{% block stylesheet %}{% endblock %}">
+  {% if stylesheet %}
+    <link rel="stylesheet preload" type="text/css" as="style" href="/resources/stylesheets/{{ stylesheet }}">
+  {% endif %}
   <!-- favicon -->
   <link rel="icon" type="image/png" href="/resources/images/fav/196x196.png" sizes="196x196" />
   <link rel="shortcut icon" href="/resources/images/fav/196x196.ico" />
