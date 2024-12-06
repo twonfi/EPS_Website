@@ -11,20 +11,52 @@
         list-style-type: none;
         padding-left: 0;
         font-size: 20pt;
-        display: inline flex;
+        display: block;
         li {
           margin: auto 20px;
         }
       }
+      #dept-toc{
+        text-align: center;
+        padding-left: 0;
+        li {
+          list-style-type: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+        a {
+          font-weight: bold;
+          padding: 10px;
+          cursor: pointer;
+          outline: none;
+          color: #fff;
+          background-color: #40263B;
+          position: relative;
+          font-size: 22px;
+          border: none;
+          border-radius: 15px;
+          text-decoration: none;
+          line-break: strict;
+        }
+      }
     }
+    .link-subtitle {
+        font-size: 15px;
+      }
   </style>
   <meta name="robots" content="noindex">
 {% endblock %}
 
 {% block main %}
   <h1>Edit requests</h1>
-  <ul title="Edit request forms">
-    <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=z-m0CBOBDUK6B1L31N-KzUVuAddiQCVNkLvgeAZm3wlUOFk3OTVHMUNVSU5RMTVXWllMVDhaU1BJMi4u&rf45a672b1ed743bc86b7c2d4a93c1311" id="form-login-link">Staff & students</a></li>
-    <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=z-m0CBOBDUK6B1L31N-KzUVuAddiQCVNkLvgeAZm3wlUMExVSUxPTUZTNlhFWTJHVUtNT01RWVpMQS4u&rf45a672b1ed743bc86b7c2d4a93c1311" id="form-no-login-link">Parents & visitors</a></li>
+  <p>Noticed a mistake, or simply want to update your course or club page? <b>Submit an edit request!</b></p>
+  <p>There are two different forms, depending on who you are:</p>
+  <ul aria-label="Edit request forms" id="dept-toc">
+    <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=z-m0CBOBDUK6B1L31N-KzUVuAddiQCVNkLvgeAZm3wlUOFk3OTVHMUNVSU5RMTVXWllMVDhaU1BJMi4u&rf45a672b1ed743bc86b7c2d4a93c1311"
+           id="form-login-link">Staff & students</a><br><span class="link-subtitle">(Requires signing in to your SD36 account)</span></li>
+    <li><br><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=z-m0CBOBDUK6B1L31N-KzUVuAddiQCVNkLvgeAZm3wlUMExVSUxPTUZTNlhFWTJHVUtNT01RWVpMQS4u&rf45a672b1ed743bc86b7c2d4a93c1311"
+           id="form-no-login-link">Parents & visitors</a><br><span class="link-subtitle">(No sign-in required)</span></li>
   </ul>
+  <p><strong>You must use the correct form</strong>, so that we can verify staff & students, who are more trusted to
+    make major changes, using the appropriate form.</p>
 {% endblock %}
