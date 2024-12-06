@@ -31,10 +31,14 @@
 </head>
 <body>
   <script>const FX_FOUC = undefined // May the console log message stay with us.</script>
+  <picture id="print-logo" style="display: none;">
+    <!--<source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">-->
+    <img src="/resources/images/logo/eps-logo.png" id="img1" alt>
+  </picture>
   <nav id="nav" aria-label="Navigation bar"><!-- TODO: make navbar responsive and screen reader friendly -->
     <ul class="l1">
-      <a href="/home" title="Go home"><picture>
-        <source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">
+      <a href="/home" title="Go home" aria-hidden="true"><picture id="logo">
+        <!--<source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">-->
         <img src="/resources/images/logo/eps-logo.png" id="img1" alt>
       </picture></a>
         <div class="NavItem">
@@ -80,6 +84,7 @@
     {% block main %}{% endblock %}
   </main>
   <footer id="footer">
+    <hr id="print-footer-hr">
     {% if dev_build %}
       <p><code>{{ debug_info }}</code></p>
     {% endif %}

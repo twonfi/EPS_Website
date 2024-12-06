@@ -73,10 +73,13 @@ main {
     height: auto;
     width: inherit;
     top: 0;
-    margin-right: 12%;
-    margin-left: 12%;
     background-color: white;
     overflow: clip;
+    margin-right: 12%;
+    margin-left: 12%;
+    @media print, screen and (max-width: 40em) {
+      margin: 0;
+    }
 }
 
 .navB{
@@ -286,4 +289,34 @@ li.dropdown {
   z-index: 10;
   justify-content: center;
   align-items: center;
+}
+
+/* Print-friendliness stuff */
+#print-footer-hr {
+  display: none;
+  @media print {
+    display: block;
+    border-top: black 2px dashed;
+    border-bottom: none;
+  }
+}
+@media print {
+  main {
+    background-color: white;
+  }
+  nav {
+    display: none;
+  }
+  footer {
+    #edit-request, #land, #first-nation-seals {
+      display: none;
+    }
+    color: black;
+  }
+  #print-logo {
+    display: block !important;
+  }
+  h1 {
+    padding-top: 30px;
+  }
 }

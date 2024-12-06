@@ -33,9 +33,9 @@ main {
   line-height: 1.7em;
 }
 
-.course {
+article, .course {
   width: inherit;
-  margin-top: 5%;
+  margin-top: 40px;
   margin-left: 10%;
   margin-right: 10%;
   padding-left: 1%;
@@ -46,9 +46,6 @@ main {
   box-shadow: 8px 8px 8px 1px rgba(0, 0, 255, .2)
 }
 
-article {
-  position: relative;
-}
 lite-youtube, .youtube-embed {
   /*position: absolute;*/
   /*display: inline;*/
