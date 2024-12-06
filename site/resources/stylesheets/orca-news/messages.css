@@ -24,6 +24,13 @@ main a:link {
   @media (prefers-color-scheme: dark) {
     color: white;
   }
+  .msg-more {
+    text-decoration-line: underline;
+    color: #372FDB;
+    @media (prefers-color-scheme: dark) {
+      color: #8397EC;
+    }
+  }
 
   text-decoration-line: none;
 }
