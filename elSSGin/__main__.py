@@ -85,7 +85,7 @@ for dept_filename in os.scandir('pods/departments'):
 with open('pods/clubs.json', 'r') as file:
     clubs = json.loads(file.read())
 
-html_text = bob(templates['clubs'])
+html_text = bob(templates['clubs'], {'clubs': clubs})
 write_file(os.path.abspath('%s/clubs.html') % file_path, html_text)
 
 # Edit requests
