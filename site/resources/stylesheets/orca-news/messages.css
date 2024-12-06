@@ -26,13 +26,6 @@ main a:link {
   }
 
   text-decoration-line: none;
-  .msg-more, #some-messages-unavailable {
-    text-decoration-line: underline;
-    color: #372FDB;
-    @media (prefers-color-scheme: dark) {
-      color: #8397EC;
-    }
-  }
 }
 
 main a:visited {
@@ -49,6 +42,13 @@ main a:visited {
   }
 }
 
+#some-messages-unavailable a:link {
+    text-decoration-line: underline;
+    color: #372FDB;
+    @media (prefers-color-scheme: dark) {
+      color: #8397EC;
+    }
+  }
 
 /* page-specific */
 .date {
