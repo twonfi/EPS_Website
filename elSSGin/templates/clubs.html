@@ -34,7 +34,7 @@
         {% if club["meeting-days"] %}{% for day in club["meeting-days"] %}{{ day }}, {% endfor %}in {% endif %}
         Room {{ club["meeting-room"] }}
       </span>
-      <p>{{ club["desc"] | safe }}</p>
+      {% if club["desc"] %}<p>{{ club["desc"] | safe }}</p>{% endif %}
     </article>
   {% endfor %}
   <article id="start-your-own-club">
