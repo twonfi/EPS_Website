@@ -42,7 +42,7 @@ main a:visited {
   }
 }
 
-#some-messages-unavailable a:link {
+#some-messages-unavailable a {
     text-decoration-line: underline;
     color: #372FDB;
     @media (prefers-color-scheme: dark) {
