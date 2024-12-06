@@ -31,26 +31,27 @@
 </head>
 <body>
   <script>const FX_FOUC = undefined // May the console log message stay with us.</script>
-  <picture id="print-logo" style="display: none;">
-    <!--<source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">-->
-    <img src="/resources/images/logo/eps-logo.png" id="img1" alt>
-  </picture>
-  <nav id="nav" aria-label="Navigation bar"><!-- TODO: make navbar responsive and screen reader friendly -->
-    <ul id="navbar-list">
+  <header><!-- TODO: this is prepped for responsive and a11y, but not actually done -->
+    <!-- print-only logo -->
+    <picture id="print-logo" style="display: none;">
+      <!--<source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">-->
+      <img src="/resources/images/logo/eps-logo.png" id="img1" alt>
+    </picture>
+    <nav id="nav" aria-label="Navigation bar">
       <a href="/home" title="Go home" aria-hidden="true"><picture id="logo">
         <!--<source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">-->
         <img src="/resources/images/logo/eps-logo.png" id="img1" alt>
       </picture></a>
-        <div class="NavItem">
-          <li><a class="nav-item-outer" href="/home">Home</a></li>
-          <li class="dropdown">
-            <a class="nav-item-outer dropdown-text">Orca News</a>
-            <div class="dropdown-content">
-              <a class="nav-item-inner" href="/orca-news/messages">News & Messages</a>
-              <a class="nav-item-inner" href="/orca-news/calendar">Calendar</a>
-            </div>
-          </li>
-          <li class="dropdown">
+      <ul id="navbar-list">
+        <li><a class="nav-item-outer" href="/home">Home</a></li>
+        <li class="dropdown">
+          <a class="nav-item-outer dropdown-text">Orca News</a>
+          <div class="dropdown-content">
+            <a class="nav-item-inner" href="/orca-news/messages">News & Messages</a>
+            <a class="nav-item-inner" href="/orca-news/calendar">Calendar</a>
+          </div>
+        </li>
+        <li class="dropdown">
           <a class="nav-item-outer dropdown-text">Departments</a>
           <div class="dropdown-content">
             <a class="nav-item-inner" href="/departments/business">Business Education</a>
@@ -70,16 +71,16 @@
         <li class="dropdown">
           <a class="nav-item-outer dropdown-text">Specialized Programs</a>
           <div class="dropdown-content">
-          <a class="nav-item-inner" href="/departments/advanced_placement">Advanced Placement</a>
-          <a class="nav-item-inner" href="/departments/leadership">Leadership</a>
+            <a class="nav-item-inner" href="/departments/advanced_placement">Advanced Placement</a>
+            <a class="nav-item-inner" href="/departments/leadership">Leadership</a>
           </div>
         </li>
         <li><a class="nav-item-outer" href="/clubs">Clubs</a></li>
         <li><a class="nav-item-outer" href="/forms">Forms</a></li>
         <li><a class="nav-item-outer" href="/contact">Contact</a></li>
-      </div>
-    </ul>
-  </nav>
+      </ul>
+    </nav>
+  </header>
   <main id="main">
     {% block main %}{% endblock %}
   </main>
