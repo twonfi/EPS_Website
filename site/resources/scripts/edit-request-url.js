@@ -7,6 +7,6 @@ if (new URL(window.location)['pathname'] === '/edit-requests' && new URLSearchPa
     const FORM_NO_LOGIN_LINK = document.getElementById('form-no-login-link');
     for (let form_link of [FORM_LOGIN_LINK, FORM_NO_LOGIN_LINK]) {
         form_link.setAttribute(
-            'href', form_link.getAttribute('href') + '=' + URL_TO_EDIT);
+            'href', form_link.getAttribute('href') + '=' + encodeURIComponent(URL_TO_EDIT));
     }
 }
