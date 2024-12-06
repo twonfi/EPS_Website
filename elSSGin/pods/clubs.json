@@ -5,7 +5,6 @@
     "meeting-days": ["Thursday at lunch"],
     "meeting-room": "Drama",
     "sponsor": "TBA",
-    "desc": "EPS Biking Club is all about cycling. Come ride with us!",
     "claimed": false
   },
   {
@@ -25,7 +24,6 @@
     "sponsor": "Mr. Ellett",
     "meeting-days": ["Tuesday at lunch"],
     "meeting-room": "PLACEHOLDER",
-    "desc": "Join the Create Change Club to help the community and school...",
     "claimed": false
   }
 ]
