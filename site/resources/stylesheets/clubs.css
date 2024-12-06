@@ -13,10 +13,14 @@ article, .club {
   margin-right: 10%;
   padding-left: 1%;
   padding-right: 1%;
+  padding-bottom: 1.3em;
   line-height: 1.5em;
   height: auto;
   border-style: solid;
-  box-shadow: 8px 8px 8px 1px rgba(0, 0, 255, .2)
+  box-shadow: 8px 8px 8px 1px rgba(0, 0, 255, .2);
+  p {
+  margin-bottom: 0;
+  }
 }
 
 #start-your-own-club {
@@ -69,4 +73,5 @@ h1 {
 
 h2 {
   font-size: 22pt;
+  padding-left: 0;
 }
