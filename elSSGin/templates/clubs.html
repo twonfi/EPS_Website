@@ -16,7 +16,7 @@
       <summary>Table of contents</summary>
       <ul aria-label="Clubs">
         {% for club in clubs %}
-          <li><a href="#{{ club["id"] }}">{{ club["name"] | safe}}</a></li>
+          <li><a href="#club-{{ club["id"] }}">{{ club["name"] | safe}}</a></li>
         {% endfor %}
         <hr><li><a href="#start-your-own-club">Start a club</a></li>
       </ul>
@@ -24,9 +24,9 @@
 
 
   {% for club in clubs %}
-    <article id="{{ club["id"] }}" class="club" aria-label="{{ club["name"] | safe }}">
+    <article id="club-{{ club["id"] }}" class="club" aria-label="{{ club["name"] | safe }}">
       <a class="club-claim-link"
-         href="/edit-requests?url=https%3A%2F%2Felginparksecondary.com%2Fclubs%3F%23{{ club["id"] }}" aria-label="Request an edit for {{ club["name"] }}" title="Request an edit">
+         href="/edit-requests?url=https%3A%2F%2Felginparksecondary.com%2Fclubs%3F%23club-{{ club["id"] }}" aria-label="Request an edit for {{ club["name"] }}" title="Request an edit">
         <img src="/resources/images/pencil.svg" width="25vw" alt>
       </a><h2>{{ club["name"] | safe }}</h2>
       <span class="club-info">
