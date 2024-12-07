@@ -25,11 +25,11 @@
 
   {% for club in clubs %}
     <article id="{{ club["id"] }}" class="club" aria-label="{{ club["name"] | safe }}">
-      <h2>{{ club["name"] | safe }}</h2>
+      <a class="club-claim-link"
+         href="/edit-requests?url=https%3A%2F%2Felginparksecondary.com%2Fclubs%3F%23{{ club["id"] }}" aria-label="Request an edit for {{ club["name"] }}" title="Request an edit">
+        <img src="/resources/images/pencil.svg" width="25vw" alt>
+      </a><h2>{{ club["name"] | safe }}</h2>
       <span class="club-info">
-          <a class="club-claim-link"
-             href="/edit-requests?url=https%3A%2F%2Felginparksecondary.com%2Fclubs%3F%23{{ club["id"] }}">Request an edit</a>
-          <br>
         Sponsored by {{ club["sponsor"] }}<br>
         {% if club["teams-code"] %}Teams code: {{ club["teams-code"] }}<br>{% endif %}
         {% if club["meeting-days"] %}{% for day in club["meeting-days"] %}{{ day }}, {% endfor %}in {% endif %}

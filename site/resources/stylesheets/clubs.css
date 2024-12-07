@@ -18,15 +18,26 @@ article, .club {
   margin-top: 40px;
   margin-left: 10%;
   margin-right: 10%;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
-  padding-bottom: 1.3em;
+  padding: 1.3em 1.5%;
   line-height: 1.5em;
   height: auto;
   border-style: solid;
   box-shadow: 8px 8px 8px 1px rgba(0, 0, 255, .2);
   p {
   margin-bottom: 0;
+  }
+  h2 {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: .5em;
+  }
+  .club-info {
+    clear: left;
+    display: block;
+  }
+  .club-claim-link {
+    margin-right: .3vw;
+    color: #00000000;
   }
 }
 
