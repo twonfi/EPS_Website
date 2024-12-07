@@ -31,7 +31,7 @@
         Sponsored by {{ club["sponsor"] }}<br>
         {% if club["teams-code"] %}Teams code: {{ club["teams-code"] }}<br>{% endif %}
         {% if club["meeting-days"] %}{% for day in club["meeting-days"] %}{{ day }}, {% endfor %}in {% endif %}
-        Room {{ club["meeting-room"] }}
+        {{ club["meeting-room"] }}
       </span>
       {% if club["desc"] %}<p>{{ club["desc"] | safe }}</p>{% endif %}
     </article>

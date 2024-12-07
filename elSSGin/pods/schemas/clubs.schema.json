@@ -34,7 +34,8 @@
         },
         "meeting-room": {
           "description": "Club's full meeting room, including last letter",
-          "type": "string"
+          "type": "string",
+          "examples": ["Room 130S"]
         },
         "sponsor": {
           "description": "Sponsor teacher of club",
