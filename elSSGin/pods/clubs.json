@@ -1,26 +1,198 @@
 [
   {
+    "name": "3D Printing &amp; 3D Modeling Club",
+    "id": "3d",
+    "sponsor": "TBA",
+    "meeting-days": ["Tuesday after school"],
+    "meeting-room": "Room 130S"
+  },
+  {
+    "name": "ABC Detective Club",
+    "id": "abc_detective",
+    "meeting-days": ["Wednesday after school"],
+    "meeting-room": "Room 145C",
+    "sponsor": "Mr. Leeder"
+  },
+  {
+    "name": "Anime &amp; Cosplay Club",
+    "id": "anime_and_cosplay",
+    "meeting-days": ["Friday after school, monthly"],
+    "meeting-room": "Room 111C",
+    "sponsor": "Ms. Li"
+  },
+  {
+    "name": "Art Club",
+    "id": "art",
+    "meeting-days": ["Tuesday after school"],
+    "meeting-room": "Room 115C",
+    "sponsor": "Ms. Davidson and Ms. Li"
+  },
+  {
+    "name": "Black Student Union (BSU)",
+    "id": "bsu",
+    "meeting-days": ["Tuesday after school, bi-weekly"],
+    "meeting-room": "Library",
+    "sponsor": "Ms. Hogan"
+  },
+  {
+    "name": "Beyond Athletics Club",
+    "id": "beyond_athletics",
+    "meeting-days": ["Wednesday at lunch"],
+    "meeting-room": "Room 143C",
+    "sponsor": "Ms. Li"
+  },
+  {
     "name": "Biking Club",
     "id": "biking",
     "meeting-days": ["Thursday at lunch"],
-    "meeting-room": "Drama",
+    "meeting-room": "Drama Room",
     "sponsor": "TBA"
+  },
+  {
+    "name": "Chess Club",
+    "id": "chess",
+    "meeting-days": ["Wednesday after school"],
+    "meeting-room": "Room 235S",
+    "sponsor": "Mr. Pereira-Costa"
+  },
+  {
+    "name": "Creative Writing Club",
+    "id": "creative_writing",
+    "meeting-days": ["Tuesday after school"],
+    "meeting-room": "Room 203N",
+    "sponsor": "Mr. Moffett"
   },
   {
     "name": "Computer Programming Club",
     "id": "computer_programming",
-    "teams-code": "PLACEHOLDER",
     "meeting-days": ["Monday after school", "Wednesday after school"],
-    "meeting-room": "PLACEHOLDER",
+    "meeting-room": "Room 130S",
     "sponsor": "Mr. Tsang",
     "desc": "The Computer Programming Club is for anyone interested in programming, web design..."
   },
   {
     "name": "Create Change Club",
     "id": "create_change",
-    "teams-code": "PLACEHOLDER",
     "sponsor": "Mr. Ellett",
     "meeting-days": ["Tuesday at lunch"],
-    "meeting-room": "PLACEHOLDER"
+    "meeting-room": "Room 203N"
+  },
+  {
+    "name": "Care/Art/Performance (CAP) Club",
+    "id": "cap",
+    "sponsor": "Mr. Henderson",
+    "meeting-days": ["Thursday after school"],
+    "meeting-room": "Room 147C"
+  },
+  {
+    "name": "Dance Club",
+    "id": "dance",
+    "sponsor": "Mr. Wu",
+    "meeting-days": ["Friday after school"],
+    "meeting-room": "Room 143C"
+  },
+  {
+    "name": "Debate Club",
+    "id": "debate",
+    "sponsor": "Mr. Pereira-Costa",
+    "meeting-days": ["Monday after school", "Friday after school"],
+    "meeting-room": "Room 235S"
+  },
+  {
+    "name": "Diabetes Awareness Club",
+    "id": "diabetes_awareness",
+    "sponsor": "Mr. Grave",
+    "meeting-days": ["TBA, bi-weekly"],
+    "meeting-room": "Room 134S"
+  },
+  {
+    "name": "Garden Club",
+    "id": "garden",
+    "sponsor": "Ms. Trevelyan",
+    "meeting-days": ["Wednesday at lunch", "Wednesday after school"],
+    "meeting-room": "Room 107N"
+  },
+  {
+    "name": "Game Design &amp; Development Club",
+    "id": "game_design_and_dev",
+    "sponsor": "Mr. Tsang",
+    "meeting-days": ["Thursday after school"],
+    "meeting-room": "Room 132S"
+  },
+  {
+    "name": "Guitar Club",
+    "id": "guitar",
+    "sponsor": "Mr. Black",
+    "meeting-days": ["Thursday after school"],
+    "meeting-room": "Room 143C"
+  },
+  {
+    "name": "IETLS Club",
+    "id": "ietls",
+    "sponsor": "Ms. Williamson",
+    "meeting-days": ["Tuesday at lunch", "Thursday at lunch"],
+    "meeting-room": "Room 248C"
+  },
+  {
+    "name": "Math Support Club",
+    "id": "math_support",
+    "sponsor": "Ms. Hill",
+    "meeting-days": ["Tuesday after school"],
+    "meeting-room": "Room 233S"
+  },
+  {
+    "name": "Elgin News",
+    "id": "elgin_news",
+    "sponsor": "Ms. Ellett",
+    "meeting-days": ["Friday at lunch"],
+    "meeting-room": "Room 207N"
+  },
+  {
+    "name": "Psychology Club",
+    "id": "psychology",
+    "sponsor": "Mr. Webb",
+    "meeting-days": ["Wednesday at lunch, bi-weekly"],
+    "meeting-room": "Room 103N"
+  },
+  {
+    "name": "Surrey Youth Leadership Club",
+    "id": "surrey_youth_leadership",
+    "sponsor": "Ms. Fowler",
+    "meeting-days": ["Wednesday at lunch"],
+    "meeting-room": "Room 163C"
+  },
+  {
+    "name": "Science Club",
+    "id": "science",
+    "sponsor": "Mr. Quan",
+    "meeting-room": "Rooms 102N &amp; 106N"
+  },
+  {
+    "name": "Student Council",
+    "id": "stuco",
+    "sponsor": "Ms. Ellett, Mr. P-C &amp; Mr. Black",
+    "meeting-days": ["TBA"],
+    "meeting-room": "Room 143C"
+  },
+  {
+    "name": "Trading Card Games Club",
+    "id": "tcg",
+    "sponsor": "Mr. Wu",
+    "meeting-days": ["Thursday after school"],
+    "meeting-room": "Room 125S"
+  },
+  {
+    "name": "Tutoring Club",
+    "id": "tutoring",
+    "sponsor": "Ms. Hogan &amp; Ms. Fowler",
+    "meeting-days": ["Wednesday at lunch"],
+    "meeting-room": "Room 163C"
+  },
+  {
+    "name": "Table Tennis Club",
+    "id": "table_tennis",
+    "sponsor": "Mr. Tsang",
+    "meeting-days": ["Wednesday after school"],
+    "meeting-room": "Cafeteria"
   }
 ]

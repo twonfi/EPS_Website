@@ -2,8 +2,15 @@ main {
   padding: 2%;
 }
 
-#toc li {
-  line-height: 1.7em;
+#toc {
+  cursor: default;
+  li {
+    line-height: 1.7em;
+  }
+  hr {
+    max-width: 10%;
+    margin: 10px 0;
+  }
 }
 
 article, .club {

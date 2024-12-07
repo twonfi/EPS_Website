@@ -12,17 +12,19 @@
 {% block main %}
   <h1>Clubs</h1>
     <p>Elgin Park has over <b>{{ clubs | length }} clubs</b>, from anime cosplay to helping out in the community, letting you do what you love at school!</p>
-    <div id="toc">
+    <details id="toc">
+      <summary>Table of contents</summary>
       <ul aria-label="Clubs">
         {% for club in clubs %}
           <li><a href="#{{ club["id"] }}">{{ club["name"] | safe}}</a></li>
         {% endfor %}
+        <hr><li><a href="#start-your-own-club">Start a club</a></li>
       </ul>
-    </div>
+    </details>
 
 
   {% for club in clubs %}
-    <article id="{{ club["id"] }}" class="club" aria-label="{{ club["name"] }}">
+    <article id="{{ club["id"] }}" class="club" aria-label="{{ club["name"] | safe }}">
       <h2>{{ club["name"] | safe }}</h2>
       <span class="club-info">
           <a class="club-claim-link"

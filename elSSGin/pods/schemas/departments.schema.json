@@ -35,8 +35,9 @@
           "examples": ["Computing"]
         },
         "id": {
-          "description": "ID (only lowercase, - and _)",
+          "description": "ID (a-z, 0-9, -, _)",
           "type": "string",
+          "pattern": "^[a-z0-9-_]*$",
           "examples": ["computing"]
         },
         "youtube": {
