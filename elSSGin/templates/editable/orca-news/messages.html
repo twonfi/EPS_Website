@@ -5,9 +5,10 @@
 {% block title %}News &amp; Messages - Elgin Park Secondary{% endblock %}
 {% set stylesheet = 'orca-news/messages.css' %}
 {% block head %}
-  <noscript><style>#loading-text { display: none; }</style></noscript>
+  <noscript><style>#loading-text { display: none; } body { cursor: auto !important;}</style></noscript>
 {% endblock %}
 
+{% block body_atts_with_first_space %} id="hello{% endblock %}
 {% block main %}
   <h1 class="msg-divider" style="text-align: center;">News & Messages</h1>
   <div id="some-messages-unavailable">Some messages may not be available here.
