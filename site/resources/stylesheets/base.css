@@ -207,15 +207,13 @@ li .nav-item-outer {
   width: 100%;
 }
 
-li a div,
-.nav-item-inner {
+ul.dropdown-content li a /* nav item inner */ {
   margin-left: 25px;
   margin-right: 25px;
   border: none;
   padding: 16px 32px;
   border-radius: 20px;
   display: inline-block;
-  color: white;
   text-align: center;
   text-decoration: none;
   transition: ease-in-out 0.5s;
@@ -231,27 +229,19 @@ li.dropdown {
 }
 
 .dropdown-content {
-  margin-left: 20px;
   transition: ease-in-out 0.5s;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
   width: inherit;
+  height: auto;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
+  padding-left: 0;
+  padding-bottom: 0;
 }
 
-.dropdown:hover .dropdown-content {
-  transition: ease-in-out 0.5s;
-  display: block;
-}
-
-.dropdown:active .dropdown-content {
-  transition: ease-in-out 0.5s;
-  display: block;
-}
-
-.dropdown:focus .dropdown-content {
+.dropdown:hover .dropdown-content, .dropdown:active .dropdown-content, .dropdown:focus-within .dropdown-content {
   transition: ease-in-out 0.5s;
   display: block;
 }
@@ -265,7 +255,11 @@ li.dropdown {
   cursor: pointer;
 }
 
-.dropdown-content a:hover {
+.dropdown-content {
+  list-style: none;
+}
+
+.dropdown-content a:hover, .dropdown-content a:focus-within, .dropdown-content a:active {
   transition: ease-in-out 0.5s;
   color: black;
   background-color: #f1f1f1;
