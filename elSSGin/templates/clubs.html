@@ -28,7 +28,7 @@
       <h2>{{ club["name"] | safe }}</h2>
       <span class="club-info">
           <a class="club-claim-link"
-             href="/edit-requests?url=https%3A%2F%2Felginparksecondary.com%2Fclubs%23{{ club["id"] }}">Request an edit</a>
+             href="/edit-requests?url=https%3A%2F%2Felginparksecondary.com%2Fclubs%3F%23{{ club["id"] }}">Request an edit</a>
           <br>
         Sponsored by {{ club["sponsor"] }}<br>
         {% if club["teams-code"] %}Teams code: {{ club["teams-code"] }}<br>{% endif %}
@@ -43,7 +43,7 @@
       <h2>Start your own club</h2>
       <p>Don't see a club you're interested in? Start your own!</p>
       <p>Find a sponsor teacher for a meeting room, fill out the club proposal form in the office.</p>
-      <p>Then, <a class="club-claim-link" href="/edit-requests?url=https%3A%2F%2Felginparksecondary.com%2Fclubs%23NEW-CLUB">
+      <p>Then, <a class="club-claim-link" href="/edit-requests?url=https%3A%2F%2Felginparksecondary.com%2Fclubs%3F%23NEW-CLUB">
         submit an edit request</a>
         to get your club listed here, get some people to join it, and go!</p>
     </div>
