@@ -5,8 +5,9 @@
   <title>{% block title %}ElginParkSecondary.com: Elgin Park's Digital Home{% endblock %}</title>
   <link rel="stylesheet preload" type="text/css" as="style" href="/resources/stylesheets/base.css">
   {% if stylesheet %}
-    <link rel="stylesheet preload" type="text/css" as="style" href="/resources/stylesheets/{{ stylesheet }}">
+    <link rel="stylesheet" type="text/css" as="style" href="/resources/stylesheets/{{ stylesheet }}">
   {% endif %}
+  <link as="image" href="/resources/images/bg.jpg">
   <!-- favicon -->
   <link rel="icon" type="image/png" href="/resources/images/fav/196x196.png" sizes="196x196" />
   <link rel="shortcut icon" href="/resources/images/fav/196x196.ico" />
@@ -15,7 +16,6 @@
   <meta name="apple-mobile-web-app-title" content="Elgin Park" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{% block description %}{% endblock %}">
-  <meta name="keywords" content="Elgin Park Secondary, Elgin Park, Orca News, EPS, SD36, Surrey Schools">
   <script type="application/ld+json">
     {
     "@context" : "https://schema.org",
@@ -98,9 +98,9 @@
       <p>The students and staff at Elgin Park Secondary work, learn, and play on the unceded and ancestral territories of the Katzie, Semiahmoo, Kwantlen and other Coast Salish Peoples. As responsible members of the Elgin community, we recognize the importance of taking the initiative to learn about and honour the history and traditions of the peoples whose lands we occupy.</p>
     </div>
     <div id="first-nation-seals">
-      <img class="pp1" src="/resources/images/land-ack/kwantlen/kwantlen.png" width="6%" alt="Seal of Kwantlen First Nation">
-      <img class="pp1" src="/resources/images/land-ack/katzie/katzie.png" width="6%" alt="Seal of Katzie First Nation">
-      <img class="pp1" src="/resources/images/land-ack/semiahmoo/semiahmoo.png" width="6%" alt="Seal of Semiahmoo First Nation">
+      <img class="pp1" src="/resources/images/land-ack/kwantlen/kwantlen.png" width="6%" alt="Seal of Kwantlen First Nation" loading="lazy">
+      <img class="pp1" src="/resources/images/land-ack/katzie/katzie.png" width="6%" alt="Seal of Katzie First Nation" loading="lazy">
+      <img class="pp1" src="/resources/images/land-ack/semiahmoo/semiahmoo.png" width="6%" alt="Seal of Semiahmoo First Nation" loading="lazy">
     </div>
     <div id="copyright">
       <p>Content © Elgin Park Secondary staff and student contributors. Website code © Elgin Park Computer Programming Club. All rights reserved.</p>
