@@ -37,12 +37,12 @@
         <h3>{{ course["name"] }}</h3>
         <div class="course-icons">
           {% for grade in course["grades"] %}
-            <span class="grade{{ grade }}">{{ grade }}</span>
+            <span class="grade{{ grade }} course-info-icon" aria-label="Grade {{ grade }}">{{ grade }}</span>
           {% endfor %}
           {% if course["elective"] %}
-            <span class="elec">Elective</span>
+            <span class="elec course-info-icon">Elective</span>
           {% else %}
-            <span class="req">Required</span>
+            <span class="req course-info-icon">Required</span>
           {% endif %}
         </div>
         <div class="course-code">

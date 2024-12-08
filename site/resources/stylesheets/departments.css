@@ -61,7 +61,11 @@ lite-youtube, .youtube-embed {
 
 .course-icons {
   font-size: 1em;
-  padding: 1.4em .2dvw;
+  padding: 1.2em .2dvw;
+}
+
+.course-info-icon {
+  margin-right: .7em;
 }
 
 .grade9{
@@ -84,7 +88,7 @@ lite-youtube, .youtube-embed {
   line-height:2em;
   font-weight: bold;
   padding: 11px;
-  background-color: green;
+  background-color: #0C5F0C;
   color: white;
 }
 
@@ -96,7 +100,7 @@ lite-youtube, .youtube-embed {
   line-height:2em;
   font-weight: bold;
   background-color: orange;
-  color: white;
+  color: black;
   padding: 11px;
 }
 
@@ -108,7 +112,7 @@ lite-youtube, .youtube-embed {
   line-height:2em;
   font-weight: bold;
   background-color: gold;
-  color: white;
+  color: black;
   padding: 11px;
 }
 
@@ -131,7 +135,7 @@ lite-youtube, .youtube-embed {
   width: 2em;
   line-height:2em;
   font-weight: bold;
-  background-color: red;
+  background-color: #AD0000;
   color: white;
   padding: 11px;
 }
@@ -164,4 +168,5 @@ h2 {
 }
 h3 {
   margin-bottom: 0;
+  padding-left: 0;
 }
