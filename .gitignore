@@ -15,6 +15,8 @@ site/404.html
 site/edit-requests.html
 site/contact.html
 site/.wrangler/
+site/elSSGin/*
 # "keepers". they MUST exist, to prevent dir not found failing build
 !site/departments/_
 !site/orca-news/_
+!site/elSSGin/_

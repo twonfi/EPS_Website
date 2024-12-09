@@ -52,7 +52,7 @@ def bob(template: jinja2.Template, params: dict = None) -> str:
         **params
     )
 
-file_path = '../site'
+site_path = '../site'
 
 # Delete existing files, so that deleted data doesn't resurface
 for directory in ['departments']:
@@ -66,7 +66,7 @@ print('Deleted old files')
 
 # 404
 write_file(
-    file_path + '/404.html',
+    site_path + '/404.html',
     jinja_env.get_template('editable/404.html').render()
 )
 
@@ -78,7 +78,7 @@ for dept_filename in os.scandir('pods/departments'):
     html_text = bob(templates['departments'], {
         'dept': dept,
     })
-    write_file(os.path.abspath('%s/departments/' % file_path + re.sub(".json$",
+    write_file(os.path.abspath('%s/departments/' % site_path + re.sub(".json$",
         ".html", os.path.basename(dept_filename.path))), html_text)
 
 # Clubs
@@ -86,17 +86,22 @@ with open('pods/clubs.json', 'r') as file:
     clubs = json.loads(file.read())
 
 html_text = bob(templates['clubs'], {'clubs': clubs})
-write_file(os.path.abspath('%s/clubs.html') % file_path, html_text)
+write_file(os.path.abspath('%s/clubs.html') % site_path, html_text)
 
 # Edit requests
-write_file('%s/edit-requests.html' % file_path,
+write_file('%s/edit-requests.html' % site_path,
     bob(templates['edit-requests']))
 
 # Contact
-write_file('%s/contact.html' % file_path,
+write_file('%s/contact.html' % site_path,
     bob(templates['contact']))
 
 # Orca News stubs
 # Messages
-write_file('%s/orca-news/messages.html' % file_path,
+write_file('%s/orca-news/messages.html' % site_path,
     bob(templates['messages']))
+
+shutil.rmtree(os.path.abspath('%s/elSSGin/pods' % site_path))
+print('Deleted old pods in site')
+shutil.copytree('pods', os.path.abspath('%s/elSSGin/pods' % site_path))
+print('Copied pods to site')
