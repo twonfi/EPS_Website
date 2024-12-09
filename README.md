@@ -8,7 +8,7 @@ Once this thing is done, twonfi can help putting this on CF Pages.
 
 ***
 
-Welcome to the **EPS Website** repository! This repository contains the official source code for the Elgin Park Secondary website, at [ElginParkSecondary.com](https://elginparksecondary.com), proudly developed and maintained by the **EPS Computer Programming Club**.
+Welcome to the **EPS Website** repository! This repository contains the official source code for the Elgin Park Secondary website, at [ElginParkSecondary.com](https://www.elginparksecondary.com), proudly developed and maintained by the **EPS Computer Programming Club**.
 
 ***
 

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://elginparksecondary.com/elSSGin/pods/schemas/clubs.schema.json",
+  "$id": "https://www.elginparksecondary.com/elSSGin/pods/schemas/clubs.schema.json",
   "title": "Clubs",
   "description": "Top-level club list, sorted by name A-Z",
   "type": "array",

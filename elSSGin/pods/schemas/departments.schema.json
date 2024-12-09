@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://elginparksecondary.com/elSSGin/pods/schemas/departments.schema.json",
+  "$id": "https://www.elginparksecondary.com/elSSGin/pods/schemas/departments.schema.json",
   "title": "Department",
   "description": "Department (course pages), containing sections, containing courses",
   "type": "object",
