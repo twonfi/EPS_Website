@@ -101,7 +101,8 @@ write_file('%s/contact.html' % site_path,
 write_file('%s/orca-news/messages.html' % site_path,
     bob(templates['messages']))
 
-shutil.rmtree(os.path.abspath('%s/elSSGin/pods' % site_path))
-print('Deleted old pods in site')
+if os.path.isdir(os.path.abspath('%s/elSSGin/pods' % site_path)):
+    shutil.rmtree(os.path.abspath('%s/elSSGin/pods' % site_path))
+    print('Deleted old pods in site')
 shutil.copytree('pods', os.path.abspath('%s/elSSGin/pods' % site_path))
 print('Copied pods to site')
