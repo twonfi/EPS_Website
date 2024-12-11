@@ -15,8 +15,8 @@
   <!--/favicon -->
   <meta name="apple-mobile-web-app-title" content="Elgin Park" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{% block description %}{% endblock %}">
-  <meta name=”robots” content="noimageai">
+  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  <meta name="robots" content="noimageai">
   <!--<script type="application/ld+json">
     {
     "@context" : "https://schema.org",
@@ -42,7 +42,7 @@
       <img src="/resources/images/logo/eps-logo.png" id="img1" alt>
     </picture>
     <nav id="nav">
-      <a href="/home" title="Go home" aria-label="Go home" style="color: #00000000;"><picture id="logo">
+      <a href="/" title="Go home" aria-label="Go home" style="color: #00000000;"><picture id="logo">
         <!--<source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">-->
         <img src="/resources/images/logo/eps-logo.png" id="img1" alt>
       </picture></a>
