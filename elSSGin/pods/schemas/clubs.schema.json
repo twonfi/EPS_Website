@@ -42,6 +42,11 @@
           "description": "Sponsor teacher of club",
           "type": "string"
         },
+        "logo": {
+          "description": "Logo file extension. The actual file is stored in /resources/images/clubs/{{ club[\"id\"] }}/logo.{{ club[\"logo\"]",
+          "type": "string",
+          "examples": ["jpg", "png", "svg"]
+        },
         "desc": {
           "description": "Club description. Should be written by someone from the club. Parsed as HTML, so paragraphs can be started using <p> (no closing needed), <i>, etc., but characters like & need to be escaped (e.g. &amp;)",
           "type": "string",
