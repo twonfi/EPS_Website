@@ -4,7 +4,8 @@
     "id": "3d",
     "sponsor": "TBA",
     "meeting-days": ["Tuesday after school"],
-    "meeting-room": "Room 130S"
+    "meeting-room": "Room 130S",
+    "instagram": "eps.3dprinting"
   },
   {
     "name": "ABC Detective Club",
@@ -56,13 +57,6 @@
     "sponsor": "Mr. Pereira-Costa"
   },
   {
-    "name": "Creative Writing Club",
-    "id": "creative_writing",
-    "meeting-days": ["Tuesday after school"],
-    "meeting-room": "Room 203N",
-    "sponsor": "Mr. Moffett"
-  },
-  {
     "name": "Computer Programming Club",
     "id": "computer_programming",
     "meeting-days": ["Monday after school", "Wednesday after school"],
@@ -76,6 +70,13 @@
     "sponsor": "Mr. Ellett",
     "meeting-days": ["Tuesday at lunch"],
     "meeting-room": "Room 203N"
+  },
+  {
+    "name": "Creative Writing Club",
+    "id": "creative_writing",
+    "meeting-days": ["Tuesday after school"],
+    "meeting-room": "Room 203N",
+    "sponsor": "Mr. Moffett"
   },
   {
     "name": "Care/Art/Performance (CAP) Club",

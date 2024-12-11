@@ -24,6 +24,11 @@
           "pattern": "^[a-z0-9_]*$",
           "examples": ["computer_programming", "dnd", "stuco"]
         },
+        "logo": {
+          "description": "Logo file extension. The actual file is stored in /resources/images/clubs/{{ club[\"id\"] }}/logo.{{ club[\"logo\"]",
+          "type": "string",
+          "examples": ["jpg", "png", "svg"]
+        },
         "teams-code": {
           "description": "Code of club team on Microsoft Teams",
           "type": "string"
@@ -42,10 +47,10 @@
           "description": "Sponsor teacher of club",
           "type": "string"
         },
-        "logo": {
-          "description": "Logo file extension. The actual file is stored in /resources/images/clubs/{{ club[\"id\"] }}/logo.{{ club[\"logo\"]",
+        "instagram": {
+          "description": "Instagram username of club without @",
           "type": "string",
-          "examples": ["jpg", "png", "svg"]
+          "pattern": "^[a-z0-9._]{1,30}$"
         },
         "desc": {
           "description": "Club description. Should be written by someone from the club. Parsed as HTML, so paragraphs can be started using <p> (no closing needed), <i>, etc., but characters like & need to be escaped (e.g. &amp;)",

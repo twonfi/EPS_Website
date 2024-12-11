@@ -29,6 +29,9 @@
          href="/edit-requests?url=https%3A%2F%2Fwww.elginparksecondary.com%2Fclubs%3F%23{{ club["id"] }}" aria-label="Request an edit for {{ club["name"] }}" title="Request an edit">
         <img src="/resources/images/pencil.svg" width="25vw" alt>
       </a><h2>{{ club["name"] | safe }}</h2>
+      {% if club["instagram"] %}
+        <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/" aria-label="{{ club["name"] }}'s Instagram"><img width="28vw" src="/resources/images/instagram.svg" alt></a>
+      {% endif %}
       <span class="club-info">
         Sponsored by {{ club["sponsor"] }}<br>
         {% if club["teams-code"] %}Teams code: {{ club["teams-code"] }}<br>{% endif %}

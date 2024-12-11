@@ -39,6 +39,12 @@ article, .club {
     margin-right: .3vw;
     color: #00000000;
   }
+  .instagram-icon {
+    position: relative;
+    top: .3em;
+    left: -.9em;
+    margin-left: .9em;
+  }
 }
 
 #start-your-own-club {
