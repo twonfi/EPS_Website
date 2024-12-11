@@ -29,9 +29,9 @@ jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates/'))
 templates = {
     'departments': jinja_env.get_template('departments.html'),
     'clubs': jinja_env.get_template('clubs.html'),
-    'messages': jinja_env.get_template('editable/orca-news/messages.html'),
-    'edit-requests': jinja_env.get_template('editable/edit-requests.html'),
-    'contact': jinja_env.get_template('editable/contact.html'),
+    'messages': jinja_env.get_template('orca-news/messages.html'),
+    'edit-requests': jinja_env.get_template('edit-requests.html'),
+    'contact': jinja_env.get_template('contact.html'),
 }
 
 def bob(template: jinja2.Template, params: dict = None) -> str:
