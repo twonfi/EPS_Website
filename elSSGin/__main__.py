@@ -64,10 +64,16 @@ for directory in ['departments']:
             shutil.rmtree(path)
 print('Deleted old files')
 
+# index
+write_file(
+    site_path + '/index.html',
+    jinja_env.get_template('index.html').render()
+)
+
 # 404
 write_file(
     site_path + '/404.html',
-    jinja_env.get_template('editable/404.html').render()
+    jinja_env.get_template('404.html').render()
 )
 
 # Departments

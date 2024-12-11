@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}ElginParkSecondary.com: Elgin Park's Digital Home{% endblock %}
+{% set stylesheet = 'index-new.css' %}
+{% set description = "Elgin Park Secondary's digital home, by students, for students. Find courses, clubs, news, events and more, all on ElginParkSecondary.com!" %}
+{% block head %}
+  <link rel="stylesheet" type="text/css" as="style" href="/resources/lite-youtube-embed/src/lite-yt-embed.css">
+  <script src="/resources/lite-youtube-embed/src/lite-yt-embed.js" async></script>
+{% endblock %}
+
+{% block main %}
+  <div id="sec1">
+    <img id="elginorca1" src="/resources/images/logo/elgin_orca.png" alt>
+    <div id="p12">The Digital Home For All Elgin Park Secondary Students!</div>
+    <img id="elginorca2" src="/resources/images/logo/elgin_orca.png" alt>
+    <article id="article1"></article>
+  </div>
+
+
+  <h2 id="processTitle">
+    Course selection process
+  </h2>
+
+  <div id="container">
+    <lite-youtube class="youtube-embed" videoid="Jw8X9cU7RRg"
+                  playlabel="MyEducation BC course selection instructions"></lite-youtube>
+    <div id="processInfo">
+      <ol>
+        <li>Ensure you have your MyEd password ready to go. If you are having trouble logging in to your MyEdBC account
+          please email: elginpark@surreyschools.ca. Type in the Subject Line: Portal Login. In the body of the email
+          please include student's full name, grade, and which account needs to be reset (Student or Parent).
+        </li>
+        <li>Explore this website so that you are familiar with all courses that Elgin Park offers. Please watch the
+          videos and pay attention to flow charts and explanations to ensure you are choosing the course that is right
+          for you.
+        </li>
+        <li> If applying to a specialized course or program, please fill out the appropriate application form (found
+          under FORMS) and return to your alpha counsellor.
+        </li>
+        <li> Log into MyEd to enter your courses.</li>
+      </ol>
+    </div>
+    <div id="clear"></div>
+  </div>
+  <div id="deadline9">
+    SELECTING COURSES IN MyED
+    <br>
+    <button class="pdf-instructions-button" href="/forms.html#sct">Click For PDF Instructions</button>
+  </div>
+  <div id="deadline12">
+    COURSE SELECTION DEADLINE
+    <br>
+    <div id="CountdownDateGr12"></div>{# TODO: countdown #}
+  </div>
+
+  <h3 id="choosing-courses">
+    Choosing courses
+  </h3>
+
+  <div id="choosing-courses-text">
+    Students are encouraged to read course descriptions and watch the accompanying videos in addition to consulting with
+    their parents and their counsellor before finalizing course selections for next year. In selecting courses,
+    particularly for grade 10 and 11 students, post-secondary options should be considered.
+    <a href="https://www.educationplannerbc.ca/">Education Planner BC</a> is a resourceful online site that students
+    can use to help check post secondary requirements in addition to visiting their choice post secondary institution
+    websites.
+  </div>
+
+  <h3 id="ministryTitle">
+    Ministry Indigenous-focused graduation requirement
+  </h3>
+
+  <div id="ministry">
+    All grade 12s will be taking English 12 First Peoples. This is to meet the new Ministry requirement for graduation
+    which is a minimum of 4 credits in an Indigenous Focused course.
+  </div>
+
+  <h2 class="all-caps">Course requirements</h2>
+  <div id="course-requirements-content">
+    <div id="boxGrade9">
+      <div id="boxGradeTitle">GRADE 9</div>
+      <br>
+
+      Students in Grade 9 are required to take a minimum of 9 courses. Please see the Course Planning Sheet for more
+      information. The general courses grade 9s require are as follows:
+      <ul>
+        <li>English 9</li>
+        <li>Mathematics 9</li>
+        <li>Social Studies 9</li>
+        <li>Science 9</li>
+        <li>Physical Education 9</li>
+        <li>Three electives</li>
+      </ul>
+    </div>
+
+    <div id="boxGrade10">
+      <div id="boxGradeTitle">GRADE 10</div>
+      <br>
+
+      Students in Grade 10 are required to take a minimum of 8 courses. The general courses grade 10s require are as
+      follows:
+      <ul>
+        <li>A Language Arts 10</li>
+        <li>Any Mathematics 10</li>
+        <li>Social Studies 10</li>
+        <li>Science 10</li>
+        <li>Career Life Education 10</li>
+        <li>Physical Education 10</li>
+        <li>Two (2) electives</li>
+      </ul>
+      <br>
+    </div>
+
+
+    <div id="boxGrade11">
+      <div id="boxGradeTitle">GRADE 11</div>
+      <br>
+
+      Students in Grade 11 are required to take a minimum of 8 courses. The general courses grade 11s require are as
+      follows:
+      <ul>
+        <li>A Language Arts 11</li>
+        <li>Any Mathematics 11</li>
+        <li>Any Science 11</li>
+        <li>A Social Studies 11 or 12 (may be taken in Grade 11 or 12)</li>
+        <li>*Career Life Connections (may be taken in Grade 11 or 12 but grade 11 is recommended)</li>
+      </ul>
+    </div>
+
+    <div id="boxGrade12">
+      <div id="boxGradeTitle">GRADE 12</div>
+      <br>
+
+      Students in Grade 12 are required to take a minimum of 8 courses.
+      <ul>
+        <li>English First Peoples 12 (Language Arts 12 requirement</li>
+        <li>3 other Grade 12 courses</li>
+        <li>A Social Studies 11 or 12 (if you have not taken one in Grade 11)</li>
+        <li>Career-Life Connections (If not taken in grade 11)</li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}
