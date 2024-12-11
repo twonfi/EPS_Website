@@ -73,6 +73,17 @@ main {
     }
 }
 
+a:link {
+    color: #2548B1;
+  }
+a:visited {
+  color: #662D91;
+}
+a:active {
+  color: #0F2050;
+}
+
+
 #article1Title{
     font-size: 30px;
     color: #40263B;
