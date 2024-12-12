@@ -1,9 +1,3 @@
-/*@import url('/resources/stylesheets/base.css');*/
-
-main {
-  padding: 2%;
-}
-
 #dept-toc{
   text-align: center;
   padding-left: 0;
@@ -18,7 +12,7 @@ main {
     padding: 10px;
     cursor: pointer;
     outline: none;
-    color: #fff;
+    color: white;
     background-color: #40263B;
     position: relative;
     font-size: 22px;
