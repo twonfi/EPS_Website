@@ -11,43 +11,52 @@
 {% block main %}
   <div id="sec1">
     <img id="elginorca1" src="/resources/images/logo/elgin_orca.png" alt>
-    <div id="p12">The Digital Home For All Elgin Park Secondary Students!</div>
+    <h1 id="p12">The Digital Home For All Elgin Park Secondary Students!</h1>
     <img id="elginorca2" src="/resources/images/logo/elgin_orca.png" alt>
     <article id="article1"></article>
   </div>
 
-
-  <h2 id="processTitle">
-    Course selection process
-  </h2>
-
   <div id="container">
-    <lite-youtube class="youtube-embed" videoid="Jw8X9cU7RRg"
+    <section id="processInfo">
+      <h2 id="processTitle">Course selection process</h2>
+      <lite-youtube class="youtube-embed" videoid="Jw8X9cU7RRg"
                   playlabel="MyEducation BC course selection instructions"></lite-youtube>
-    <div id="processInfo">
       <ol>
-        <li>Ensure you have your MyEd password ready to go. If you are having trouble logging in to your MyEdBC account
-          please email: elginpark@surreyschools.ca. Type in the Subject Line: Portal Login. In the body of the email
-          please include student's full name, grade, and which account needs to be reset (Student or Parent).
+        <li>Ensure you have your MyEd password ready to go. If you forgot your password and have not set a recovery email and security question:
+          <ul>
+            <li>
+              If you have an email client (you access email using a desktop or mobile app),
+              <a href="mailto:elginpark@surreyschools.ca?subject=Portal%20Login&body=Full%20name%3A%20%0AGrade%3A%20%0AAccount%20to%20be%20reset%20(student%20or%20parent)%3A%0A%0APlease%20reset%20my%20MyEducation%20BC%20password.%20Thank%20you.">
+                open your email client and prefill the subject line and instructions</a>.
+            </li>
+            <li>Otherwise, please email: elginpark@surreyschools.ca</li>
+            <li>Subject line: Portal Login</li>
+            <li>Please include:<ul>
+              <li>Full name</li>
+              <li>Grade</li>
+              <li>Which account needs to be reset (student or parent)</li>
+            </ul></li>
+            <li>If possible, send this through your @surreyschools.ca email address.</li>
+          </ul>
         </li>
         <li>Explore this website so that you are familiar with all courses that Elgin Park offers. Please watch the
           videos and pay attention to flow charts and explanations to ensure you are choosing the course that is right
           for you.
         </li>
-        <li> If applying to a specialized course or program, please fill out the appropriate application form (found
-          under FORMS) and return to your alpha counsellor.
+        <li>If applying to a specialized course or program, please fill out the <a href="/forms">appropriate application form</a>
+          and return to your <a href="/contact#students">alpha counsellor</a>.
         </li>
         <li> Log into MyEd to enter your courses.</li>
       </ol>
-    </div>
+    </section>
     <div id="clear"></div>
   </div>
-  <div id="deadline9">
+  <div id="pdf-instructions">
     SELECTING COURSES IN MyED
     <br>
-    <button class="pdf-instructions-button" href="/forms.html#sct">Click For PDF Instructions</button>
+    <button class="pdf-instructions-button" href="/forms.html#sct">PDF Instructions</button>
   </div>
-  <div id="deadline12">
+  <div id="deadline-gr12-countdown">
     COURSE SELECTION DEADLINE
     <br>
     <div id="CountdownDateGr12"></div>{# TODO: countdown #}
