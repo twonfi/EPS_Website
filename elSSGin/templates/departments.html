@@ -12,7 +12,7 @@
 {% block main %}
   <h1>{{ dept["name"] }}</h1>
 
-  <menu id="dept-toc">
+  <menu id="dept-toc" aria-label="Department table of contents">
     {% for section in dept["sections"] %}
       <li><a href="#{{ section["id"] | safe }}">{{ section["name"] | safe}}</a></li>
     {% endfor %}
@@ -21,7 +21,7 @@
   {% for section in dept["sections"] %}
     <section id="{{ section["id"] | safe }}" aria-label="{{ section["name"] }}">
       <h2>{{ section["name"] | safe }}</h2>
-      <div class="toc">
+      <div class="toc" aria-label="{{ section["name"] }} table of contents">
         <figure>
           <figcaption><h3>Contents</h3></figcaption>
           <menu>
