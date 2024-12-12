@@ -26,13 +26,6 @@ def write_file(full_path, content):
 
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates/'))
-templates = {
-    'departments': jinja_env.get_template('departments.html'),
-    'clubs': jinja_env.get_template('clubs.html'),
-    'messages': jinja_env.get_template('orca-news/messages.html'),
-    'edit-requests': jinja_env.get_template('edit-requests.html'),
-    'contact': jinja_env.get_template('contact.html'),
-}
 
 def bob(template: jinja2.Template, params: dict = None) -> str:
     """Bob the builder, actually a renderer.
@@ -65,23 +58,19 @@ for directory in ['departments']:
 print('Deleted old files')
 
 # index
-write_file(
-    site_path + '/index.html',
-    jinja_env.get_template('index.html').render()
-)
+write_file('%s/index.html' % site_path,
+    bob(jinja_env.get_template('index.html')))
 
 # 404
-write_file(
-    site_path + '/404.html',
-    jinja_env.get_template('404.html').render()
-)
+write_file('%s/404.html' % site_path,
+    bob(jinja_env.get_template('404.html')))
 
 # Departments
 for dept_filename in os.scandir('pods/departments'):
     with open(dept_filename.path, 'r') as file:
         dept = json.loads(file.read())
 
-    html_text = bob(templates['departments'], {
+    html_text = bob(jinja_env.get_template('departments.html'), {
         'dept': dept,
     })
     write_file(os.path.abspath('%s/departments/' % site_path + re.sub(".json$",
@@ -91,21 +80,21 @@ for dept_filename in os.scandir('pods/departments'):
 with open('pods/clubs.json', 'r') as file:
     clubs = json.loads(file.read())
 
-html_text = bob(templates['clubs'], {'clubs': clubs})
+html_text = bob(jinja_env.get_template('clubs.html'), {'clubs': clubs})
 write_file(os.path.abspath('%s/clubs.html') % site_path, html_text)
 
 # Edit requests
 write_file('%s/edit-requests.html' % site_path,
-    bob(templates['edit-requests']))
+    bob(jinja_env.get_template('edit-requests.html')))
 
 # Contact
 write_file('%s/contact.html' % site_path,
-    bob(templates['contact']))
+    bob(jinja_env.get_template('contact.html')))
 
 # Orca News stubs
 # Messages
 write_file('%s/orca-news/messages.html' % site_path,
-    bob(templates['messages']))
+    bob(jinja_env.get_template('orca-news/messages.html')))
 
 if os.path.isdir(os.path.abspath('%s/elSSGin/pods' % site_path)):
     shutil.rmtree(os.path.abspath('%s/elSSGin/pods' % site_path))
