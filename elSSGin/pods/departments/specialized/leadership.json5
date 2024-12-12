@@ -12,25 +12,25 @@
           "grades": [11],
           "elective": true,
           "youtube": "NMFdomGBJd4",
-          "desc": "Elgin's Co-op Program is a cohort of students that includes set academic courses, two work experiences (without missing instructional time), customer service training, completion of Career Life Connections 12 and a variety of field trips related to curriculum and careers. Instead of the standard 16 credit semester, co-op students receive 20 credits.\
-          <p><strong>An <a href=\"/forms#TODO\">application form</a> must be submitted to the Career Centre to be considered for this program.</strong>\
+          "desc": 'Elgin\'s Co-op Program is a cohort of students that includes set academic courses, two work experiences (without missing instructional time), customer service training, completion of Career Life Connections 12 and a variety of field trips related to curriculum and careers. Instead of the standard 16 credit semester, co-op students receive 20 credits.\
+          <p><strong>An <a href="/forms#TODO">application form</a> must be submitted to the Career Centre to be considered for this program.</strong>\
           The application process begins in grade 10 and is based on academics, attitude, work habits and attendance. There may also be an interview component to determine participants.\
           \
           <p>Co-op provides students with a competitive edge in terms of post secondary applications and employment. The work experiences, combined with the CLC 12 curriculum prepare students for post-secondary and career decisions.\
           <p>Co-op includes Language Arts 11, Law 12, Work Experience 12 A & B and Career Life Connections 12\
           <p>Other information:</p>\
-          <ul aria-label=\"Co-op other information\">\
+          <ul aria-label="Co-op other information">\
             <li>Students earn credit in the co-op semester.</li>\
             <li>Students receive a separate grade for each course.</li>\
             <li>Students complete two work experiences in the co-op semester</li>\
             <li>Students do not miss any instructional time from classes while on work experience,\
-            however, due to the fact that students will be absent from the classroom, and receiving \"on the job training\"\
+            however, due to the fact that students will be absent from the classroom, and receiving "on the job training"\
             during the work experience portion of the co-op program, the remaining curricular areas will be faster paced during the time the students are in school.</li>\
             <li>Due to the pace of the curricular areas and the agreements made with employers, it is crucial that students maintain an excellent attendance record during the co-op semester.</li>\
             <li>Holidays and/or other absences, other than on prescribed school holidays, are strongly discouraged during the co-op semester.</li>\
             <li>Students interested in applying for the Co-op Programs must submit an application for consideration for admission.</li>\
           </ul>\
-          <p><b>Applications are available in the Career Centre and are due by February 23rd.</b>"
+          <p><b>Applications are available in the Career Centre and are due by February 23rd.</b>'
           // TODO: link application form and included courses
         }
         // TODO: rest of leadership courses
