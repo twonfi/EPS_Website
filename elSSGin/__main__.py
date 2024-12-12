@@ -1,10 +1,10 @@
-import json
 import os
 import sys
 import re
 import shutil
 from datetime import datetime, timezone
 
+import json5 as json
 import jinja2
 
 debug_info = datetime.now(timezone.utc).isoformat(), sys.version
@@ -35,7 +35,7 @@ for dept_list_entry in os.scandir('pods/departments'):
 
         departments.append({
             'name': dept['name'],
-            'id': re.sub('.json$', '', dept_list_entry.name)
+            'id': re.sub('.json5?$', '', dept_list_entry.name)
         })
 
 specialized_programs = []
@@ -46,7 +46,7 @@ for specialized_program_path in os.scandir(
 
     specialized_programs.append({
         'name': specialized_program['name'],
-        'id': re.sub('.json$', '', specialized_program_path.name)
+        'id': re.sub('.json5?$', '', specialized_program_path.name)
     })
 
 def bob(template: jinja2.Template, params: dict = None) -> str:
@@ -90,7 +90,7 @@ write_file('%s/404.html' % site_path,
 
 # Departments
 for dept_list_entry in departments:
-    dept_path = os.path.abspath('pods/departments/%s.json'
+    dept_path = os.path.abspath('pods/departments/%s.json5'
                                 % dept_list_entry['id'])
     if os.path.isfile(dept_path):
         with open(dept_path, 'r') as file:
@@ -100,13 +100,13 @@ for dept_list_entry in departments:
             'dept': dept,
         })
         write_file(
-            os.path.abspath('%s/departments/' % site_path + re.sub(".json$",
+            os.path.abspath('%s/departments/' % site_path + re.sub(".json5?$",
             ".html", os.path.basename(dept_path))), html_text
         )
 
 # Special programs
 for dept_list_entry in specialized_programs:
-    dept_path = os.path.abspath('pods/departments/specialized/%s.json'
+    dept_path = os.path.abspath('pods/departments/specialized/%s.json5'
                                 % dept_list_entry['id'])
     if os.path.isfile(dept_path):
         with open(dept_path, 'r') as file:
@@ -118,13 +118,13 @@ for dept_list_entry in specialized_programs:
         write_file(
             os.path.abspath(
                 '%s/specialized/' % site_path + re.sub(
-                    ".json$",
+                    ".json5?$",
                     ".html", os.path.basename(dept_path))), html_text
         )
 
 
 # Clubs
-with open('pods/clubs.json', 'r') as file:
+with open('pods/clubs.json5', 'r') as file:
     clubs = json.loads(file.read())
 
 html_text = bob(jinja_env.get_template('clubs.html'), {'clubs': clubs})
