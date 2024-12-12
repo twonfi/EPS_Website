@@ -9,7 +9,6 @@ if (new URL(window.location)['pathname'] === '/edit-requests' && new URLSearchPa
         form_link.setAttribute(
             'href', form_link.getAttribute('href') + '=' + encodeURIComponent(URL_TO_EDIT));
     }
-    document.getElementById('edit-request').setAttribute('style', 'display: none;');
 } else {
     document.getElementById('edit-request-link').setAttribute(
         'href', '/edit-requests?url=' + encodeURIComponent(window.location));
