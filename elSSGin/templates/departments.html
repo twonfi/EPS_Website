@@ -19,7 +19,7 @@
   </menu>
 
   {% for section in dept["sections"] %}
-    <section id="{{ section["id"] | safe }}" aria-label="{{ section["name"] }}">
+    <article id="{{ section["id"] | safe }}" aria-label="{{ section["name"] }}">
       <h2>{{ section["name"] | safe }}</h2>
       <div class="toc">
         <figure>
@@ -33,7 +33,7 @@
       </div>
 
     {% for course in section["courses"] %}
-      <article id="{{ course["code"] }}" class="course" aria-label="{{ course["name"] }}">
+      <section id="{{ course["code"] }}" class="course" aria-label="{{ course["name"] }}">
         <h3>{{ course["name"] }}</h3>
         <div class="course-icons">
           {% for grade in course["grades"] %}
@@ -52,8 +52,8 @@
           <lite-youtube class="youtube-embed" videoid="{{ course["youtube"] }}" playlabel="Video for {{ course["name"] }}"></lite-youtube>
         {% endif %}
         <p>{{ course["desc"] }}</p>
-      </article>
-    </section>
+      </section>
+    </article>
     {% endfor %}
   {% endfor %}
 
