@@ -231,8 +231,7 @@ font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-s
 }
 #processInfo{
   font-size: 18px;
-  margin-top: 100px;
-  margin-bottom: 15px;
+  margin: 20px 0;
   text-align: left;
   font-family: arial, sans-serif;
   line-height: 1.5;
@@ -271,9 +270,10 @@ lite-youtube {
 
 ol {
   margin-bottom: 0;
+  clear: left;
 }
 
-#deadline9 {
+#pdf-instructions {
   max-width: 35%;
   min-width: 5%;
 
@@ -293,7 +293,7 @@ ol {
   line-height: 35px;
 }
 
-#deadline12 {
+#deadline-gr12-countdown {
   width: 35%;
   float: right;
   border-style: solid;
