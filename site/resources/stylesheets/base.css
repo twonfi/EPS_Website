@@ -1,7 +1,8 @@
 body {
   height: 85%;
   margin: 0;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  /*font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;*/
   background-image: url('/resources/images/bg.jpg');
   overflow-wrap: break-word;
   hyphens: auto;
@@ -58,19 +59,19 @@ h3 {
 }
 
 main {
-    margin-top: inherit;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    height: auto;
-    width: inherit;
-    top: 0;
-    background-color: white;
-    overflow: clip;
-    margin-right: 12%;
-    margin-left: 12%;
-    @media print, screen and (max-width: 40em) {
-      margin: 0;
-    }
+  margin-top: inherit;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  height: auto;
+  width: inherit;
+  top: 0;
+  background-color: white;
+  overflow: clip;
+  margin-right: 12%;
+  margin-left: 12%;
+  @media print, screen and (max-width: 40em) {
+    margin: 0;
+  }
 }
 
 a:link {
