@@ -1,5 +1,6 @@
-document.getElementById('edit-request-link').setAttribute(
-    'href', '/edit-requests?url=' + encodeURIComponent(window.location));
+if (new URLSearchParams(document.location.search).get('url').includes('/clubs')) {
+    document.getElementById('edit-info-clubs').setAttribute('style', 'display: block;');
+}
 
 if (new URL(window.location)['pathname'] === '/edit-requests' && new URLSearchParams(document.location.search).get('url')) {
     const URL_TO_EDIT = new URLSearchParams(document.location.search).get('url')
@@ -10,3 +11,6 @@ if (new URL(window.location)['pathname'] === '/edit-requests' && new URLSearchPa
             'href', form_link.getAttribute('href') + '=' + encodeURIComponent(URL_TO_EDIT));
     }
 }
+
+document.getElementById('edit-request-link').setAttribute(
+    'href', '/edit-requests?url=' + encodeURIComponent(window.location));

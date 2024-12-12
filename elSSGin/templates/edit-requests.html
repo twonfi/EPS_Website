@@ -39,6 +39,27 @@
           line-break: strict;
         }
       }
+      .page-specific-info {
+        display: none; /* hide by default, shown for specific pages by script */
+        text-align: left;
+        h2 {
+          text-align: center;
+        }
+        box-shadow: 2px 2px 4px;
+        padding: 8px 15px;
+        margin-bottom: 20px;
+        margin-inline: auto;
+        width: 50%;
+        font-size: 14pt;
+        line-height: 1.4em;
+        ul {
+          font-size: 15pt;
+          list-style-type: disc;
+        }
+      }
+      p {
+        clear: left;
+      }
     }
     .link-subtitle {
         font-size: 15px;
@@ -49,6 +70,18 @@
 
 {% block main %}
   <h1>Edit requests</h1>
+  <div id="edit-info-clubs" class="page-specific-info">
+    <h2>Clubs</h2>
+    <p>You can include:</p>
+    <ul>
+      <li>Club description</li>
+      <li>Teams code</li>
+      <li>Instagram</li>
+      <li>Logo</li>
+      <li>Pictures</li>
+    </ul>
+    <p>Other content may be submitted, but are not currently implemented, so it may take a while to add them</p>
+  </div>
   <p>Noticed a mistake, or simply want to update your course or club page? <b>Submit an edit request!</b></p>
   <p>There are two different forms, depending on who you are:</p>
   <ul aria-label="Edit request forms" id="dept-toc">
