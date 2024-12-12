@@ -25,7 +25,7 @@
           "examples": ["computer_programming", "dnd", "stuco"]
         },
         "logo": {
-          "description": "Logo file extension. The actual file is stored in /resources/images/clubs/{{ club[\"id\"] }}/logo.{{ club[\"logo\"]",
+          "description": "Logo file extension. The actual file is stored in /resources/images/clubs/{{ club[\"id\"] }}/logo.{{ club[\"logo\"] }}",
           "type": "string",
           "examples": ["jpg", "png", "svg"]
         },

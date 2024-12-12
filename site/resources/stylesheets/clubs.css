@@ -45,6 +45,10 @@ article, .club {
     left: -.9em;
     margin-left: .9em;
   }
+  .club-logo {
+    float: right;
+    height: 100px;
+  }
 }
 
 #start-your-own-club {

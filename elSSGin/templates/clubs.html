@@ -32,6 +32,9 @@
       {% if club["instagram"] %}
         <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/" aria-label="{{ club["name"] }}'s Instagram"><img width="28vw" src="/resources/images/instagram.svg" alt></a>
       {% endif %}
+      {% if club["logo"] %}
+        <img class="club-logo" src="/resources/images/clubs/{{ club["id"] }}/logo.{{ club["logo"] }}" alt>
+      {% endif %}
       <span class="club-info">
         Sponsored by {{ club["sponsor"] }}<br>
         {% if club["teams-code"] %}Teams code: {{ club["teams-code"] }}<br>{% endif %}
