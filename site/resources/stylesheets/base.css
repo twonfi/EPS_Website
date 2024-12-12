@@ -5,7 +5,7 @@ body {
   /*font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;*/
   background-image: url('/resources/images/bg.jpg');
   overflow-wrap: break-word;
-  hyphens: auto;
+  /*hyphens: auto;*/
 }
 
 .center {
