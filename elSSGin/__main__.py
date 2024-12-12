@@ -27,6 +27,28 @@ def write_file(full_path, content):
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader('templates/'))
 
+departments = []
+for dept_list_entry in os.scandir('pods/departments'):
+    if os.path.isfile(dept_list_entry):
+        with open(dept_list_entry.path, 'r') as file:
+            dept = json.loads(file.read())
+
+        departments.append({
+            'name': dept['name'],
+            'id': re.sub('.json$', '', dept_list_entry.name)
+        })
+
+specialized_programs = []
+for specialized_program_path in os.scandir(
+        'pods/departments/specialized'):
+    with open(specialized_program_path.path, 'r') as file:
+        specialized_program = json.loads(file.read())
+
+    specialized_programs.append({
+        'name': specialized_program['name'],
+        'id': re.sub('.json$', '', specialized_program_path.name)
+    })
+
 def bob(template: jinja2.Template, params: dict = None) -> str:
     """Bob the builder, actually a renderer.
 
@@ -39,6 +61,7 @@ def bob(template: jinja2.Template, params: dict = None) -> str:
     if params is None:
         params = {}
     return template.render(
+        departments=departments, specialized_programs=specialized_programs,
         dev_build=dev_build, debug_info=debug_info,
         last_update=datetime.now(timezone.utc).strftime('%A, %B %-d, %Y'
                                                         ' at %-I:%M:%S %p'),
@@ -48,7 +71,7 @@ def bob(template: jinja2.Template, params: dict = None) -> str:
 site_path = '../site'
 
 # Delete existing files, so that deleted data doesn't resurface
-for directory in ['departments']:
+for directory in ['departments', 'specialized', 'orca-news']:
     for file in os.scandir(os.path.abspath('../site/' + directory)):
         path = os.path.join(directory, file.path)
         if os.path.isfile(path) and file.path[-1] != '_':
@@ -66,15 +89,39 @@ write_file('%s/404.html' % site_path,
     bob(jinja_env.get_template('404.html')))
 
 # Departments
-for dept_filename in os.scandir('pods/departments'):
-    with open(dept_filename.path, 'r') as file:
-        dept = json.loads(file.read())
+for dept_list_entry in departments:
+    dept_path = os.path.abspath('pods/departments/%s.json'
+                                % dept_list_entry['id'])
+    if os.path.isfile(dept_path):
+        with open(dept_path, 'r') as file:
+            dept = json.loads(file.read())
 
-    html_text = bob(jinja_env.get_template('departments.html'), {
-        'dept': dept,
-    })
-    write_file(os.path.abspath('%s/departments/' % site_path + re.sub(".json$",
-        ".html", os.path.basename(dept_filename.path))), html_text)
+        html_text = bob(jinja_env.get_template('departments.html'), {
+            'dept': dept,
+        })
+        write_file(
+            os.path.abspath('%s/departments/' % site_path + re.sub(".json$",
+            ".html", os.path.basename(dept_path))), html_text
+        )
+
+# Special programs
+for dept_list_entry in specialized_programs:
+    dept_path = os.path.abspath('pods/departments/specialized/%s.json'
+                                % dept_list_entry['id'])
+    if os.path.isfile(dept_path):
+        with open(dept_path, 'r') as file:
+            dept = json.loads(file.read())
+
+        html_text = bob(jinja_env.get_template('departments.html'), {
+            'dept': dept,
+        })
+        write_file(
+            os.path.abspath(
+                '%s/specialized/' % site_path + re.sub(
+                    ".json$",
+                    ".html", os.path.basename(dept_path))), html_text
+        )
+
 
 # Clubs
 with open('pods/clubs.json', 'r') as file:

@@ -57,25 +57,17 @@
         <li class="dropdown">
           <button aria-haspopup="true" class="nav-item-outer dropdown-text">Departments</button>
           <ul class="dropdown-content">
-            <li><a class="nav-item-inner" href="/departments/business">Business Education</a>
-            <li><a class="nav-item-inner" href="/departments/careers">Career Education</a>
-            <li><a class="nav-item-inner" href="/departments/ell">English Language Learning</a>
-            <li><a class="nav-item-inner" href="/departments/fine_arts">Fine Arts</a>
-            <li><a class="nav-item-inner" href="/departments/home_ec">Home Economics</a>
-            <li><a class="nav-item-inner" href="/departments/english">Language Arts</a>
-            <li><a class="nav-item-inner" href="/departments/language_arts">Languages</a>
-            <li><a class="nav-item-inner" href="/departments/mathematics">Mathematics</a>
-            <li><a class="nav-item-inner" href="/departments/physical_ed">Physical Education</a>
-            <li><a class="nav-item-inner" href="/departments/science">Sciences</a>
-            <li><a class="nav-item-inner" href="/departments/social_studies">Social Studies</a>
-            <li><a class="nav-item-inner" href="/departments/tech_ed">Technology Education</a>
+            {% for department in departments %}
+              <li><a class="nav-item-inner" href="/departments/{{ department["id"] }}">{{ department["name"] }}</a>
+            {% endfor %}
           </ul>
         </li>
         <li class="dropdown">
           <button aria-haspopup="true" class="nav-item-outer dropdown-text">Specialized Programs</button>
           <ul class="dropdown-content">
-            <li><a class="nav-item-inner" href="/departments/advanced_placement">Advanced Placement</a>
-            <li><a class="nav-item-inner" href="/departments/leadership">Leadership</a>
+            {% for program in specialized_programs %}
+              <li><a class="nav-item-inner" href="/specialized/{{ program["id"] }}">{{ program["name"] }}</a>
+            {% endfor %}
           </ul>
         </li>
         <li><a class="nav-item-outer" href="/clubs">Clubs</a></li>

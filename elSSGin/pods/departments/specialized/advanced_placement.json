@@ -1,0 +1,19 @@
+{
+  "name": "ap",
+  "has-youtube": false,
+  "sections": [
+    {
+      "name": "a",
+      "id": "a",
+      "courses": [
+        {
+          "name": "a",
+          "code": "a",
+          "grades": [12],
+          "elective": false,
+          "desc": "a"
+        }
+      ]
+    }
+  ]
+}
