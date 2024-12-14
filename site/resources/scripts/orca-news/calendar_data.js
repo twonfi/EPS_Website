@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
+    eventColor: '#623C5B',
 
     events: async function (fetchInfo, successCallback, failureCallback) {
         try {
@@ -32,4 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }},
   });
   calendar.render();
+
+  document.getElementById('loading-message').remove();
+  document.getElementById('body').setAttribute(
+    'style', 'cursor: auto !important;');
 });

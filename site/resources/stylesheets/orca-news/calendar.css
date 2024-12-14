@@ -1,3 +1,18 @@
-/*body {*/
-/*  cursor: progress;*/
-/*}*/
+body {
+  cursor: progress;
+}
+
+:root {
+  --fc-button-bg-color: #40263b;
+  --fc-button-border-color: #593751;
+  .fc-button:disabled {
+    background-color: #6C4B6B !important;
+    opacity: 1 !important;
+  }
+  --fc-button-active-bg-color: #593751;
+
+  @media (prefers-color-scheme: dark) {
+    --fc-page-bg-color: #454545;
+    --fc-list-event-hover-bg-color: #171717;
+  }
+}
