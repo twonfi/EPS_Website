@@ -10,9 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks: true,
     eventColor: '#623C5B',
     eventClassNames: function(arg) {
-      if (['A-B-C-D', 'B-A-D-C', 'C-D-A-B', 'D-C-B-A'].includes(arg.event['title'])) {
+      if (['A-B-C-D', 'B-A-D-C', 'C-D-A-B', 'D-C-B-A'].includes(arg.event.title)) {
         return [ 'block-order' ]
       }
+    },
+    eventDidMount: function(arg) {
+      arg.el.setAttribute('title', arg.event.title);
     },
     validRange: {
       // only show 30 days back and 12 months forward
