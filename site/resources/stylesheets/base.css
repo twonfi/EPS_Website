@@ -60,7 +60,7 @@ h3 {
 
 main {
   margin-top: inherit;
-  padding: 1px min(12px, .8%);
+  padding: 2vh 2vw;
   height: auto;
   width: inherit;
   top: 0;
