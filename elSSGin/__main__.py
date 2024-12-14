@@ -151,3 +151,16 @@ if os.path.isdir(os.path.abspath('%s/elSSGin/pods' % site_path)):
     print('Deleted old pods in site')
 shutil.copytree('pods', os.path.abspath('%s/elSSGin/pods' % site_path))
 print('Copied pods to site')
+
+
+# Install npm packages
+if not os.path.isfile('nonpm'):
+    os.chdir('../site/resources/lib')
+    for file in os.scandir(os.path.abspath('node_modules')):
+        path = os.path.join(directory, file.path)
+        if os.path.isfile(path) and file.path[-1] != '_':
+            os.remove(path)
+        elif os.path.isdir(path):
+            shutil.rmtree(path)
+    print('Deleted old npm packages')
+    os.system('npm install')
