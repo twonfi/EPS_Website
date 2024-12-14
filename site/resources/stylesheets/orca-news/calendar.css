@@ -23,3 +23,7 @@ body {
     --fc-list-event-hover-bg-color: #171717;
   }
 }
+
+.block-order {
+  background-color: #40263b !important;
+}
