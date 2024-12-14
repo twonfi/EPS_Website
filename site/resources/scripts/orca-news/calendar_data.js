@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     navLinks: true,
     eventColor: '#623C5B',
+    eventClassNames: function(arg) {
+      if (['A-B-C-D', 'B-A-D-C', 'C-D-A-B', 'D-C-B-A'].includes(arg.event['title'])) {
+        return [ 'block-order' ]
+      }
+    },
     validRange: {
       // only show 30 days back and 12 months forward
       start: new Date(new Date().setDate(new Date().getDate() - 30)),
@@ -42,14 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
           alert("Events could not be loaded. Please try again later.");
           failureCallback(error);
         }},
-    eventClassNames: function(arg) {
-      if (arg.event['title'] === "A-B-C-D" ||
-          arg.event['title'] === "B-A-D-C" ||
-          arg.event['title'] === "C-D-A-B" ||
-          arg.event['title'] === "D-C-B-A") {
-        return [ 'block-order' ]
-      }
-    }
   });
   calendar.render();
 

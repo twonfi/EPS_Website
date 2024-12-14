@@ -26,4 +26,6 @@ body {
 
 .block-order {
   background-color: #40263b !important;
+  border-color: #593751;
+  text-align: center;
 }
