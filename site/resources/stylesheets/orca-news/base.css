@@ -14,4 +14,7 @@ footer {
   /*@media (prefers-color-scheme: dark) {*/
   /*    color: #B3B3B3;*/
   /*}*/
+  #edit-request {
+    display: none !important;
+  }
 }

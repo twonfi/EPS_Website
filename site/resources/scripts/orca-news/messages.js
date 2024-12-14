@@ -65,5 +65,4 @@ getData().then((data) => {
   document.getElementById('loading-message').remove();
   document.getElementById('body').setAttribute(
     'style', 'cursor: auto !important;');
-  // TODO: change footer message
 });
