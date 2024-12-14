@@ -20,10 +20,4 @@ In PyCharm, you can run build commands by choosing a config in the top-right cor
   * Development build
 
 ### `nonpm`
-elSSGin automatically installs dependencies from npm to `/site/resources/lib`,
-as `node_modules` is (_obviously_) ignored by Git.
-
-This is good for building on Cloudflare Pages, but not on a local development environment. To bypass this,
-either add `--no-npm` to the build script or create a file called `nonpm` (no dot) in `/elSSGin` (i.e. `/elSSGin/nonpm`).
-
-The `nonpm` file is ignored by Git, so it should not be shown by `git status`. If it does, you did something wrong.
+we now use cdnjs don't worry about npm anymore
