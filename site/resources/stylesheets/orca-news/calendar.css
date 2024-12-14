@@ -16,6 +16,7 @@ body {
     background-color: #6C4B6B !important;
     opacity: 1 !important;
   }
+  --fc-button-hover-bg-color: #231520;
   --fc-button-active-bg-color: #593751;
 
   @media (prefers-color-scheme: dark) {
