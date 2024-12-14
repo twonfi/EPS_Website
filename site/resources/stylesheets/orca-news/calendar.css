@@ -2,6 +2,10 @@ body {
   cursor: progress;
 }
 
+#calendar {
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+}
+
 :root {
   --fc-button-bg-color: #40263b;
   --fc-button-border-color: #593751;
