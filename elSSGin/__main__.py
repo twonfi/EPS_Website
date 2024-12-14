@@ -142,6 +142,9 @@ write_file('%s/contact.html' % site_path,
 # Messages
 write_file('%s/orca-news/messages.html' % site_path,
     bob(jinja_env.get_template('orca-news/messages.html')))
+# Calendar
+write_file('%s/orca-news/calendar.html' % site_path,
+    bob(jinja_env.get_template('orca-news/calendar.html')))
 
 if os.path.isdir(os.path.abspath('%s/elSSGin/pods' % site_path)):
     shutil.rmtree(os.path.abspath('%s/elSSGin/pods' % site_path))

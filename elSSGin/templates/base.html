@@ -6,6 +6,10 @@
   <link rel="stylesheet preload" type="text/css" as="style" href="/resources/stylesheets/base.css">
   {% if stylesheet %}
     <link rel="stylesheet" type="text/css" as="style" href="/resources/stylesheets/{{ stylesheet }}">
+  {% elif stylesheets %}
+    {% for sheet in stylesheets %}
+      <link rel="stylesheet" type="text/css" as="style" href="/resources/stylesheets/{{ sheet }}">
+    {% endfor %}
   {% endif %}
   <link as="image" href="/resources/images/bg.jpg">
   <!-- favicon -->

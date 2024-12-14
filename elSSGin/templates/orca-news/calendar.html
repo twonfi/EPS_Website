@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}School Events Calendar - ElginParkSecondary.com{% endblock %}
+{% set stylesheets = ['orca-news/base.css', 'orca-news/calendar.css'] %}
+{% block head %}
+  <noscript><style>#loading-text { display: none; } body { cursor: auto !important;}</style></noscript>
+  <script src="/resources/lib/node_modules/@fullcalendar/core/index.global.min.js"></script>
+  <script src="/resources/lib/node_modules/@fullcalendar/daygrid/index.global.min.js"></script>
+  <script src="/resources/lib/node_modules/@fullcalendar/timegrid/index.global.min.js"></script>
+  <script src="/resources/scripts/orca-news/calendar_data.js"></script>
+{% endblock %}
+
+{% block main %}
+  <h1>School Events Calendar</h1>
+  <div id="loading-message">
+{#    <label id="loading-text">Loading <span id="loading-step">the calendar</span>... <progress aria-hidden="true"></progress></label>#}
+    <noscript>This page requires JavaScript.</noscript>
+  </div>
+  <div id='calendar'></div>
+{% endblock %}
