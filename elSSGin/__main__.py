@@ -164,5 +164,5 @@ if not (os.path.isfile('nonpm') or '--no-npm' in sys.argv):
                 os.remove(path)
             elif os.path.isdir(path):
                 shutil.rmtree(path)
-    print('Deleted old npm packages')
+        print('Deleted old npm packages')
     os.system('npm install')
