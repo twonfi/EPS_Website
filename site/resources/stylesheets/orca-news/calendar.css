@@ -4,6 +4,9 @@ body {
 
 #calendar {
   font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  h2 {
+    padding: 0;
+  }
 }
 
 :root {
