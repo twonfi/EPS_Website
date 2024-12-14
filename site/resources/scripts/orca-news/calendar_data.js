@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
+    validRange: {
+      // only show 30 days back and 12 months forward
+      start: new Date(new Date().setDate(new Date().getDate() - 30)),
+      end: new Date(new Date().setDate(new Date().getDate() + 365))
+    },
     eventColor: '#623C5B',
 
     events: async function (fetchInfo, successCallback, failureCallback) {
