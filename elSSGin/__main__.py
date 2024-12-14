@@ -12,7 +12,7 @@ debug_info = datetime.now(timezone.utc).isoformat(), sys.version
 print(debug_info)
 
 # Add noindex if run with --dev-build
-if len(sys.argv) > 1 and sys.argv[1] == '--dev-build':
+if '--dev-build' in sys.argv:
     dev_build = True
     print('Building with --dev-build: noindex and debug information added.')
 else:
@@ -154,7 +154,7 @@ print('Copied pods to site')
 
 
 # Install npm packages
-if not os.path.isfile('nonpm'):
+if not (os.path.isfile('nonpm') or '--no-npm' in sys.argv):
     os.chdir('../site/resources/lib')
     for file in os.scandir(os.path.abspath('node_modules')):
         path = os.path.join(directory, file.path)

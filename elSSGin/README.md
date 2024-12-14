@@ -2,6 +2,28 @@
 elSSGin (else-jin) is ElginParkSecondary.com's new platform, powered by Python and templates to reduce the files needed
 to edit to make global changes, and allowing simple content changes with JSON files (pods).
 
-elSSGin is brought to you by twonfi, who pretty much made the whole thing.
+## Building
+First, `cd` to the elSSGin directory (elSSGin uses a lot of relative paths, so you can't run this anywhere).
 
-`editable` templates are basically templates that don't use Python
+Then, choose a build command:
+* `python __main__.py`
+  * Production
+* `python __main__.py --dev-build`
+  * Development
+  * Prevents the site from being indexed by search engines
+  * Adds build time and Python version to footer of every page
+
+In PyCharm, you can run build commands by choosing a config in the top-right corner:
+* Build elSSGin site
+  * Production build
+* Build elSSGin site (--dev-build)
+  * Development build
+
+### `nonpm`
+elSSGin automatically installs dependencies from npm to `/site/resources/lib`,
+as `node_modules` is (_obviously_) ignored by Git.
+
+This is good for building on Cloudflare Pages, but not on a local development environment. To bypass this,
+either add `--no-npm` to the build script or create a file called `nonpm` (no dot) in `/elSSGin` (i.e. `/elSSGin/nonpm`).
+
+The `nonpm` file is ignored by Git, so it should not be shown by `git status`. If it does, you did something wrong.
