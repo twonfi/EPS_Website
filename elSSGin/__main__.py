@@ -74,10 +74,11 @@ site_path = '../site'
 for directory in ['departments', 'specialized', 'orca-news']:
     for file in os.scandir(os.path.abspath('../site/' + directory)):
         path = os.path.join(directory, file.path)
-        if os.path.isfile(path) and file.path[-1] != '_':
-            os.remove(path)
-        elif os.path.isdir(path):
-            shutil.rmtree(path)
+        if os.path.isdir(os.path.abspath(path)):
+            if os.path.isfile(path) and file.path[-1] != '_':
+                os.remove(path)
+            elif os.path.isdir(path):
+                shutil.rmtree(path)
 print('Deleted old files')
 
 # index
@@ -156,11 +157,12 @@ print('Copied pods to site')
 # Install npm packages
 if not (os.path.isfile('nonpm') or '--no-npm' in sys.argv):
     os.chdir('../site/resources/lib')
-    for file in os.scandir(os.path.abspath('node_modules')):
-        path = os.path.join(directory, file.path)
-        if os.path.isfile(path) and file.path[-1] != '_':
-            os.remove(path)
-        elif os.path.isdir(path):
-            shutil.rmtree(path)
+    if os.path.isdir(os.path.abspath('node_modules')):
+        for file in os.scandir(os.path.abspath('node_modules')):
+            path = os.path.join(directory, file.path)
+            if os.path.isfile(path) and file.path[-1] != '_':
+                os.remove(path)
+            elif os.path.isdir(path):
+                shutil.rmtree(path)
     print('Deleted old npm packages')
     os.system('npm install')
