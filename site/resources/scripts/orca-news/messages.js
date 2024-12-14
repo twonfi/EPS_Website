@@ -1,6 +1,6 @@
 async function getData() {
   const url = "/orca-news/data?api=msg";
-    const RESPONSE = await fetch(url);
+      const RESPONSE = await fetch(url);
     return await RESPONSE.json();
 }
 
@@ -10,7 +10,7 @@ getData().then((data) => {
     messageArticle.setAttribute('id', `msg-${MESSAGE['sid']}`);
     messageArticle.setAttribute('class', 'message');
 
-    if (MESSAGE['atts'].length) {
+    if (MESSAGE['atts'].length && !MESSAGE['atts'][0]['url'].endsWith('.pdf')) {
       const messageAttachment = document.createElement('img');
       messageAttachment.setAttribute('src', MESSAGE['atts'][0]['url']);
       messageAttachment.setAttribute('loading', 'lazy');
