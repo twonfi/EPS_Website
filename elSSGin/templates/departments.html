@@ -12,7 +12,7 @@
 {% block main %}
   <h1>{{ dept["name"] }}</h1>
 
-  <ul id="dept-toc" aria-label="Department table of contents">
+  <ul id="dept-toc" aria-label="{{ dept['name'] }} department table of contents">
     {% for section in dept["sections"] %}
       <li><a href="#{{ section["id"] | safe }}">{{ section["name"] | safe}}</a></li>
     {% endfor %}
@@ -22,10 +22,10 @@
     <section id="{{ section["id"] | safe }}" aria-label="{{ section["name"] }}">
       <h2>{{ section["name"] | safe }}</h2>
       {% if section["courses"] | length > 1 %}
-        <div class="toc" aria-label="{{ section["name"] }} table of contents">
+        <div class="toc">
           <figure>
             <figcaption><h3>Contents</h3></figcaption>
-            <ul>
+            <ul aria-label="{{ section["name"] }} table of contents">
               {% for course in section["courses"] %}
                 <li><a href="#{{ course["code"] | safe }}">{{ course["name"] | safe}}</a></li>
               {% endfor %}

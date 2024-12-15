@@ -14,8 +14,8 @@
   <h1>Clubs</h1>
     <p>Elgin Park has over <b>{{ clubs | length }} clubs</b>, for all your interests, whether that's art, chess, or helping out in the community, and more!</p>
     <details id="toc">
-      <summary>Table of contents</summary>
-      <ul aria-label="Clubs">
+      <summary id="toc-summary">Table of contents</summary>
+      <ul aria-labelledby="toc-summary">
         {% for club in clubs %}
           <li><a href="#{{ club["id"] }}">{{ club["name"] | safe}}</a></li>
         {% endfor %}
