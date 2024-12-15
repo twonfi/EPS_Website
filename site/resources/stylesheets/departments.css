@@ -41,6 +41,7 @@ article, .course {
 }
 
 lite-youtube, .youtube-embed {
+  margin-top: 1em;
   /*position: absolute;*/
   /*display: inline;*/
   /*justify-content: right;*/
