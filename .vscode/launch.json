@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Build elSSGin site",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/elSSGin",
+            "program": "__main__.py",
+            "console": "internalConsole"
+        },
+        {
+            "name": "Build elSSGin site (--dev-build)",
+            "type": "debugpy",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/elSSGin",
+            "program": "__main__.py",
+            "console": "internalConsole",
+            "args": ["--dev-build"]
+        }
+    ]
+}

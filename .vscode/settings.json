@@ -1,0 +1,50 @@
+{
+    "json.schemas": [
+        
+        {
+            "fileMatch": [
+                "elSSGin/pods/departments/*",
+                "elSSGin/pods/specialized/*"
+            ],
+            "url": "./elSSGin/pods/schemas/departments.schema.json"
+        },
+        {
+            "fileMatch": [
+                "elSSGin/pods/clubs.json",
+                "elSSGin/pods/clubs.json5",
+            ],
+            "url": "./elSSGin/pods/schemas/clubs.schema.json"
+        },
+        {
+            "fileMatch": [
+                "elSSGin/pods/forms.json",
+                "elSSGin/pods/forms.json5",
+            ],
+            "url": "./elSSGin/pods/schemas/forms.schema.json"
+        }
+    ],
+    "json5.schemas": [
+        
+        {
+            "fileMatch": [
+                "elSSGin/pods/departments/*",
+                "elSSGin/pods/specialized/*"
+            ],
+            "url": "./elSSGin/pods/schemas/departments.schema.json"
+        },
+        {
+            "fileMatch": [
+                "elSSGin/pods/clubs.json",
+                "elSSGin/pods/clubs.json5",
+            ],
+            "url": "./elSSGin/pods/schemas/clubs.schema.json"
+        },
+        {
+            "fileMatch": [
+                "elSSGin/pods/forms.json",
+                "elSSGin/pods/forms.json5",
+            ],
+            "url": "./elSSGin/pods/schemas/forms.schema.json"
+        }
+    ]
+}

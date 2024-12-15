@@ -33,14 +33,20 @@ and add debugging information to the footer of every page. This can be run with 
 When in doubt, don't push it to main; use a new branch, and preview the page at
 `https://{{ first 8 chars of commit hash }}.eps-website.pages.dev`
 
+### IDE/editor setup
+#### PyCharm
+PyCharm config should be automatic
+
+#### Visual Studio Code
+Install the extensions marked as recommended in `.vscode/extensions.json` (a.k.a. workspace recommendations, recommended by other users). The rest should be automatic.
+
 ## Editing data
 Department and club data is stored in `elSSGin/pods`; every JSON data file is called a "pod".
 
-Before you edit, set the schemas (`elSSGin/pods/schemas`) in your IDE or editor,
-such as [PyCharm Professional](https://www.jetbrains.com/help/pycharm/json.html#ws_json_schema_add_custom)
-(it is [free for students](https://www.jetbrains.com/community/education/))
-and [VS Code](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings).
-**Don't break the site. Don't edit without the schema.**
+Before you edit, set the schemas (`elSSGin/pods/schemas`) in your IDE or editor. **Don't break the site. Don't edit without the schema.**
+
+### Visual Studio Code JSON5 support
+Pods use [JSON5](https://json5.org/), which does not have built-in support in VS Code. Install the recommended JSON5 extension in the editor setup section; other JSON5 extensions don't have schema validation.
 
 ## Handling edit requests
 1. If you don't have access to the forms, ask in the Computer Programming Club team on Teams for access to form data
