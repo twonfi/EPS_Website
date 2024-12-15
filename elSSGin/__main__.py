@@ -93,22 +93,21 @@ def dept_pages(pods: list[dict], file_dir: str) -> None:
     for entry in pods:
         pod_path = os.path.abspath('pods/%s/%s.json5'
                                     % (file_dir, entry['id']))
-        if os.path.isfile(pod_path):
-            with open(pod_path, 'r') as pod_file:
-                pod_data = json.loads(pod_file.read())
 
-            write_file(
-                os.path.abspath(
-                    '%s/%s/' % (site_path, file_dir) + re.sub(".json5?$",
-                        ".html", os.path.basename(pod_path))),
-                bob(jinja_env.get_template('departments.html'), {
-                    'dept': pod_data,
-                })
-            )
+        with open(pod_path, 'r') as pod_file:
+            pod_data = json.loads(pod_file.read())
 
+        write_file(
+            os.path.abspath(
+                '%s/%s/' % (site_path, file_dir) + re.sub(".json5?$",
+                    ".html", os.path.basename(pod_path))),
+            bob(jinja_env.get_template('departments.html'), {
+                'dept': pod_data,
+                'dept_id': entry['id']
+            })
+        )
 # Departments
 dept_pages(departments, 'departments')
-
 # Specialized programs
 dept_pages(specialized_programs, 'specialized')
 

@@ -62,7 +62,9 @@
           <button aria-haspopup="true" class="nav-item-outer dropdown-text">Departments</button>
           <ul class="dropdown-content">
             {% for department in departments %}
-              <li><a class="nav-item-inner" href="/departments/{{ department["id"] }}">{{ department["name"] }}</a>
+              {% if department["id"] != 'test' %}
+                <li><a class="nav-item-inner" href="/departments/{{ department["id"] }}">{{ department["name"] }}</a>
+              {% endif %}
             {% endfor %}
           </ul>
         </li>
@@ -70,7 +72,9 @@
           <button aria-haspopup="true" class="nav-item-outer dropdown-text">Specialized Programs</button>
           <ul class="dropdown-content">
             {% for program in specialized_programs %}
-              <li><a class="nav-item-inner" href="/specialized/{{ program["id"] }}">{{ program["name"] }}</a>
+              {% if program["id"] != 'test' %}
+                <li><a class="nav-item-inner" href="/specialized/{{ program["id"] }}">{{ program["name"] }}</a>
+              {% endif %}
             {% endfor %}
           </ul>
         </li>
