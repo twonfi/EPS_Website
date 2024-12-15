@@ -5,19 +5,19 @@
   <title>{% block title %}ElginParkSecondary.com: Elgin Park's Digital Home{% endblock %}</title>
   <link rel="stylesheet preload" type="text/css" as="style" href="/resources/stylesheets/base.css">
   {% if stylesheet %}
-    <link rel="stylesheet" type="text/css" as="style" href="/resources/stylesheets/{{ stylesheet }}">
+    <link rel="stylesheet" type="text/css" href="/resources/stylesheets/{{ stylesheet }}">
   {% elif stylesheets %}
     {% for sheet in stylesheets %}
-      <link rel="stylesheet" type="text/css" as="style" href="/resources/stylesheets/{{ sheet }}">
+      <link rel="stylesheet" type="text/css" href="/resources/stylesheets/{{ sheet }}">
     {% endfor %}
   {% endif %}
-  <link as="image" href="/resources/images/bg.jpg">
+  <link rel="prefetch" href="/resources/images/bg.jpg">
   <!-- favicon -->
-  <link rel="icon" type="image/png" href="/resources/images/fav/196x196.png" sizes="196x196" />
-  <link rel="shortcut icon" href="/resources/images/fav/196x196.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/resources/images/fav/180x180-bg.png" />
+  <link rel="icon" type="image/png" href="/resources/images/fav/196x196.png" sizes="196x196">
+  <link rel="shortcut icon" href="/resources/images/fav/196x196.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/resources/images/fav/180x180-bg.png">
   <!--/favicon -->
-  <meta name="apple-mobile-web-app-title" content="Elgin Park" />
+  <meta name="apple-mobile-web-app-title" content="Elgin Park">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% if description %}<meta name="description" content="{{ description }}">{% endif %}
   <meta name="robots" content="noimageai">
@@ -38,12 +38,12 @@
        All rights reserved. -->
 </head>
 <body id="body">
+  <a href="#main" id="skip-to-main">Skip to main content</a>
   <header><!-- TODO: this is prepped for responsive and a11y, but not actually done -->
     <!-- print-only logo -->
-    <a href="#main" id="skip-to-main">Skip to main content</a>
     <picture id="print-logo" style="display: none;">
       <!--<source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">-->
-      <img src="/resources/images/logo/eps-logo.png" id="img1" alt>
+      <img src="/resources/images/logo/eps-logo.png" alt>
     </picture>
     <nav id="nav">
       <a href="/" title="Go home" aria-label="Go home" style="color: #00000000;"><picture id="logo">
@@ -99,9 +99,9 @@
       <p>The students and staff at Elgin Park Secondary work, learn, and play on the unceded and ancestral territories of the Katzie, Semiahmoo, Kwantlen and other Coast Salish Peoples. As responsible members of the Elgin community, we recognize the importance of taking the initiative to learn about and honour the history and traditions of the peoples whose lands we occupy.</p>
     </div>
     <div id="first-nation-seals">
-      <img class="pp1" src="/resources/images/land-ack/kwantlen/kwantlen.png" width="6%" alt="Seal of Kwantlen First Nation" loading="lazy">
-      <img class="pp1" src="/resources/images/land-ack/katzie/katzie.png" width="6%" alt="Seal of Katzie First Nation" loading="lazy">
-      <img class="pp1" src="/resources/images/land-ack/semiahmoo/semiahmoo.png" width="6%" alt="Seal of Semiahmoo First Nation" loading="lazy">
+      <img class="first-nation-seal-img" src="/resources/images/land-ack/kwantlen/kwantlen.png" alt="Seal of Kwantlen First Nation" loading="lazy">
+      <img class="first-nation-seal-img" src="/resources/images/land-ack/katzie/katzie.png" alt="Seal of Katzie First Nation" loading="lazy">
+      <img class="first-nation-seal-img" src="/resources/images/land-ack/semiahmoo/semiahmoo.png" alt="Seal of Semiahmoo First Nation" loading="lazy">
     </div>
     <div id="copyright">
       <p>Content © Elgin Park Secondary staff and student contributors. Website code © Elgin Park Computer Programming Club. All rights reserved.</p>

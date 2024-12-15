@@ -61,12 +61,13 @@ h3 {
   font-size: 20px;
 }
 
-.pdf-instructions-button{
-    background-color:#4a6fa5;
-    font-size:26px;
-    border-color: white;
-    color: white;
-    font-weight: bold;
+.pdf-instructions-button {
+  /* TODO: style as button (originally a button with href, not allowed) */
+  background-color:#4a6fa5;
+  font-size:26px;
+  border-color: white;
+  color: white;
+  font-weight: bold;
 }
 
 .pdf-instructions-button:hover{
@@ -423,7 +424,7 @@ ol {
     display: flex;
 }
 
-#boxGradeTitle {
+.boxGradeTitle {
   font-weight: 900;
   color: purple;
 }

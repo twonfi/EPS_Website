@@ -4,7 +4,7 @@
 {% set stylesheet = 'index-new.css' %}
 {% set description = "Elgin Park Secondary's digital home, by students, for students. Find courses, clubs, news, events and more, all on ElginParkSecondary.com!" %}
 {% block head %}
-  <link rel="stylesheet" type="text/css" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.css" crossorigin="anonymous" integrity="sha512-jGFXuWMxJUKzdfBmoyqCXz9k2AU3Z/ZNoayoUPEBAtJZjHbTbw50AxTR1ICVPQJbSamH9ny1JwOur0x4WOdcWQ==">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.css" crossorigin="anonymous" integrity="sha512-jGFXuWMxJUKzdfBmoyqCXz9k2AU3Z/ZNoayoUPEBAtJZjHbTbw50AxTR1ICVPQJbSamH9ny1JwOur0x4WOdcWQ==">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.js" crossorigin="anonymous" integrity="sha512-l8cIzs5aAJutiOPIyW/9PAvDevwTA8F17Pmge51rwmKBkjZ47tap3kRv+pI8JX9owkkBpRMuOIUE7v+Rg6os9w==" async></script>
 {% endblock %}
 
@@ -13,7 +13,6 @@
     <img id="elginorca1" src="/resources/images/logo/elgin_orca.png" alt>
     <h1 id="p12">The Digital Home For All Elgin Park Secondary Students!</h1>
     <img id="elginorca2" src="/resources/images/logo/elgin_orca.png" alt>
-    <article id="article1"></article>
   </div>
 
   <div id="container">
@@ -54,7 +53,7 @@
   <div id="pdf-instructions">
     SELECTING COURSES IN MyED
     <br>
-    <button class="pdf-instructions-button" href="/forms.html#sct">PDF Instructions</button>
+    <a class="pdf-instructions-button" href="/forms.html#sct">PDF Instructions</a><!-- TODO: style as button (originally a button with href, not allowed) -->
   </div>
   <div id="deadline-gr12-countdown">
     COURSE SELECTION DEADLINE
@@ -87,7 +86,7 @@
   <h2 class="all-caps">Course requirements</h2>
   <div id="course-requirements-content">
     <div id="boxGrade9">
-      <div id="boxGradeTitle">GRADE 9</div>
+      <div class="boxGradeTitle">GRADE 9</div>
       <br>
 
       Students in Grade 9 are required to take a minimum of 9 courses. Please see the Course Planning Sheet for more
@@ -103,7 +102,7 @@
     </div>
 
     <div id="boxGrade10">
-      <div id="boxGradeTitle">GRADE 10</div>
+      <div class="boxGradeTitle">GRADE 10</div>
       <br>
 
       Students in Grade 10 are required to take a minimum of 8 courses. The general courses grade 10s require are as
@@ -122,7 +121,7 @@
 
 
     <div id="boxGrade11">
-      <div id="boxGradeTitle">GRADE 11</div>
+      <div class="boxGradeTitle">GRADE 11</div>
       <br>
 
       Students in Grade 11 are required to take a minimum of 8 courses. The general courses grade 11s require are as
@@ -137,7 +136,7 @@
     </div>
 
     <div id="boxGrade12">
-      <div id="boxGradeTitle">GRADE 12</div>
+      <div class="boxGradeTitle">GRADE 12</div>
       <br>
 
       Students in Grade 12 are required to take a minimum of 8 courses.
