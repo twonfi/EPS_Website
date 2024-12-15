@@ -40,7 +40,7 @@ for dept_list_entry in os.scandir('pods/departments'):
 
 specialized_programs = []
 for specialized_program_path in os.scandir(
-        'pods/departments/specialized'):
+        'pods/specialized'):
     with open(specialized_program_path.path, 'r') as file:
         specialized_program = json.loads(file.read())
 
@@ -89,39 +89,28 @@ write_file('%s/index.html' % site_path,
 write_file('%s/404.html' % site_path,
     bob(jinja_env.get_template('404.html')))
 
+def dept_pages(pods: list[dict], file_dir: str) -> None:
+    for entry in pods:
+        pod_path = os.path.abspath('pods/%s/%s.json5'
+                                    % (file_dir, entry['id']))
+        if os.path.isfile(pod_path):
+            with open(pod_path, 'r') as pod_file:
+                pod_data = json.loads(pod_file.read())
+
+            write_file(
+                os.path.abspath(
+                    '%s/%s/' % (site_path, file_dir) + re.sub(".json5?$",
+                        ".html", os.path.basename(pod_path))),
+                bob(jinja_env.get_template('departments.html'), {
+                    'dept': pod_data,
+                })
+            )
+
 # Departments
-for dept_list_entry in departments:
-    dept_path = os.path.abspath('pods/departments/%s.json5'
-                                % dept_list_entry['id'])
-    if os.path.isfile(dept_path):
-        with open(dept_path, 'r') as file:
-            dept = json.loads(file.read())
+dept_pages(departments, 'departments')
 
-        html_text = bob(jinja_env.get_template('departments.html'), {
-            'dept': dept,
-        })
-        write_file(
-            os.path.abspath('%s/departments/' % site_path + re.sub(".json5?$",
-            ".html", os.path.basename(dept_path))), html_text
-        )
-
-# Special programs
-for dept_list_entry in specialized_programs:
-    dept_path = os.path.abspath('pods/departments/specialized/%s.json5'
-                                % dept_list_entry['id'])
-    if os.path.isfile(dept_path):
-        with open(dept_path, 'r') as file:
-            dept = json.loads(file.read())
-
-        html_text = bob(jinja_env.get_template('departments.html'), {
-            'dept': dept,
-        })
-        write_file(
-            os.path.abspath(
-                '%s/specialized/' % site_path + re.sub(
-                    ".json5?$",
-                    ".html", os.path.basename(dept_path))), html_text
-        )
+# Specialized programs
+dept_pages(specialized_programs, 'specialized')
 
 
 # Clubs
