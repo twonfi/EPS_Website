@@ -9,10 +9,11 @@
               <option name="generatedName" value="New Schema" />
               <option name="name" value="Clubs" />
               <option name="relativePathToSchema" value="elSSGin/pods/schemas/clubs.schema.json" />
+              <option name="schemaVersion" value="JSON Schema 7" />
               <option name="patterns">
                 <list>
                   <Item>
-                    <option name="path" value="elSSGin/pods/clubs.json" />
+                    <option name="path" value="elSSGin/pods/clubs.json5" />
                   </Item>
                 </list>
               </option>
