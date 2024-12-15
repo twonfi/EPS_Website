@@ -24,17 +24,18 @@
           "pattern": "^[a-z0-9_]*$",
           "examples": ["math_flowchart", "library_science_application"]
         },
-        "path": {
-          "description": "Relative path to form, with base /resources/forms/",
+        "ext": {
+          "description": "File extension of form (the actual file is stored in /site/resources/forms/{{ form[\"id\"] }}.{{ form[\"ext\"] }}). If none, use PDF",
           "type": "string",
-          "examples": ["Elgin Park Math Flowchart.pdf"]
+          "examples": ["pdf", "docx"]
         },
         "thumb": {
-          "description": "Form thumbnail, usually first page of form, with base /resources/forms/thumb. If none, use path",
+          "description": "File extension of form thumbnail, usually first page of form, stored in /resources/forms/thumb/{{ form[\"id\"] }}.{{ form[\"thumb\"] }}. If none, same as form file",
           "type": "string",
-          "examples": ["Elgin Park Math Flowchart.webp"]
+          "examples": ["webp"]
         }
-      }
+      },
+      "required": ["form-title", "id", "ext"]
     }
   }
 }
