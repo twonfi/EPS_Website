@@ -35,7 +35,7 @@
           "examples": ["Computing"]
         },
         "id": {
-          "description": "ID (a-z, 0-9, -, _)",
+          "description": "ID (a-z, 0-9, -, _); use _ for spaces, - for hyphens and other characters",
           "type": "string",
           "pattern": "^[a-z0-9-_]*$",
           "examples": ["computing"]
@@ -68,6 +68,13 @@
           "type": "string",
           "examples": ["ABC--123"]
         },
+        "prereqs": {
+          "description": "Recommended prerequisites",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/prereq"
+          }
+        },
         "grades": {
           "description": "Grade levels",
           "type": ["array"],
@@ -76,7 +83,7 @@
           }
         },
         "elective": {
-          "description": "Whether the coures is an elective",
+          "description": "Whether the course is an elective",
           "type": "boolean"
         },
         "youtube": {
@@ -96,6 +103,28 @@
       "type": "number",
       "minimum": 8,
       "maximum": 12
+    },
+    "prereq": {
+      "description": "Recommended prerequisite object",
+      "type": "object",
+      "properties": {
+        "dept": {
+          "description": "Department type.ID (department/ or specialized/ then filename of department pod, excluding .json(5)) of prerequisite course. If omitted, use same department",
+          "type": "string",
+          "examples": ["business", "advanced_placement"],
+          "pattern": "^(department|specialized)\/[a-z0-9-_]*$"
+        },
+        "name": {
+          "description": "Name of prerequisite course",
+          "type": "string"
+        },
+        "code": {
+          "description": "Course code of prerequisite course",
+          "type": "string",
+          "examples": ["ABC--123"]
+        }
+      },
+      "required": ["name","code"]
     }
   }
 }

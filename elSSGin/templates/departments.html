@@ -2,12 +2,15 @@
 
 {% block title %}{{ dept["name"] }} - ElginParkSecondary.com{% endblock %}
 {% set stylesheet = 'departments.css' %}
-{% if dept["has-youtube"] %}
-  {% block head %}
+{% block head %}
+  {% if dept["has-youtube"] %}
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.css" crossorigin="anonymous" integrity="sha512-jGFXuWMxJUKzdfBmoyqCXz9k2AU3Z/ZNoayoUPEBAtJZjHbTbw50AxTR1ICVPQJbSamH9ny1JwOur0x4WOdcWQ==">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.js" crossorigin="anonymous" integrity="sha512-l8cIzs5aAJutiOPIyW/9PAvDevwTA8F17Pmge51rwmKBkjZ47tap3kRv+pI8JX9owkkBpRMuOIUE7v+Rg6os9w==" async></script>
-  {% endblock %}
-{% endif %}
+  {% endif %}
+  {% if dept_id == 'test' %}
+    <meta name="robots" content="noindex">
+  {% endif %}
+{% endblock %}
 
 {% block main %}
   <h1>{{ dept["name"] }}</h1>
@@ -37,19 +40,29 @@
     {% for course in section["courses"] %}
       <article id="{{ course["code"] }}" class="course" aria-label="{{ course["name"] }}">
         <h3>{{ course["name"] }}</h3>
-        <div class="course-icons">
+        <div class="course-icons" role="note">
           {% for grade in course["grades"] %}
             <span class="grade{{ grade }} course-info-icon" role="note" aria-label="Grade {{ grade }}">{{ grade }}</span>
           {% endfor %}
           {% if course["elective"] %}
-            <span class="elec course-info-icon">Elective</span>
+            <span class="elec course-info-icon" role="note">Elective</span>
           {% else %}
-            <span class="req course-info-icon">Required</span>
+            <span class="req course-info-icon" role="note">Required</span>
           {% endif %}
         </div>
-        <div class="course-code">
+        <div class="course-code" role="note">
           Course Code: {{ course["code"] }}
         </div>
+        {% if course["prereqs"] %}
+          <div class="prereqs" role="note">
+            Recommended Prerequisite{% if course["prereqs"] | length > 1 %}s{% endif %}:
+            <ul aria-label="{{ course["name"] }} recommended prerequisites">
+              {% for prereq in course["prereqs"] %}
+                <li><a href="{% if prereq["dept"] %}/{{ prereq["dept"] }}{% endif %}#{{ prereq["code"] }}">{{ prereq["name"] }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
         {% if course["youtube"] %}
           <lite-youtube class="youtube-embed" videoid="{{ course["youtube"] }}" playlabel="Video for {{ course["name"] }}"></lite-youtube>
         {% endif %}
