@@ -5,6 +5,11 @@
       <sourceFolder url="file://$MODULE_DIR$/elSSGin" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/site/resources/scripts" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/site/resources/stylesheets" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/site/.wrangler" />
+      <excludeFolder url="file://$MODULE_DIR$/site/departments" />
+      <excludeFolder url="file://$MODULE_DIR$/site/elSSGin" />
+      <excludeFolder url="file://$MODULE_DIR$/site/orca-news" />
+      <excludeFolder url="file://$MODULE_DIR$/site/specialized" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
