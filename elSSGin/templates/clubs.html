@@ -4,6 +4,7 @@
 
 {% block title %}Clubs - ElginParkSecondary.com{% endblock %}
 {% set stylesheet = 'clubs.css' %}
+{% set description = 'Elgin Park has over ' + clubs | length | string + " clubs for all your interests, from art and chess to helping out in the community and more! Don't see a club? Start your own!" %}
 {% block head %}
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.css" crossorigin="anonymous" integrity="sha512-jGFXuWMxJUKzdfBmoyqCXz9k2AU3Z/ZNoayoUPEBAtJZjHbTbw50AxTR1ICVPQJbSamH9ny1JwOur0x4WOdcWQ==">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.js" crossorigin="anonymous" integrity="sha512-l8cIzs5aAJutiOPIyW/9PAvDevwTA8F17Pmge51rwmKBkjZ47tap3kRv+pI8JX9owkkBpRMuOIUE7v+Rg6os9w==" async></script>
@@ -11,7 +12,7 @@
 
 {% block main %}
   <h1>Clubs</h1>
-    <p>Elgin Park has over <b>{{ clubs | length }} clubs</b>, from anime cosplay to helping out in the community, letting you do what you love at school!</p>
+    <p>Elgin Park has over <b>{{ clubs | length }} clubs</b>, for all your interests, whether that's art, chess, or helping out in the community, and more!</p>
     <details id="toc">
       <summary>Table of contents</summary>
       <ul aria-label="Clubs">
