@@ -19,7 +19,7 @@
         {% for club in clubs %}
           <li><a href="#{{ club["id"] }}">{{ club["name"] | safe}}</a></li>
         {% endfor %}
-        <hr><li><a href="#start-your-own-club">Start a club</a></li>
+        <li><a href="#start-your-own-club">Start a club</a></li>
       </ul>
     </details>
 
@@ -28,7 +28,7 @@
     <article id="{{ club["id"] }}" class="club" aria-label="{{ club["name"] | safe }}">
       <a class="club-claim-link"
          href="/edit-requests?url=https%3A%2F%2Fwww.elginparksecondary.com%2Fclubs%3F%23{{ club["id"] }}" aria-label="Request an edit for {{ club["name"] }}" title="Request an edit">
-        <img src="/resources/images/pencil.svg" width="25vw" alt>
+        <img src="/resources/images/pencil.svg" alt>
       </a><h2>{{ club["name"] | safe }}</h2>
       {% if club["instagram"] %}
         <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/" aria-label="{{ club["name"] }}'s Instagram"><img width="28vw" src="/resources/images/instagram.svg" alt></a>

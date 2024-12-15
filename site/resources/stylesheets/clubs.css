@@ -34,6 +34,9 @@ article, .club {
   .club-claim-link {
     margin-right: .3vw;
     color: #00000000;
+    img {
+      width: 1.8vw;
+    }
   }
   .instagram-icon {
     position: relative;
