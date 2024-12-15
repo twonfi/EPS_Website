@@ -24,6 +24,9 @@
   {% for section in dept["sections"] %}
     <section id="{{ section["id"] | safe }}" aria-label="{{ section["name"] }}">
       <h2>{{ section["name"] | safe }}</h2>
+      {% if section["youtube"] %}
+        <lite-youtube class="youtube-embed section-youtube" videoid="{{ section["youtube"] }}" playlabel="Video for {{ section["name"] }} section"></lite-youtube>
+      {% endif %}
       {% if section["courses"] | length > 1 %}
         <div class="toc">
           <figure>
@@ -64,7 +67,7 @@
           </div>
         {% endif %}
         {% if course["youtube"] %}
-          <lite-youtube class="youtube-embed" videoid="{{ course["youtube"] }}" playlabel="Video for {{ course["name"] }}"></lite-youtube>
+          <lite-youtube class="youtube-embed" videoid="{{ course["youtube"] }}" playlabel="Video for {{ course["name"] }} course"></lite-youtube>
         {% endif %}
         <p>{{ course["desc"] }}</p>
       </article>
