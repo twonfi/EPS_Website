@@ -20,9 +20,9 @@
       <h2 id="processTitle">Course selection process</h2>
       <lite-youtube class="youtube-embed" videoid="Jw8X9cU7RRg"
                   playlabel="MyEducation BC course selection instructions"></lite-youtube>
-      <ol>
-        <li>Ensure you have your MyEd password ready to go. If you forgot your password and have not set a recovery email and security question:
-          <ul>
+      <ol aria-labelledby="processTitle">
+        <li>Have your MyEducation BC password ready. If you forgot your password and have not set a recovery email and security question:
+          <ul aria-label="Password reset">
             <li>
               If you have an email client (you access email using a desktop or mobile app),
               <a href="mailto:elginpark@surreyschools.ca?subject=Portal%20Login&body=Full%20name%3A%20%0AGrade%3A%20%0AAccount%20to%20be%20reset%20(student%20or%20parent)%3A%0A%0APlease%20reset%20my%20MyEducation%20BC%20password.%20Thank%20you.">
@@ -30,7 +30,7 @@
             </li>
             <li>Otherwise, please email: elginpark@surreyschools.ca</li>
             <li>Subject line: Portal Login</li>
-            <li>Please include:<ul>
+            <li>Please include:<ul aria-label="Password reset: information to be included">
               <li>Full name</li>
               <li>Grade</li>
               <li>Which account needs to be reset (student or parent)</li>
@@ -45,16 +45,17 @@
         <li>If applying to a specialized course or program, please fill out the <a href="/forms">appropriate application form</a>
           and return to your <a href="/contact#students">alpha counsellor</a>.
         </li>
-        <li> Log into MyEd to enter your courses.</li>
+        <li><a href="https://myeducation.gov.bc.ca">Log in to <abbr title="MyEducation BC">MyEd</abbr>.</a></li>
+        <li>Follow the <a href="/forms.html#sct">steps to select courses in <abbr title="MyEducation BC">MyEd</abbr></a>.</li>
       </ol>
     </section>
     <div id="clear"></div>
   </div>
-  <div id="pdf-instructions">
-    SELECTING COURSES IN MyED
-    <br>
-    <a class="pdf-instructions-button" href="/forms.html#sct">PDF Instructions</a><!-- TODO: style as button (originally a button with href, not allowed) -->
-  </div>
+{#  <div id="pdf-instructions">#}
+{#    SELECTING COURSES IN MyED#}
+{#    <br>#}
+{#    <a class="pdf-instructions-button" href="/forms.html#sct">PDF Instructions</a><!-- TODO: style as button (originally a button with href, not allowed) -->#}
+{#  </div>#}
   <div id="deadline-gr12-countdown">
     COURSE SELECTION DEADLINE
     <br>
