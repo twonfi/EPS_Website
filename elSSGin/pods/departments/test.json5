@@ -45,7 +45,7 @@
             {
               "code": "TEST-PREREQ-CODE",
               "name": "test prereq 12",
-              "dept": "department/test"
+              "dept": "departments/test"
             }
           ],
           "grades": [

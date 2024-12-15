@@ -109,10 +109,10 @@
       "type": "object",
       "properties": {
         "dept": {
-          "description": "Department type.ID (department/ or specialized/ then filename of department pod, excluding .json(5)) of prerequisite course. If omitted, use same department",
+          "description": "Department type.ID (departments/ or specialized/ then filename of department pod, excluding .json(5)) of prerequisite course. If omitted, use same department",
           "type": "string",
           "examples": ["business", "advanced_placement"],
-          "pattern": "^(department|specialized)\/[a-z0-9-_]*$"
+          "pattern": "^(departments|specialized)\/[a-z0-9-_]*$"
         },
         "name": {
           "description": "Name of prerequisite course",
