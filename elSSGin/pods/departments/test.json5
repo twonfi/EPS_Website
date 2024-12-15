@@ -1,0 +1,64 @@
+{
+  "name": "Test department",
+  "has-youtube": true,
+  "sections": [
+    {
+      "name": "Test section 1",
+      "id": "test_section_1",
+      "youtube": "Xj0Jtjg3lHQ",
+      "courses": [
+        {
+          "name": "Test course 1.1",
+          "code": "TEST--1-1",
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "elective": false,
+          "youtube": "jNQXAC9IVRw",
+          "desc": "desc 1.1<p>Hello world!"
+        },
+        {
+          "name": "Test course 1.2",
+          "code": "TEST--1-2",
+          "grades": [
+            11,
+            12
+          ],
+          "elective": false,
+          "youtube": "aqz-KE-bpKQ",
+          "desc": "desc 1.2<p>Hello world!"
+        }
+      ]
+    },
+    {
+      "name": "Test section 2",
+      "id": "test_section_2",
+      "youtube": "Xj0Jtjg3lHQ",
+      "courses": [
+        {
+          "name": "Test course 2.1",
+          "code": "TEST--2-1",
+          "prereqs": [
+            {
+              "code": "TEST-PREREQ-CODE",
+              "name": "test prereq 12",
+              "dept": "department/test"
+            }
+          ],
+          "grades": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "elective": false,
+          "youtube": "jNQXAC9IVRw",
+          "desc": "desc 2.1<p>Hello world!"
+        }
+      ]
+    }
+  ]
+}
