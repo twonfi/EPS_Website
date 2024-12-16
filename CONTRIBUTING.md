@@ -19,6 +19,7 @@ Make sure to only use Wrangler, which is pretty much a local Cloudflare Pages, s
 2. `pip install -r elSSGin/requirements.txt`
 3. Build the site
     - If you use PyCharm: run "Build elSSGin site" (select in top right corner)
+    - If you use Visual Studio Code: run "Build elSSGin site" in Run & Debug
     - Everyone else: in `/elSSGin`: `python __main__.py`
     - The script builds the site to `/site`
     - Rebuild every time you update a pod
@@ -48,20 +49,24 @@ Before you edit, set the schemas (`elSSGin/pods/schemas`) in your IDE or editor.
 Pods use [JSON5](https://json5.org/), which does not have built-in support in VS Code. Install the recommended JSON5 extension in the editor setup section; other JSON5 extensions don't have schema validation.
 
 ## Handling edit requests
-1. If you don't have access to the forms, ask in the Computer Programming Club team on Teams for access to form data
-2. Wait for requests
-    - You'll be emailed when a new request is submitted
-3. Read the request
+If you don't have access to the forms, ask in the Computer Programming Club team on Teams for access to form data
+
+### Wait for requests
+You'll be emailed when a new request is submitted
+
+### Read the request
     - Requests sent through the staff & students form should be more trusted, as it requires SD36 login
     - First submitted, first handled
     - **Do not delete old requests. They are to be kept for tracking purposes.**
-4. Implement
+
+### Implement
     - Edit the files
     - Increase the edit request counter in `/EDIT_REQUESTS_HANDLED`
     - Use the following commit message:
         - Implement edit request #`{{ ID }}`
     - For privacy reasons, **do not include name, email, or any other info** other than request ID
-5. Respond
+
+### Respond
     - Staff & students form: download as Excel spreadsheet and find the email. If requester chose Teams, start a chat and enter the email address as the name.
     - Parents & visitors form: Email is in the form as a field
     - Use the [edit request templates in the wiki](https://github.com/Bouney/EPS_Website/wiki/Edit-request-templates)
