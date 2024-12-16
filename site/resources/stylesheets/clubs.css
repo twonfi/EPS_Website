@@ -35,16 +35,16 @@ article, .club {
     margin-right: .3vw;
     color: #00000000;
     img {
-      width: 1.8vw;
+      width: 1.5em;
     }
   }
   .instagram-icon {
     position: relative;
     top: .25em;
-    left: -.9em;
+    left: -1.2em;
     margin-left: .9em;
     img {
-      width: 3.8%;
+      width: 1.7em;
     }
   }
   .club-logo {
