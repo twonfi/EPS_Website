@@ -10,14 +10,14 @@
   },
   {
     "name": "ABC Detective Club",
-    "id": "abc_detective",
+    "id": "abc-detective",
     "meeting-days": ["Wednesday after school"],
     "meeting-room": "Room 145C",
     "sponsor": "Mr. Leeder"
   },
   {
     "name": "Anime &amp; Cosplay Club",
-    "id": "anime_and_cosplay",
+    "id": "anime-and-cosplay",
     "meeting-days": ["Friday after school, monthly"],
     "meeting-room": "Room 111C",
     "sponsor": "Ms. Li"
@@ -38,7 +38,7 @@
   },
   {
     "name": "Beyond Athletics Club",
-    "id": "beyond_athletics",
+    "id": "beyond-athletics",
     "meeting-days": ["Wednesday at lunch"],
     "meeting-room": "Room 143C",
     "sponsor": "Ms. Li"
@@ -59,7 +59,7 @@
   },
   {
     "name": "Computer Programming Club",
-    "id": "computer_programming",
+    "id": "computer-programming",
     "meeting-days": ["Monday after school", "Wednesday after school"],
     "meeting-room": "Room 130S",
     "sponsor": "Mr. Tsang",
@@ -67,14 +67,14 @@
   },
   {
     "name": "Create Change Club",
-    "id": "create_change",
+    "id": "create-change",
     "sponsor": "Mr. Ellett",
     "meeting-days": ["Tuesday at lunch"],
     "meeting-room": "Room 203N"
   },
   {
     "name": "Creative Writing Club",
-    "id": "creative_writing",
+    "id": "creative-writing",
     "meeting-days": ["Tuesday after school"],
     "meeting-room": "Room 203N",
     "sponsor": "Mr. Moffett"
@@ -102,7 +102,7 @@
   },
   {
     "name": "Diabetes Awareness Club",
-    "id": "diabetes_awareness",
+    "id": "diabetes-awareness",
     "sponsor": "Mr. Grave",
     "meeting-days": ["TBA, bi-weekly"],
     "meeting-room": "Room 134S"
@@ -116,7 +116,7 @@
   },
   {
     "name": "Game Design &amp; Development Club",
-    "id": "game_design_and_dev",
+    "id": "game-design-and-dev",
     "sponsor": "Mr. Tsang",
     "meeting-days": ["Thursday after school"],
     "meeting-room": "Room 132S"
@@ -137,14 +137,14 @@
   },
   {
     "name": "Math Support Club",
-    "id": "math_support",
+    "id": "math-support",
     "sponsor": "Ms. Hill",
     "meeting-days": ["Tuesday after school"],
     "meeting-room": "Room 233S"
   },
   {
     "name": "Elgin News",
-    "id": "elgin_news",
+    "id": "elgin-news",
     "sponsor": "Ms. Ellett",
     "meeting-days": ["Friday at lunch"],
     "meeting-room": "Room 207N"
@@ -158,7 +158,7 @@
   },
   {
     "name": "Surrey Youth Leadership Club",
-    "id": "surrey_youth_leadership",
+    "id": "surrey-youth-leadership",
     "sponsor": "Ms. Fowler",
     "meeting-days": ["Wednesday at lunch"],
     "meeting-room": "Room 163C"
@@ -192,7 +192,7 @@
   },
   {
     "name": "Table Tennis Club",
-    "id": "table_tennis",
+    "id": "table-tennis",
     "sponsor": "Mr. Tsang",
     "meeting-days": ["Wednesday after school"],
     "meeting-room": "Cafeteria"

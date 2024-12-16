@@ -19,10 +19,10 @@
           "examples": ["Computer Programming Club", "<i>Dungeons &amp; Dragons</i> Club"]
         },
         "id": {
-          "description": "Club ID (abbreviation if more common but usually full name, no \"club\", a-z, 0-9, _)",
+          "description": "Club ID (abbreviation if more common but usually full name, no \"club\", a-z, 0-9, -)",
           "type": "string",
-          "pattern": "^[a-z0-9_]*$",
-          "examples": ["computer_programming", "dnd", "stuco"]
+          "pattern": "^[a-z0-9-]*$",
+          "examples": ["computer-programming", "dnd", "stuco"]
         },
         "logo": {
           "description": "Logo file extension. The actual file is stored in /resources/images/clubs/{{ club[\"id\"] }}/logo.{{ club[\"logo\"] }}",
@@ -50,7 +50,7 @@
         "instagram": {
           "description": "Instagram username of club without @",
           "type": "string",
-          "pattern": "^[a-z0-9._]{1,30}$"
+          "pattern": "^[a-z0-9._-]{1,30}$"
         },
         "desc": {
           "description": "Club description. Should be written by someone from the club. Parsed as HTML, so paragraphs can be started using <p> (no closing needed), <i>, etc., but characters like & need to be escaped (e.g. &amp;)",
