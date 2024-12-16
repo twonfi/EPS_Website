@@ -11,7 +11,6 @@ This is a how-to guide on working on the Elgin Park Secondary website.
 3. cd to `/`
 4. Install Wrangler: `npm i wrangler`
 5. `npx wrangler pages dev`
-6. Profit
 
 Make sure to only use Wrangler, which is pretty much a local Cloudflare Pages, so that Pages redirects and Workers work correctly.
 
@@ -35,10 +34,10 @@ When in doubt, don't push it to main; use a new branch, and preview the page at
 
 ### IDE/editor setup
 #### PyCharm
-PyCharm config should be automatic
+Use the project inspection settings; everything else should be automatic (run configs)
 
 #### Visual Studio Code
-Install the extensions marked as recommended in `.vscode/extensions.json` (a.k.a. workspace recommendations, recommended by other users). The rest should be automatic.
+Install the extensions marked as recommended in `.vscode/extensions.json` (a.k.a. workspace recommendations, recommended by other users in the workspace), and turn on any other workspace settings.
 
 ## Editing data
 Department and club data is stored in `elSSGin/pods`; every JSON data file is called a "pod".

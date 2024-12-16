@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalDependencies">
+    <plugin id="HtmlTools" />
+    <plugin id="JavaScript" />
+    <plugin id="PythonCore" />
+    <plugin id="com.intellij.css" />
+    <plugin id="com.intellij.modules.json" />
+    <plugin id="org.jetbrains.dbt" />
+  </component>
+</project>
