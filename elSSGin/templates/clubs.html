@@ -31,7 +31,7 @@
         <img src="/resources/images/pencil.svg" alt="Request an edit for {{ club["name"] }}">
       </a><h2>{{ club["name"] | safe }}</h2>
       {% if club["instagram"] %}
-        <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/"><img width="28vw" src="/resources/images/instagram.svg" alt></a>
+        <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/"><img src="/resources/images/instagram.svg" alt></a>
       {% endif %}
       {% if club["logo"] %}
         <img class="club-logo" src="/resources/images/clubs/{{ club["id"] }}/logo.{{ club["logo"] }}" alt="{{ club["name"] }}'s Instagram">

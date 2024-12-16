@@ -43,6 +43,9 @@ article, .club {
     top: .25em;
     left: -.9em;
     margin-left: .9em;
+    img {
+      width: 3.8%;
+    }
   }
   .club-logo {
     float: right;
