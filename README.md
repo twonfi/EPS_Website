@@ -40,4 +40,6 @@ This project is made possible thanks to the hard work and dedication of the foll
 
 *Richard Fang*
 
+*Oliver Kihoi Guo*
+
 * **Enter your name here if you want to be recognized**
