@@ -1,3 +1,5 @@
+//Function to calculate countdown time
+//Used in One.js
 export default function Countdown(time, element) {
   var x = setInterval(function () {
     // Get today's date and time

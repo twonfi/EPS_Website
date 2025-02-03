@@ -185,5 +185,71 @@
         "description": "This course combines mechanical engineering and electronics. Students use CAD programs to create and prototype movements powered first by hydraulics, then by electronics. The course is project-based, and students are graded on their ability to complete movement challenges. Technologies used include vinyl cutters, laser engravers, 3D printers, and hotwire cutters."
       }
     ]
+  },
+  {
+    "SectionName": "Industrial Design",
+    "SectionTag": "IndDes",
+    "SectionContentBrief": ["Tech Exploration 8", "STEM 9/10", "Industrial Design Level 1","Industrial Design Level 2", "Industrial Design Level 3", "Industrial Design Level 4"],
+    "courses": [
+      {
+        "course_name": "Tech Exploration 8",
+        "grade_levels": [8],
+        "elective": true,
+        "course_codes": ["-1"],
+        "description": "Lorem Ipsum"
+      },
+      {
+        "course_name": "STEM 9/10",
+        "grade_levels": [9, 10],
+        "elective": true,
+        "course_codes": ["-1", "-1"],
+        "description": "This course aims to provide students with hands-on learning experiences in STEM (Science, Technology, Engineering, and Mathematics) by utilizing recycled materials for building projects. The course emphasizes the application of scientific principles, particularly in physics, to solve real-world problems. Students will engage in project-based learning to explore concepts such as balanced forces, kinematics, trigonometry, air resistance, and parabolic motion. Each project will follow the design cycle, integrating relevant scientific topics and fostering critical thinking, creativity, and problem-solving skills."
+      },
+      
+      {
+        "course_name": "Industrial Design Level 1",
+        "grade_levels": [-1],
+        "elective": true,
+        "course_codes": ["-1"],
+        "prerequisite": "-1",
+        "description":"-1"
+      },
+      {
+        "course_name": "Industrial Design Level 2",
+        "grade_levels": [-1],
+        "elective": true,
+        "course_codes": ["-1"],
+        "prerequisite": "-1",
+        "description":"-1"
+      },{
+        "course_name": "Industrial Design Level 3",
+        "grade_levels": [-1],
+        "elective": true,
+        "course_codes": ["-1"],
+        "prerequisite": "-1",
+        "description":"-1"
+      },{
+        "course_name": "Industrial Design Level 4",
+        "grade_levels": [-1],
+        "elective": true,
+        "course_codes": ["-1"],
+        "prerequisite": "-1",
+        "description":"-1"
+      }
+    ]
+  },
+  {
+    "SectionName": "TTRPG",
+    "SectionTag": "TTRPG",
+    "SectionContentBrief": ["Social Dynamic"],
+    "courses": [
+      {
+        "course_name": "Social Dynamic",
+        "grade_levels": [-1],
+        "elective": true,
+        "course_codes": ["-1"],
+        "description": "Social Dynamics in Tabletop Role Playing Games (TTRPGs) is a course for students who desire to strengthen their interpersonal and leadership skills through project-based, collaborative learning. This course will allow students to develop and further their understanding of intentional and purposeful design skills and they will be able to learn how to use various Computer Aided Design (CAD) programs in order to bring their creations to life through 3D printing. Programs that students will be able to utilize include AutoCAD, Sketchup, and Cura in order to 3D print the finalized designs. The course will draw from various forms of tabletop games including miniatures, card, and board games in order for students to develop and actualize their own creations."
+      }
+    ]
   }
 ]
