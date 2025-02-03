@@ -1,4 +1,6 @@
 // This is the javascript file for index.html
+// Uses one.CONFIG.js to get deadline date
+// Uses Countdown.js function to calculate
 import Countdown from "./Countdown.js";
 import { navbarExport } from "./Navbar.config.js";
 import { COURSE_SELECTION_SEMESTER_2 } from "./one.CONFIG.js";
@@ -20,4 +22,4 @@ Countdown(courseSelectionDate, COUNTDOWNELEMENT);
 Countdown(courseSelectionDate, COUNTDOWNELEMENTGR12);
 
 
-// change the end date of the countdown to March 10 4:00 PM 
+// Current deadline is March 7 15:00:00 in 2025
