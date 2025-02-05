@@ -221,6 +221,7 @@ html {
     margin-left: 12%;
     background-color: white;
     overflow: clip;
+    border-radius: 15px;
 }
 
 #article1Title {
