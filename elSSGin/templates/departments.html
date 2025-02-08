@@ -27,6 +27,11 @@
       {% if section["youtube"] %}
         <lite-youtube class="youtube-embed section-youtube" videoid="{{ section["youtube"] }}" playlabel="Video for {{ section["name"] }} section"></lite-youtube>
       {% endif %}
+      {% if section["embed-code"] %}
+        <div class="embed-code-container">
+          {{ section["embed-code"] | safe }}
+        </div>
+      {% endif %}
       {% if section["courses"] | length > 1 %}
         <div class="toc">
           <figure>
@@ -68,6 +73,11 @@
         {% endif %}
         {% if course["youtube"] %}
           <lite-youtube class="youtube-embed" videoid="{{ course["youtube"] }}" playlabel="Video for {{ course["name"] }} course"></lite-youtube>
+        {% endif %}
+        {% if course["embed-code"] %}
+          <div class="embed-code-container">
+            {{ course["embed-code"] | safe }}
+          </div>
         {% endif %}
         <p>{{ course["desc"] }}</p>
       </article>

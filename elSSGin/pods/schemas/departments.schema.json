@@ -41,8 +41,10 @@
           "examples": ["computing"]
         },
         "youtube": {
-          "description": "YouTube video ID",
-          "type": "string"
+          "$ref": "#/definitions/youtube"
+        },
+        "embed-code": {
+          "$ref": "#/definitions/embed-code"
         },
         "courses": {
           "description": "Course objects",
@@ -87,8 +89,10 @@
           "type": "boolean"
         },
         "youtube": {
-          "description": "YouTube video ID",
-          "type": "string"
+          "$ref": "#/definitions/youtube"
+        },
+        "embed-code": {
+          "$ref": "#/definitions/embed-code"
         },
         "desc": {
           "description": "Course description. Use <p> (no closing tag) to separate large blocks of text",
@@ -125,6 +129,14 @@
         }
       },
       "required": ["name","code"]
+    },
+    "youtube": {
+      "description": "YouTube video ID",
+      "type": "string"
+    },
+    "embed-code": {
+      "description": "Some other HTML embed code (e.g. Google Slides or Canva)",
+      "type": "string"
     }
   }
 }
