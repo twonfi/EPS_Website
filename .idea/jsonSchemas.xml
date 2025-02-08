@@ -44,6 +44,22 @@
             </SchemaInfo>
           </value>
         </entry>
+        <entry key="Forms">
+          <value>
+            <SchemaInfo>
+              <option name="generatedName" value="New Schema" />
+              <option name="name" value="Forms" />
+              <option name="relativePathToSchema" value="elSSGin/pods/schemas/forms.schema.json" />
+              <option name="patterns">
+                <list>
+                  <Item>
+                    <option name="path" value="elSSGin/pods/forms.json5" />
+                  </Item>
+                </list>
+              </option>
+            </SchemaInfo>
+          </value>
+        </entry>
         <entry key="JSON Schema 2020-12">
           <value>
             <SchemaInfo>

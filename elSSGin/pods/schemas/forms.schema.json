@@ -19,9 +19,9 @@
           "examples": ["Math Flowchart", "Library Science Application Form"]
         },
         "id": {
-          "description": "Form ID (a-z, 0-9, _)",
+          "description": "Form ID (a-z, 0-9, _, _)",
           "type": "string",
-          "pattern": "^[a-z0-9_]*$",
+          "pattern": "^[a-z0-9-_]+$",
           "examples": ["math_flowchart", "library_science_application"]
         },
         "ext": {
@@ -35,7 +35,7 @@
           "examples": ["webp"]
         }
       },
-      "required": ["form-title", "id", "ext"]
+      "required": ["form-title", "id"]
     }
   }
 }

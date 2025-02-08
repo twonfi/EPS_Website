@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block url %}{% endblock %}
+{% set stylesheet = 'forms.css' %}
+{% block title %}Form Downloads - ElginParkSecondary.com{% endblock %}
+
+{% block main %}
+  <h1>Form Downloads</h1>
+  <div id="forms">
+    {% for f in forms %}
+      {% if not f['ext'] %}
+        {% set ext = 'pdf' %}
+      {% else %}
+          {% set ext = f['ext'] %}
+      {% endif %}
+
+      {% if not f['thumb'] %}
+        {% set thumb = '/resources/forms/' + f['id'] + '.' + ext %}
+      {% else %}
+        {% set thumb = '/resources/forms/thumb/' + f['id'] + '.' + f['thumb'] %}
+      {% endif %}
+
+      <a id="{{ f['id'] }}" href="/resources/forms/{{ f['id'] }}.{{ ext }}" aria-label="{{ f['form-title'] }}" download>
+        <figure class="form">
+          <div class="linked-to">
+            (You've been linked here)
+            <hr>
+          </div>
+          <figcaption>{{ f['form-title'] }}</figcaption>
+          <hr>
+          <img src="{{ thumb }}" alt>
+        </figure>
+      </a>
+    {% endfor %}
+  </div>
+{% endblock %}

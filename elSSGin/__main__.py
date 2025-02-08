@@ -70,7 +70,7 @@ def bob(template: jinja2.Template, params: dict = None) -> str:
 
 site_path = '../site'
 
-# Delete existing files, so that deleted data doesn't resurface
+# Delete existing files so that deleted data doesn't resurface
 for directory in ['departments', 'specialized', 'orca-news']:
     for file in os.scandir(os.path.abspath('../site/' + directory)):
         path = os.path.join(directory, file.path)
@@ -118,6 +118,13 @@ with open('pods/clubs.json5', 'r') as file:
 
 html_text = bob(jinja_env.get_template('clubs.html'), {'clubs': clubs})
 write_file(os.path.abspath('%s/clubs.html') % site_path, html_text)
+
+# Forms
+with open('pods/forms.json5', 'r') as file:
+    forms = json.loads(file.read())
+
+html_text = bob(jinja_env.get_template('forms.html'), {'forms': forms})
+write_file(os.path.abspath('%s/forms.html') % site_path, html_text)
 
 # Edit requests
 write_file('%s/edit-requests.html' % site_path,
