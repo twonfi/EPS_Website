@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
       center: 'title',
       right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
     },
+    buttonText: {
+      list: "agenda"
+    },
     navLinks: true,
     eventColor: '#623C5B',
     eventClassNames: function(arg) {
