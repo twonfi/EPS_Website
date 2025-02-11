@@ -8,7 +8,7 @@ Welcome to the **EPS Website** repository! This repository contains the official
 
 ## 📌 Overview
 
-The **EPS Website** is the digital platform for Elgin Park School, designed to provide students, staff, and the community with easy access to information and resources. This repository marks a significant update with a revamped interface and exciting new features to enhance user experience.
+The **EPS Website** is the digital platform for Elgin Park School, designed to provide students, staff, and the community with easy access to information and resources. This repository is updated with the latest information on school courses for the school year 2025-2026.
 
 ***
 
