@@ -51,6 +51,15 @@
     "sponsor": "TBA"
   },
   {
+    // TODO: official site and meeting days
+    "name": "Book Addicts' Book Club",
+    "id": "book-addicts",
+    "meeting-days": ["TODO"],
+    "meeting-room": "Library",
+    "sponsor": "TBA",
+    //"site": "https://llc.elginparksecondary.com/book-addicts-club" // TODO: the actual URL and launch the LLC site
+  },
+  {
     "name": "Chess Club",
     "id": "chess",
     "meeting-days": ["Wednesday after school"],
