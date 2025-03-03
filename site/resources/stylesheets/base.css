@@ -203,7 +203,7 @@ li.dropdown {
 }
 
 .dropdown-text {
-  cursor: s-resize !important;
+  cursor: default !important;
 }
 
 .dropdown-content {
