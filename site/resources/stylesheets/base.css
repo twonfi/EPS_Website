@@ -315,13 +315,15 @@ li.dropdown {
   }
 }
 
-@media (min-width: 70em) {
-  #navbar-toggle {
-    display: none;
-  }
+#navbar-toggle {
+  display: none;
 }
 
 @media (max-width: 70em) {
+  #navbar-toggle {
+    display: block;
+  }
+
   nav:has(#navbar-toggle-checkbox:not(:checked)) #navbar-list {
     display: none;
   }
@@ -338,7 +340,7 @@ li.dropdown {
     #navbar-list > li {
       button {
         height: auto;
-      text-align: right;
+        text-align: right;
       }
       text-align: right;
       display: block;
