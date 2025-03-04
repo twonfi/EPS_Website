@@ -15,6 +15,7 @@ site/clubs.html
 site/404.html
 site/edit-requests.html
 site/contact.html
+site/forms.html
 site/.wrangler/
 site/elSSGin/*
 site/resources/lib/node_modules/
