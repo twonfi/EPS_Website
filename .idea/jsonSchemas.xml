@@ -15,6 +15,9 @@
                   <Item>
                     <option name="path" value="elSSGin/pods/clubs.json5" />
                   </Item>
+                  <Item>
+                    <option name="path" value="elSSGin/pods/clubs.yaml" />
+                  </Item>
                 </list>
               </option>
             </SchemaInfo>
@@ -55,22 +58,8 @@
                   <Item>
                     <option name="path" value="elSSGin/pods/forms.json5" />
                   </Item>
-                </list>
-              </option>
-            </SchemaInfo>
-          </value>
-        </entry>
-        <entry key="JSON Schema 2020-12">
-          <value>
-            <SchemaInfo>
-              <option name="name" value="JSON Schema 2020-12" />
-              <option name="relativePathToSchema" value="https://json-schema.org/draft/2020-12/schema" />
-              <option name="schemaVersion" value="JSON Schema 202,012" />
-              <option name="applicationDefined" value="true" />
-              <option name="patterns">
-                <list>
                   <Item>
-                    <option name="path" value="elSSGin/pods/schemas/departments.schema.json" />
+                    <option name="path" value="elSSGin/pods/forms.yaml" />
                   </Item>
                 </list>
               </option>
