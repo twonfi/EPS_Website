@@ -1,3 +1,7 @@
+:root {
+  --navbar-focus-outline: 5px solid white;
+}
+
 body {
   height: 85%;
   margin: 0;
@@ -28,12 +32,15 @@ h3 {
   padding: 1% 2% 0;
 }
 
-#img1 {
+#navbar-logo-image {
 	padding-top: 12px;
     padding-left: 12px;
 	height: 65px;
     width: 135px;
     position: absolute;
+}
+#navbar-home-link:focus-visible {
+  outline: var(--navbar-focus-outline);
 }
 
 #img2 {
@@ -218,7 +225,7 @@ li.dropdown {
   width: inherit;
   height: auto;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 10;
   padding-left: 0;
   padding-bottom: 0;
 }
@@ -287,10 +294,13 @@ li.dropdown {
 #navbar-toggle {
   float: right;
   height: 100%;
+  position: relative;
+  right: 5px;
   aspect-ratio: 1/1;
 
   input {
-    display: none;
+    position: absolute;
+    opacity: 0;
   }
 
   label {
@@ -313,6 +323,10 @@ li.dropdown {
   label:has(input:checked) img#navbar-toggle-closed-icon {
     display: none;
   }
+}
+
+#navbar-toggle:has(input:focus-visible) {
+  outline: var(--navbar-focus-outline);
 }
 
 #navbar-toggle {

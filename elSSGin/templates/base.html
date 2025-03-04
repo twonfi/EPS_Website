@@ -46,10 +46,12 @@
       <img src="/resources/images/logo/eps-logo.png" alt>
     </picture>
     <nav id="nav">
-      <a href="/" title="Go home" style="color: #00000000;"><picture id="logo">
-        <!--<source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">-->
-        <img src="/resources/images/logo/eps-logo.png" id="img1" alt="Go home">
-      </picture></a>
+      <a id="navbar-home-link" href="/" title="Go home" style="color: #00000000;">
+        <picture id="navbar-logo">
+          <!--<source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">-->
+          <img src="/resources/images/logo/eps-logo.png" id="navbar-logo-image" alt="Go home">
+        </picture>
+      </a>
       <ul id="navbar-list" aria-label="Navigation links">
         <li class="dropdown">
           <button aria-haspopup="true" class="nav-item-outer dropdown-text">Orca News</button>
@@ -83,13 +85,11 @@
         <li><a class="nav-item-outer" href="/contact">Contact</a></li>
       </ul>
 
-      <span id="navbar-toggle" style="cursor: pointer;" aria-labelledby="navbar-toggle-label-text">
-        <!-- TODO: move to the navbar itself (right now it's floating in space) -->
+      <span id="navbar-toggle" style="cursor: pointer;">
         <label for="navbar-toggle-checkbox">
-          <img id="navbar-toggle-closed-icon" src="/resources/images/icons/bars-solid-white.svg" alt>
-          <img id="navbar-toggle-opened-icon" src="/resources/images/icons/xmark-solid-white.svg" alt>
+          <img id="navbar-toggle-closed-icon" src="/resources/images/icons/bars-solid-white.svg" alt="Open navigation menu">
+          <img id="navbar-toggle-opened-icon" src="/resources/images/icons/xmark-solid-white.svg" alt="Close naigation menu">
           <input id="navbar-toggle-checkbox" type="checkbox">
-          <span id="navbar-toggle-label-text" class="screen-reader-only">Toggle navigation links</span>
         </label>
       </span>
     </nav>
