@@ -39,7 +39,7 @@
 </head>
 <body id="body">
   <a href="#main" id="skip-to-main">Skip to main content</a>
-  <header><!-- TODO: this is prepped for responsive and a11y, but not actually done -->
+  <header>
     <!-- print-only logo -->
     <picture id="print-logo" style="display: none;">
       <!--<source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">-->
@@ -50,12 +50,6 @@
         <!--<source srcset="/resources/images/logo/eps-logo.svg" type="image/svg+xml">-->
         <img src="/resources/images/logo/eps-logo.png" id="img1" alt="Go home">
       </picture></a>
-      <button id="navbar-toggle" aria-label="Open/Close navigation menu">
-        <label for="navbar-toggle-checkbox">
-          <img src="/resources/images/icons/bars-solid-white.svg" alt>
-        </label>
-        <input id="navbar-toggle-checkbox" type="checkbox">
-      </button>
       <ul id="navbar-list" aria-label="Navigation links">
         <li class="dropdown">
           <button aria-haspopup="true" class="nav-item-outer dropdown-text">Orca News</button>
@@ -88,6 +82,15 @@
         <li><a class="nav-item-outer" href="/forms">Forms</a></li>
         <li><a class="nav-item-outer" href="/contact">Contact</a></li>
       </ul>
+
+      <span id="navbar-toggle" style="cursor: pointer;" aria-label="Toggle navigation links">
+        <!-- TODO: move to the navbar itself (right now it's floating in space) -->
+        <label for="navbar-toggle-checkbox">
+          <img id="navbar-toggle-closed-icon" src="/resources/images/icons/bars-solid-white.svg" alt>
+          <img id="navbar-toggle-opened-icon" src="/resources/images/icons/xmark-solid-white.svg" alt>
+          <input id="navbar-toggle-checkbox" type="checkbox">
+        </label>
+      </span>
     </nav>
   </header>
   <main id="main">

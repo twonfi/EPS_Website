@@ -108,7 +108,72 @@ footer {
   }
 }
 
-/* Nav */
+/*** Nav ***/
+
+/* The responsive small screen nav thing */
+#navbar-toggle {
+  float: right;
+  height: 100%;
+  aspect-ratio: 1/1;
+
+  input {
+    display: none;
+  }
+
+  label {
+    /* center in both directions */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+
+    img {
+      height: 40%;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  label:has(input:not(:checked)) img#navbar-toggle-opened-icon {
+    display: none;
+  }
+  label:has(input:checked) img#navbar-toggle-closed-icon {
+    display: none;
+  }
+}
+
+@media (min-width: 70em) {
+  #navbar-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 70em) {
+  nav:has(#navbar-toggle-checkbox:not(:checked)) #navbar-list {
+    display: none;
+  }
+  nav:has(#navbar-toggle-checkbox:checked) {
+    #navbar-list {
+      display: block;
+      position: absolute;
+      top: 98px;
+      width: 100%;
+      z-index: 1;
+    }
+    #navbar-list > li {
+      button {
+        height: auto;
+      text-align: right;
+      }
+      text-align: right;
+      display: block;
+      margin: 1em 0;
+    }
+  }
+}
+
+/* Big screen nav */
+
 #skip-to-main {
   position: absolute;
   left: -9999px;
@@ -125,14 +190,13 @@ footer {
   opacity: 1;
 }
 
-#navbar {
+nav {
 	background-color: #40263B;
     height: 90px;
     width: 100%;
     border-bottom-style: solid;
     border-width: 8px;
     border-color: #4D42B3;
-    position: sticky;
     top: 0; /* required */
     overflow: auto;
 }
@@ -148,12 +212,11 @@ footer {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  display: flex;
+  font-size: x-large;
+  justify-content: center;
+  align-items: center;
   background-color: #40263b;
-  height: 90px;
-  width: 100%;
-  border-bottom-style: solid;
-  border-width: 8px;
-  border-color: #4D42B3;
 }
 
 .navbar-list li{
@@ -241,16 +304,6 @@ li.dropdown {
   transition: ease-in-out 0.5s;
   color: black;
   background-color: #f1f1f1;
-}
-
-nav ul {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  font-size: x-large;
-  z-index: 10;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Print-friendliness */
