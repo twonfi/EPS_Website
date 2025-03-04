@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 
 import json5 as json
 import jinja2
+import yaml
 
 debug_info = datetime.now(timezone.utc).isoformat(), sys.version
 
@@ -31,22 +32,22 @@ departments = []
 for dept_list_entry in os.scandir('pods/departments'):
     if os.path.isfile(dept_list_entry):
         with open(dept_list_entry.path, 'r') as file:
-            dept = json.loads(file.read())
+            dept = yaml.safe_load(file.read())
 
         departments.append({
             'name': dept['name'],
-            'id': re.sub('.json5?$', '', dept_list_entry.name)
+            'id': re.sub('.yaml$', '', dept_list_entry.name)
         })
 
 specialized_programs = []
 for specialized_program_path in os.scandir(
         'pods/specialized'):
     with open(specialized_program_path.path, 'r') as file:
-        specialized_program = json.loads(file.read())
+        specialized_program = yaml.safe_load(file.read())
 
     specialized_programs.append({
         'name': specialized_program['name'],
-        'id': re.sub('.json5?$', '', specialized_program_path.name)
+        'id': re.sub('.yaml$', '', specialized_program_path.name)
     })
 
 def bob(template: jinja2.Template, params: dict = None) -> str:
@@ -91,15 +92,15 @@ write_file('%s/404.html' % site_path,
 
 def dept_pages(pods: list[dict], file_dir: str) -> None:
     for entry in pods:
-        pod_path = os.path.abspath('pods/%s/%s.json5'
+        pod_path = os.path.abspath('pods/%s/%s.yaml'
                                     % (file_dir, entry['id']))
 
         with open(pod_path, 'r') as pod_file:
-            pod_data = json.loads(pod_file.read())
+            pod_data = yaml.safe_load(pod_file.read())
 
         write_file(
             os.path.abspath(
-                '%s/%s/' % (site_path, file_dir) + re.sub(".json5?$",
+                '%s/%s/' % (site_path, file_dir) + re.sub(".yaml?$",
                     ".html", os.path.basename(pod_path))),
             bob(jinja_env.get_template('departments.html'), {
                 'dept': pod_data,
@@ -113,15 +114,15 @@ dept_pages(specialized_programs, 'specialized')
 
 
 # Clubs
-with open('pods/clubs.json5', 'r') as file:
-    clubs = json.loads(file.read())
+with open('pods/clubs.yaml', 'r') as file:
+    clubs = yaml.safe_load(file.read())
 
 html_text = bob(jinja_env.get_template('clubs.html'), {'clubs': clubs})
 write_file(os.path.abspath('%s/clubs.html') % site_path, html_text)
 
 # Forms
-with open('pods/forms.json5', 'r') as file:
-    forms = json.loads(file.read())
+with open('pods/forms.yaml', 'r') as file:
+    forms = yaml.safe_load(file.read())
 
 html_text = bob(jinja_env.get_template('forms.html'), {'forms': forms})
 write_file(os.path.abspath('%s/forms.html') % site_path, html_text)
