@@ -292,7 +292,7 @@ ol {
   line-height: 35px;
 }
 
-#deadline-gr12-countdown {
+#deadline-countdown-box {
   width: 35%;
   float: right;
   border-style: solid;
@@ -301,13 +301,21 @@ ol {
   margin-right: 20px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  font-size: 18px;
   font-weight: 600;
   background-color: green;
   color: white;
   padding: 0 6% 2%;
   margin-bottom: 15px;
   line-height: 35px;
+
+  #deadline-countdown-text {
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+
+  #deadline-countdown {
+    font-size: 2em;
+  }
 }
 
 #line {

@@ -6,6 +6,7 @@
 {% block head %}
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.css" crossorigin="anonymous" integrity="sha512-jGFXuWMxJUKzdfBmoyqCXz9k2AU3Z/ZNoayoUPEBAtJZjHbTbw50AxTR1ICVPQJbSamH9ny1JwOur0x4WOdcWQ==">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.js" crossorigin="anonymous" integrity="sha512-l8cIzs5aAJutiOPIyW/9PAvDevwTA8F17Pmge51rwmKBkjZ47tap3kRv+pI8JX9owkkBpRMuOIUE7v+Rg6os9w==" async></script>
+  <script src="/resources/scripts/course-selection-deadline-countdown.js"></script>
 {% endblock %}
 
 {% block main %}
@@ -56,10 +57,10 @@
 {#    <br>#}
 {#    <a class="pdf-instructions-button" href="/forms.html#sct">PDF Instructions</a><!-- TODO: style as button (originally a button with href, not allowed) -->#}
 {#  </div>#}
-  <div id="deadline-gr12-countdown">
-    COURSE SELECTION DEADLINE
+  <div id="deadline-countdown-box">
+    <span id="deadline-countdown-text">Course Selection Deadline</span>
     <br>
-    <div id="CountdownDateGr12"></div>{# TODO: countdown #}
+    <div id="deadline-countdown"></div>
   </div>
 
   <h3 id="choosing-courses">
