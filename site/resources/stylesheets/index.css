@@ -1,8 +1,577 @@
-/*@import url('/resources/stylesheets/base.css');*/
+main {
+  font-family: "Open Sans", sans-serif;
+  padding-left: 10px;
+}
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)),
+    url("scool.jpg");
+  height: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
 
-table,td,tr {
-  border-collapse: collapse;
-  border: 2px solid black;
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+h2,h3 {
+  font-family: "Open Sans", sans-serif;
+  color: purple;
+  padding-left: 0;
+  margin-left: 10px;
+  margin-top: 0;
+}
+h2 {
+  font-size: 24pt;
+  margin-bottom: 0;
+}
+h3 {
+  font-size: 18pt;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+#bp{
+    height: 30%;
+    float:left;
+}
+
+#soze{
+    height: 25%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+#pp1{
+    height: 80%;
+    margin: auto;
+}
+
+.p2 {
+  font-size: 20px;
+}
+
+.pdf-instructions-button {
+  /* TODO: style as button (originally a button with href, not allowed) */
+  background-color:#4a6fa5;
+  font-size:26px;
+  border-color: white;
+  color: white;
+  font-weight: bold;
+}
+
+.pdf-instructions-button:hover{
+    background-color: #6486B9;
+    cursor: pointer;
+}
+
+#CountdownDateGr12{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#img1 {
+  padding-top: 12px;
+  padding-left: 12px;
+  height: 65px;
+  width: 135px;
+  position: absolute;
+}
+
+#img2 {
+  padding-top: 12px;
+  padding-left: 12px;
+  height: 65px;
+  width: 135px;
+  position: relative;
+  float: left;
+  margin-left: 3%;
+  margin-top: 1%;
+}
+
+#img3 {
+  padding-top: 12px;
+  padding-left: 12px;
+  height: 65px;
+  width: 135px;
+  position: relative;
+  float: right;
+  margin-right: 3%;
+  margin-top: 1%;
+}
+
+.navbar {
+  background-color: #40263b;
+  height: 90px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: 8px;
+  border-color: #4d42b3;
+  position: sticky;
+  top: 0; /* required */
+  overflow: auto;
+  transition: 1s;
+}
+.navbarActive {
+  background-color: #40263b;
+  height: 90px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: 8px;
+  border-color: #4d42b3;
+  position: fixed;
+  top: 0; /* required */
+  overflow: auto;
+  z-index: 99;
+  transition: 1s;
+}
+
+#elginorca1 {
+  width: 20%;
+  float: left;
+  margin-top: 35px;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+#elginorca2 {
+  width: 20%;
+  float: right;
+  margin-top: 35px;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
+#topinfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#digihome {
+  background-color: white;
+  text-align: center;
+  float: left;
+  box-shadow: 2px 2px 4px;
+  font-size: 30px;
+  font-weight: 400;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.navB {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbarItem {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  margin-top: 24px;
+  margin-left: 2%;
+  display: inline-block;
+}
+
+
+
+#article1Title {
+  font-size: 30px;
+  color: #40263b;
+  font-family: Garamond, sans-serif;
+}
+
+#article1 {
+  font-size: 30px;
+  color: #40263b;
+  font-family: Garamond, sans-serif;
+}
+
+#videoTitle {
+  float: right;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: purple;
+  font-weight: 600;
+  background-color: lavender;
+  width: 40%;
+  padding-top: 10px;
+  box-shadow: purple 2px 2px 4px;
+  padding-bottom: 32px;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+#processTitle {
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: purple;
+  font-weight: 600;
+  margin-left: 10px;
+}
+#processInfo{
+  font-size: 18px;
+  margin: 20px 0;
+  text-align: left;
+  font-family: arial, sans-serif;
+  line-height: 1.5;
+  clear: left;
+}
+
+#container1 {
+  width:100%;
+  margin-top: 10px;
+}
+
+
+lite-youtube {
+  float: right;
+  margin-left: 20px;
+  margin-right: 30px;
+  width: 400px;
+  height: 360px;
+  box-shadow: 2px 2px 4px;
+}
+
+#clear {
+  clear: both;
+}
+
+#theGraduationProgram {
+  font-size: 20px;
+  font-family: Garamond, sans-serif;
+  font-weight: 50;
+}
+
+.crsReqHd {
+  background-color: darkblue;
+  border: 1px black;
+}
+
+ol {
+  margin-bottom: 0;
+  clear: left;
+}
+
+#pdf-instructions {
+  max-width: 35%;
+  min-width: 5%;
+
+  float: left;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #4a6fa5;
+  color: white;
+  padding: 0 5% 2%;
+  margin-bottom: 15px;
+  line-height: 35px;
+}
+
+#deadline-gr12-countdown {
+  width: 35%;
+  float: right;
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  margin-right: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: green;
+  color: white;
+  padding: 0 6% 2%;
+  margin-bottom: 15px;
+  line-height: 35px;
+}
+
+#line {
+  margin-top: 125px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#choosing-courses{
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: purple;
+  font-weight: 700;
+  clear: both;
+  text-align: justify;
+}
+
+#choosing-courses-text {
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding-top: 15px;
+  margin-right: 10px;
+  line-height: 1.6;
+}
+
+#line2 {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#ministry {
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding-top: 15px;
+  margin-right: 10px;
+  line-height: 1.6;
+}
+
+#ministryTitle {
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: purple;
+  font-weight: 700;
+}
+
+#line3 {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#course-requirements-content{
+  display: flex;
+  justify-content: space-evenly;
+
+  .boxGrade {
+    margin-left: 3%;
+    width: 17%;
+    margin-top: 2.5%;
+    padding: 1%;
+    color: black;
+    height: 20%;
+    background-color: lavender;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 150%;
+    font-size: 14px;
+    border: solid 3px black;
+
+    .boxGradeTitle {
+      font-weight: 900;
+      color: purple;
+      text-transform: uppercase;
+      font-size: 1.3em;
+      margin: 0 0 .6em 0;
+    }
+  }
+
+  @media print, screen and (max-width: 60em) {
+    display: block;
+
+    .boxGrade {
+      width: 93%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+
+
+#lege{
+    border-style: solid;
+  margin-left: 5%;
+  width: 17%;
+  margin-top: 2.5%;
+  padding: 1%;
+  color: black;
+  height: 20%;
+  background-color: lavender;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 150%;
+  font-size: 14px;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)), url("scool.jpg");
+  height: inherit;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.p1{
+	font-size:50px;
+}
+
+.p2{
+	font-size: 30px;
+}
+
+#img1 {
+	padding-top: 12px;
+    padding-left: 12px;
+	height: 65px;
+    width: 135px;
+    position: absolute;
+}
+
+#img2 {
+	padding-top: 12px;
+    padding-left: 12px;
+	height: 65px;
+    width: 135px;
+    position: relative;
+    float: left;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+
+#img3{
+	padding-top: 12px;
+    padding-left: 12px;
+	height: 65px;
+    width: 135px;
+    position: relative;
+    float: right;
+    margin-right: 3%;
+    margin-top: 1%;
+}
+
+#navbar {
+	background-color: #40263B;
+    height: 90px;
+    width: 100%;
+    border-bottom-style: solid;
+    border-width: 8px;
+    border-color: #4D42B3;
+    position: sticky;
+    
+    top: 0; /* required */
+    overflow: auto;
+}
+
+#main{
+    margin-top: inherit;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    background-image: url('bg.jpg');
+    background-repeat: repeat;
+    filter: grayscale(20%);
+    background-attachment: fixed;
+    height: auto;
+}
+
+#p1 {
+  color: black;
+  padding-top: 2%;
+  font-size: 5%;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 2%;
+}
+
+#p2{
+  color: black;
+  font-size: 20px;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.navB{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.navbarItem1 {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    font-family: Garamond, sans-serif;
+    margin-top:24px;
+    margin-left: 1%;
+    display: inline-block;
+}
+
+#textSpace{
+    top: 0;
+    width: inherit;
+    margin-right: 12%;
+    margin-left: 12%;
+    background-color: white;
+    height:auto;
+}
+
+#article1Title{
+    font-size: 30px;
+    color: #40263B;
+    font-family: Garamond, sans-serif;
+}
+
+#article1{
+    font-size: 30px;
+    color: #40263B;
+    font-family: Garamond, sans-serif;
+}
+
+#theGraduationProgram{
+    font-size: 20px;
+    font-family: lato thin sans-serif;
+    font-weight: 50;
+}
+
+.l1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #40263b;
+  height: 90px;
+  width: 100%;
+  border-bottom-style: solid;
+    border-width: 8px;
+    border-color: #4D42B3;
+}
+
+.l1 li{
+  float: left;
 }
 
 td {
@@ -23,3 +592,4 @@ table{
   margin-right: 10%;
   margin-left: 10%;
 }
+
