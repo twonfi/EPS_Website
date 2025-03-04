@@ -342,6 +342,7 @@ li.dropdown {
         height: auto;
         text-align: right;
       }
+
       text-align: right;
       display: block;
       margin: 1em 0;
@@ -361,7 +362,13 @@ li.dropdown {
 
     .dropdown:active .dropdown-content, .dropdown:focus-within .dropdown-content {
       display: block;
-      right: 1em;
+      position: relative;
+      right: 0;
+      margin-top: .4em;
+    }
+
+    .nav-item-inner {
+      margin-right: 0;
     }
   }
 }
