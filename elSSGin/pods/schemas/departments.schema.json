@@ -65,7 +65,7 @@
       "description": "Course object",
       "type": "object",
       "properties": {
-        "course-redirect": {//TODO ues the course link name param rather than a separate course objetc param
+        "course-redirect": {
           "$ref": "#/definitions/course-link"
         },
         "name": {
