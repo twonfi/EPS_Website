@@ -1,0 +1,46 @@
+name: Advanced Placement (AP)
+sections:
+  - name: Advanced Placement Courses
+    id: ap-courses
+    courses:
+      - name: AP Computer Science 12
+        grades: [ 11, 12 ]
+        codes: [ 'acsc-2A' ]
+        elective: true
+        prereqs:
+          - { name: 'Computer Programming 11', dept: 'departments/business', code: 'MCMPR11--S,MCMPR12--S'}
+        # Originally on the page in white-on-white (invisible unless selected) text: Lowkey best class
+        desc: >-
+          AP Computer Science 12 is a course for students interested in digging deep into the technical side of computer
+          programming. It is a fast-paced and intensive course that takes students who have experience in programming
+          (Python, C++, or Java) and goes into an intensive level of programming in Java language. It emphasizes
+          object-oriented programming methodology in Java and focuses on problem solving and algorithm development. The 
+          course will cover the equivalent of a one semester course in computer science at most post-secondary
+          institutions. Students who successfully meet the required standards in the AP Computer Science A Exam may use
+          this course credit at the post-secondary institution of their choice.
+      - name: AP Art 12 / Pre-AP Art 12
+        grades: [ 11, 12 ]
+        codes: [ 'PKG-12--6' ]
+        elective: true
+        desc: >-
+          This course is for students who are dedicated to developing their art portfolio for post-secondary studies in 
+          Studio Art and Design programs.
+
+          <p>Students signing up for the Advanced Placement programs must be prepared for the rigorous amount of time 
+          and effort required both in and out of class needed to develop their art portfolio.
+          
+          <p>If you want to take <b>Pre-Advance Placement Art</b>, you should sign up for PKG--11--8. If you want to 
+          take <b>Advance Placement Art 12</b>, you should sign up for PKG--12--6.
+      - name: Advanced Placement Calculus 12
+        grades: [ 11, 12 ]
+        codes: [ 'PKG--12--S-4' ]
+        elective: true
+        desc: >-
+          This is an excellent preparatory course for first and second year university Mathematics. The AP course 
+          content is differentiation and integration with applications of the two. Students registered in AP Calc 12 are 
+          encouraged to write the AP (Advanced Placement) Exam in May.
+          
+          <p>This course is offered as a linear program with Pre-Calculus Math 12. Students are required to take both
+          Pre-Calculus Math 12 and AP Calculus 12 in this program. <strong>It is stressed that students verify
+          prerequisite math courses and grades</strong> to specific programs at post-secondary institutions. The
+          <a href="/forms#math-flowchart">Math Flowchart</a> can help you find the required math course paths.

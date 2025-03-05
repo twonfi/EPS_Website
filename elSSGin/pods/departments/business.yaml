@@ -1,5 +1,4 @@
 name: Business Education
-has-youtube: true
 sections:
   - name: Business
     id: business
@@ -102,3 +101,73 @@ sections:
     # yeah someone told me that this section is "sigma" or whatever</joke>
     courses:
       - name: Computer Programming 9/10
+        codes: ['MADIT09--S', 'MASTU10--S']
+        grades: [9, 10]
+        elective: true
+        desc: >-
+          This course gives students the opportunity to learning coding and
+          game design. Students will be introduced to various applied computer
+          software (Adobe Flash ActionScript or Python). No previous computer
+          experience is required and all assignments are completed in-class for
+          this course.
+      - name: Computer Programming 11/12
+        codes: ['MCMPR11--S', 'MCMPR12--S']
+        grades: [11, 12]
+        elective: true
+        desc: >-
+          This course is for students with strong computer skills and an interest 
+          in computer programming. Students will learn intermediate skills in 
+          problem solving, programming and game design, as well as structured 
+          programming using C++/Java/Python. This course is valuable for students
+          interested in pursuing sciences at post secondary level. This course is
+          open to all Grade 11/12 students whether they have taken any previous 
+          computer courses or not.
+      - course-redirect:
+          name: Advanced Placement Computer Science 12
+          dept: specialized/advanced-placement
+          code: acsc-2A
+  - name: Graphic Production
+    id: graphic-production
+    courses:
+      - name: 'Graphic Production: Intro to Computers 11/12'
+        codes: ['MGRPR11--S', 'MGRPR12--S']
+        grades: [11, 12]
+        elective: true
+        desc: >-
+          Use your artistic skills to create documents and graphic images in a 
+          hands-on course. Students explore projects of personal interest by learning
+          to use the following software: Photoshop, Dreamweaver, and Adobe Flash. 
+          This course is recommended for students with less computer experience or
+          who need to refresh their skills from Junior Computers. Graphic Production
+          12 students will be expected to cover more advanced or creative projects as 
+          a continuation of Graphic Production 11.
+      - name: 'Graphic Production 11/12: Yearbook (+ Study)'
+        codes: ['PKG--11-7', 'PKG--12-7']
+        grades: [11, 12]
+        elective: true
+        desc: >-
+          This course is available only to Grade 11/12 students who also qualify for a 
+          study block. The schedule for Yearbook combines a 4-credit course with a study 
+          block. Classes are in session 3 days a week (students will have a study block 
+          during the other 2 periods). The course will run from September through April.
+          Students will be on a full time study block in May and June. Students will learn
+          a variety of skills in graphics and commercial design, desktop publishing, 
+          digital media technology, and will market a product to the school community.
+          Students will use computers and digital cameras to create the Yearbook. Students
+          with timetabling issues during second semester may be able to take this course 
+          and leave at the end of the semester and get a 2 credit Independent Studies 
+          11/12 credit, but must consult with counselors and the course instructor for 
+          permission.
+      - name: 'Media Design 11/12: Computer Animation 11/12'
+        codes: ['MMEDD11--S', 'MMEDD12--S']
+        grades: [11, 12]
+        elective: true
+        desc: >-
+          Use your artistic skills to create professional models and graphic images in a 
+          hands-on course. This advanced computer course explores Modeling and Animation
+          and provides many opportunities for hands-on activities. It is an extension of 
+          Junior Computers. Some basic computer experience is recommended. This course is 
+          recommended for students that have achieved a "B" level or higher in Junior 
+          Computers or Graphic Production 11/12. This course will primarily use Blender 
+          and Maya. Advanced Media Design 12 students will be expected to cover more 
+          advanced or creative projects as a continuation of Media Design 11. 

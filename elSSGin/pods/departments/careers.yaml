@@ -1,0 +1,39 @@
+name: Career Education
+sections:
+  - name: Required Career Education Courses
+    id: required-courses
+    youtube: NMFdomGBJd4
+    desc: >-
+      The goal of career education is to help students reflect and identify their personal interests and skills in order
+      to assist with evaluating the multiple options available to them and ease the transition from secondary school the
+      workplace and post-secondary school.
+    courses:
+      - name: Career Education 8 & 9
+        id: 'career-ed-8-9'
+        grades: [8, 9]
+        elective: false
+        desc: >-
+          All students receive credit and a letter grade for Career Education 8 & 9. Career related guest speakers and 
+          curriculum will be delivered throughout the year. Participation in and completion of follow up assignments for 
+          Take Our Kids to Work Day for Gr. 9 is required. <b>Both courses are not in the structured timetable and
+          require independent study and initiative from the students.</b>
+      - name: Career Life Education 10
+        codes: ['MCLE-10--S']
+        grades: [10]
+        elective: false
+        desc: >-
+          Career Life Education 10 is a Ministry requirement and a pre-requisite for CLC 12. The aim of Career Life 
+          Education 10 is to enable students to develop the skills they need to become self-directed individuals who set 
+          goals, make thoughtful decisions, and take responsibility for pursuing their goals throughout life. Career 
+          Life Education 10 will also provide opportunities for students to develop skills, attitudes, and behaviours
+          that will allow them to manage their lives more purposefully and effectively, enhance their personal wellbeing 
+          and realize their full potential.
+          
+          <p>Topics include:
+          <ul>
+            <li>Personal Development and Goal Setting
+            <li>Career Research and Networking
+            <li>Interview Skills, Resumes and Cover Letters
+            <li>Wellness and Workplace Safety
+          </ul>
+          

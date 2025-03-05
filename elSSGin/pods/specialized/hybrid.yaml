@@ -1,5 +1,4 @@
 name: Hybrid Learning
-has-youtube: false
 sections:
   - name: Hybrid Learning Courses
     id: hybrid-courses
