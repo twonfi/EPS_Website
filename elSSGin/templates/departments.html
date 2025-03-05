@@ -3,10 +3,8 @@
 {% block title %}{{ dept["name"] }} - ElginParkSecondary.com{% endblock %}
 {% set stylesheet = 'departments.css' %}
 {% block head %}
-  {% if dept["has-youtube"] %}
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.css" crossorigin="anonymous" integrity="sha512-jGFXuWMxJUKzdfBmoyqCXz9k2AU3Z/ZNoayoUPEBAtJZjHbTbw50AxTR1ICVPQJbSamH9ny1JwOur0x4WOdcWQ==">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.js" crossorigin="anonymous" integrity="sha512-l8cIzs5aAJutiOPIyW/9PAvDevwTA8F17Pmge51rwmKBkjZ47tap3kRv+pI8JX9owkkBpRMuOIUE7v+Rg6os9w==" async></script>
-  {% endif %}
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.css" crossorigin="anonymous" integrity="sha512-jGFXuWMxJUKzdfBmoyqCXz9k2AU3Z/ZNoayoUPEBAtJZjHbTbw50AxTR1ICVPQJbSamH9ny1JwOur0x4WOdcWQ==">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.js" crossorigin="anonymous" integrity="sha512-l8cIzs5aAJutiOPIyW/9PAvDevwTA8F17Pmge51rwmKBkjZ47tap3kRv+pI8JX9owkkBpRMuOIUE7v+Rg6os9w==" async></script>
   {% if dept_id == 'test' %}
     <meta name="robots" content="noindex">
   {% endif %}
@@ -14,6 +12,12 @@
 
 {% block main %}
   <h1>{{ dept["name"] }}</h1>
+  {% if dept["desc"] %}
+    {{ dept["desc"] }}
+  {% endif %}
+  {% if dept['youtube'] %}
+    <lite-youtube class="youtube-embed section-youtube" videoid="{{ dept["youtube"] }}" playlabel="Video for this department"></lite-youtube>
+  {% endif %}
 
   <ul id="dept-toc" aria-label="{{ dept['name'] }} department table of contents">
     {% for section in dept["sections"] %}
@@ -24,13 +28,16 @@
   {% for section in dept["sections"] %}
     <section id="{{ section["id"] | safe }}" aria-label="{{ section["name"] }}">
       <h2>{{ section["name"] | safe }}</h2>
-      {% if section["youtube"] %}
-        <lite-youtube class="youtube-embed section-youtube" videoid="{{ section["youtube"] }}" playlabel="Video for {{ section["name"] }} section"></lite-youtube>
-      {% endif %}
       {% if section["embed-code"] %}
         <div class="embed-code-container">
           {{ section["embed-code"] | safe }}
         </div>
+      {% endif %}
+      {% if section["desc"] %}
+        <p>{{ section["desc"] | safe }}</p>
+      {% endif %}
+      {% if section["youtube"] %}
+        <lite-youtube class="youtube-embed section-youtube" videoid="{{ section["youtube"] }}" playlabel="Video for {{ section["name"] }} section"></lite-youtube>
       {% endif %}
       {% if section["courses"] | length > 1 %}
         <div class="toc">
@@ -38,7 +45,11 @@
             <figcaption><h3>Contents</h3></figcaption>
             <ul aria-label="{{ section["name"] }} table of contents">
               {% for course in section["courses"] %}
-                <li><a href="#{% for c in course["codes"] %}{{ c }}{{ "," if not loop.last else "" }}{% endfor %}">{{ course["name"] | safe}}</a></li>
+                {% if course["course-redirect"] %}
+                  <li><a href="#course-redirect-{{ course['course-redirect']['code'] }}">{{ course['course-redirect']['name'] | safe }}</a></li>
+                {% else %}
+                  <li><a href="#{% for c in course["codes"] %}{{ c }}{{ "," if not loop.last else "" }}{% endfor %}">{{ course["name"] | safe}}</a></li>
+                {% endif %}
               {% endfor %}
             </ul>
           </figure>
@@ -46,44 +57,52 @@
       {% endif %}
 
     {% for course in section["courses"] %}
-      <article id="{% for c in course["codes"] %}{{ c }}{{ "," if not loop.last else "" }}{% endfor %}" class="course" aria-label="{{ course["name"] }}">
-        <h3>{{ course["name"] }}</h3>
-        <div class="course-icons" role="note">
-          {% for grade in course["grades"] %}
-            <span class="grade{{ grade }} course-info-icon" role="note" aria-label="Grade {{ grade }}">{{ grade }}</span>
-          {% endfor %}
-          {% if course["elective"] %}
-            <span class="elec course-info-icon" role="note">Elective</span>
-          {% else %}
-            <span class="req course-info-icon" role="note">Required</span>
+      <article id="{% if course["course-redirect"] %}course-redirect-{{ course["course-redirect"]["code"] }}{% else %}{% for c in course["codes"] %}{{ c }}{{ "," if not loop.last else "" }}{% endfor %}{% endif %}" class="course" aria-label="{{ course["name"] }}">
+        {% if course["course-redirect"] %}
+          <h3>{{ course["course-redirect"]['name'] }}</h3>
+          <div class="course-redirect">
+            <p class="course-redirect-info-text">This course is on another page. For information, see:</p>
+            <a href="/{{ course["course-redirect"]['dept'] }}#{{ course["course-redirect"]['code'] }}" class="course-redirect-link">{{ course["course-redirect"]['name'] }}</a>
+          </div>
+        {% else %}
+          <h3>{{ course["name"] }}</h3>
+          <div class="course-icons" role="note">
+            {% for grade in course["grades"] %}
+              <span class="grade{{ grade }} course-info-icon" role="note" aria-label="Grade {{ grade }}">{{ grade }}</span>
+            {% endfor %}
+            {% if course["elective"] %}
+              <span class="elec course-info-icon" role="note">Elective</span>
+            {% else %}
+              <span class="req course-info-icon" role="note">Required</span>
+            {% endif %}
+          </div>
+          <div class="course-code" role="note">
+            {# comma separated list, use plural "Codes" for more than 1 #}
+            Course Code{% if course["codes"] | length > 1 %}s{% endif %}:
+            {% for code in course["codes"] %}
+              {{ code }}{{ ", " if not loop.last else "" }}
+            {% endfor %}
+          </div>
+          {% if course["prereqs"] %}
+            <div class="prereqs" role="note">
+              Recommended Prerequisite{% if course["prereqs"] | length > 1 %}s{% endif %}:
+              <ul aria-label="{{ course["name"] }} recommended prerequisites">
+                {% for prereq in course["prereqs"] %}
+                  <li><a href="{% if prereq["dept"] %}/{{ prereq["dept"] }}{% endif %}#{{ prereq["code"] }}">{{ prereq["name"] }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
           {% endif %}
-        </div>
-        <div class="course-code" role="note">
-          {# comma separated list, use plural "Codes" for more than 1 #}
-          Course Code{% if course["codes"] | length > 1 %}s{% endif %}:
-          {% for code in course["codes"] %}
-            {{ code }}{{ ", " if not loop.last else "" }}
-          {% endfor %}
-        </div>
-        {% if course["prereqs"] %}
-          <div class="prereqs" role="note">
-            Recommended Prerequisite{% if course["prereqs"] | length > 1 %}s{% endif %}:
-            <ul aria-label="{{ course["name"] }} recommended prerequisites">
-              {% for prereq in course["prereqs"] %}
-                <li><a href="{% if prereq["dept"] %}/{{ prereq["dept"] }}{% endif %}#{{ prereq["code"] }}">{{ prereq["name"] }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
+          {% if course["youtube"] %}
+            <lite-youtube class="youtube-embed" videoid="{{ course["youtube"] }}" playlabel="Video for {{ course["name"] }} course"></lite-youtube>
+          {% endif %}
+          {% if course["embed-code"] %}
+            <div class="embed-code-container">
+              {{ course["embed-code"] | safe }}
+            </div>
+          {% endif %}
+          <p>{{ course["desc"] }}</p>
         {% endif %}
-        {% if course["youtube"] %}
-          <lite-youtube class="youtube-embed" videoid="{{ course["youtube"] }}" playlabel="Video for {{ course["name"] }} course"></lite-youtube>
-        {% endif %}
-        {% if course["embed-code"] %}
-          <div class="embed-code-container">
-            {{ course["embed-code"] | safe }}
-          </div>
-        {% endif %}
-        <p>{{ course["desc"] }}</p>
       </article>
     {% endfor %}
     </section>

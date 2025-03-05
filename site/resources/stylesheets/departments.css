@@ -145,3 +145,24 @@ h3 {
   margin-bottom: 0;
   padding-left: 0;
 }
+
+.course-redirect {
+  .course-redirect-link {
+    /* button-like link */
+    border-style: solid;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    margin: 5px 5px 20px;
+    cursor: pointer;
+    outline: none;
+    color: #E1DEE9;
+    border-color: #40263B;
+    font-size: 30px;
+    border-radius: 5px;
+    background-color: #3D348B;
+    transition: background-color 1.5s, color 1.5s;
+    text-decoration: none;
+    display: inline-block;
+  }
+}

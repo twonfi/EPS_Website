@@ -10,9 +10,11 @@
       "type": "string",
       "examples": ["Business"]
     },
-    "has-youtube": {
-      "description": "Whether the department has any YouTube videos",
-      "type": "boolean"
+    "desc": {
+      "$ref": "#/definitions/desc"
+    },
+    "youtube": {
+      "$ref": "#/definitions/youtube"
     },
     "sections": {
       "description": "Section objects",
@@ -22,7 +24,7 @@
       }
     }
   },
-  "required": ["name", "has-youtube", "sections"],
+  "required": ["name", "sections"],
 
   "definitions": {
     "section": {
@@ -46,6 +48,9 @@
         "embed-code": {
           "$ref": "#/definitions/embed-code"
         },
+        "desc": {
+          "$ref": "#/definitions/desc"
+        },
         "courses": {
           "description": "Course objects",
           "type": "array",
@@ -60,6 +65,9 @@
       "description": "Course object",
       "type": "object",
       "properties": {
+        "course-redirect": {//TODO ues the course link name param rather than a separate course objetc param
+          "$ref": "#/definitions/course-link"
+        },
         "name": {
           "description": "Name of course",
           "type": "string",
@@ -74,11 +82,17 @@
           },
           "examples": [["ABC--123"]]
         },
+        "id": {
+          "description": "Internal ID for courses without course codes. If possible, course codes should be used. Don't use both.",
+          "type": "string",
+          "pattern": "^[a-z0-9-_]+$",
+          "examples": ["computer-programming-9"]
+        },
         "prereqs": {
           "description": "Recommended prerequisites",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/prereq"
+            "$ref": "#/definitions/course-link"
           }
         },
         "grades": {
@@ -99,12 +113,21 @@
           "$ref": "#/definitions/embed-code"
         },
         "desc": {
-          "description": "Course description. Use <p> (no closing tag) to separate large blocks of text",
-          "type": "string",
-          "examples": ["This course includes web design and development...<p>Students will..."]
+          "$ref": "#/definitions/desc"
         }
       },
-      "required": ["name", "codes", "grades", "elective", "desc"]
+      "oneOf": [
+        {
+          "required": ["name", "grades", "elective", "desc"],
+          "oneOf": [
+              {"required": ["codes"]},
+              {"required": ["id"]}
+          ]
+        },
+        {
+          "required": ["course-redirect"]
+        }
+      ]
     },
     "grade": {
       "description": "Grade level",
@@ -112,35 +135,42 @@
       "minimum": 8,
       "maximum": 12
     },
-    "prereq": {
-      "description": "Recommended prerequisite object",
+    "course-link": {
+      "description": "Course link",
       "type": "object",
       "properties": {
+        "name": {
+          "description": "Name of course",
+          "type": "string"
+        },
         "dept": {
-          "description": "Department type.ID (departments/ or specialized/ then filename of department pod, excluding .json(5)) of prerequisite course. If omitted, use same department",
+          "description": "Department type/ID (departments/ or specialized/ then filename of department pod, excluding .yaml. If omitted, use same department",
           "type": "string",
           "examples": ["business", "advanced_placement"],
           "pattern": "^(departments|specialized)\/[a-z0-9-_]*$"
         },
-        "name": {
-          "description": "Name of prerequisite course",
-          "type": "string"
-        },
         "code": {
-          "description": "Course code of prerequisite course",
+          "description": "Course code or internal ID of course",
           "type": "string",
-          "examples": ["ABC--123"]
+          "examples": ["ABC--123", "internal-id"]
         }
       },
       "required": ["name","code"]
     },
     "youtube": {
       "description": "YouTube video ID",
-      "type": "string"
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{11}$",
+      "examples": ["dQw4w9WgXcQ"]
     },
     "embed-code": {
       "description": "Some other HTML embed code (e.g. Google Slides or Canva)",
       "type": "string"
+    },
+    "desc": {
+      "description": "Description. Use <p> (no closing tag) to separate large blocks of text",
+      "type": "string",
+      "examples": ["This course includes web design and development...<p>Students will..."]
     }
   }
 }
