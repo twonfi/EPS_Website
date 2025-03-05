@@ -1,4 +1,6 @@
 window.addEventListener("load", async (event) => {
+  const deadlineCountdown = document.getElementById('deadline-countdown');
+
   try {
     console.log("Preparing to count down...");
 
@@ -8,13 +10,11 @@ window.addEventListener("load", async (event) => {
     console.log(`The deadline is ${deadlineString}`);
     console.log(deadline);
 
-    const deadlineCountdown = document.getElementById('deadline-countdown');
-
     const updater = setInterval(function() {
       const now = new Date();
       const diff = deadline - now;
       if (diff <= 0) {
-        deadlineCountdown.innerHTML = "Deadline passed";
+        deadlineCountdown.innerHTML = "Deadline Passed";
         clearInterval(updater);
         console.log('Done; deadline passed!');
         return;
@@ -29,6 +29,6 @@ window.addEventListener("load", async (event) => {
     }, 1000);
   } catch (err) {
     console.error(err);
-    // TODO: error handling stuff (e.g. "Deadline Unavailable")
+    deadlineCountdown.innerHTML = "Error Loading Deadline";
   }
 });
