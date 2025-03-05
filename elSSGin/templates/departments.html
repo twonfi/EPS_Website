@@ -38,7 +38,7 @@
             <figcaption><h3>Contents</h3></figcaption>
             <ul aria-label="{{ section["name"] }} table of contents">
               {% for course in section["courses"] %}
-                <li><a href="#{{ course["code"] | safe }}">{{ course["name"] | safe}}</a></li>
+                <li><a href="#{% for c in course["codes"] %}{{ c }}{{ "," if not loop.last else "" }}{% endfor %}">{{ course["name"] | safe}}</a></li>
               {% endfor %}
             </ul>
           </figure>
@@ -46,7 +46,7 @@
       {% endif %}
 
     {% for course in section["courses"] %}
-      <article id="{{ course["code"] }}" class="course" aria-label="{{ course["name"] }}">
+      <article id="{% for c in course["codes"] %}{{ c }}{{ "," if not loop.last else "" }}{% endfor %}" class="course" aria-label="{{ course["name"] }}">
         <h3>{{ course["name"] }}</h3>
         <div class="course-icons" role="note">
           {% for grade in course["grades"] %}
@@ -59,7 +59,11 @@
           {% endif %}
         </div>
         <div class="course-code" role="note">
-          Course Code: {{ course["code"] }}
+          {# comma separated list, use plural "Codes" for more than 1 #}
+          Course Code{% if course["codes"] | length > 1 %}s{% endif %}:
+          {% for code in course["codes"] %}
+            {{ code }}{{ ", " if not loop.last else "" }}
+          {% endfor %}
         </div>
         {% if course["prereqs"] %}
           <div class="prereqs" role="note">

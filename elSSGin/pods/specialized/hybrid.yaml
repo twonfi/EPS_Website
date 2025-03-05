@@ -10,7 +10,7 @@ sections:
       allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
     courses:
       - name: Law Studies + Career Life Connections 12 Hybrid
-        code: PGK--12--SHY
+        codes: [PGK--12--SHY]
         grades:
           - 12
         elective: true
@@ -43,7 +43,7 @@ sections:
           branding, budgeting, health and wellness, scholarship applications,
           resumes and cover letters.          
       - name: Career Life Connections Hybrid
-        code: MCLC-12--S-HYBRID
+        codes: [MCLC-12--S-HYBRID]
         grades:
           - 11
           - 12
@@ -65,7 +65,7 @@ sections:
               forward.
           </ul>
       - name: Pre-Calculus 11 Hybrid
-        code: MPREC11--S-HYBRID
+        codes: [MPREC11--S-HYBRID]
         grades:
           - 11
         elective: false
@@ -90,7 +90,7 @@ sections:
       - name: >-
           English First Peoples 10 Literary Studies & Career Life Education
           Hybrid
-        code: PKG--10--S-EN/CLE
+        codes: ['PKG--10--S-EN/CLE']
         grades:
           - 10
         elective: false

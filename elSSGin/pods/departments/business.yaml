@@ -6,7 +6,7 @@ sections:
     youtube: 7Zv8hvVu5ws
     courses:
       - name: Business Education 9
-        code: MADEM09--S
+        codes: [MADEM09--S]
         grades:
           - 9
         elective: true
@@ -19,7 +19,7 @@ sections:
           this course will have a chance to participate in an Elgin Park Orca
           Pod Dragon's Den Challenge.
       - name: Entrepreneurship & Marketing 10
-        code: MADEM10--S
+        codes: [MADEM10--S]
         grades:
           - 10
         elective: true
@@ -34,7 +34,7 @@ sections:
           chance to create Business Plans and participate in an Elgin Park Orca
           Pod Dragon's Den Challenge and Business Case Studies.
       - name: Marketing & Promotion 11
-        code: MMAP-11-S
+        codes: [MMAP-11-S]
         grades:
           - 11
         elective: true
@@ -51,7 +51,7 @@ sections:
           the world economy. Students who take this course will have the
           opportunity to create their own Business Plan.
       - name: E-Commerce 12
-        code: MECOM12-S
+        codes: [MECOM12-S]
         grades:
           - 12
         elective: true
@@ -61,7 +61,7 @@ sections:
           use more advanced and professional marketing strategies, applying
           students' learning to e-commerence.
       - name: Accounting 12
-        code: MACC-12--S
+        codes: [MACC-12--S]
         grades:
           - 12
         elective: true
@@ -79,7 +79,7 @@ sections:
           personal income tax return at the end of the course. No pre-requisite
           elective.
       - name: Entrepreneurship 12
-        code: MENT-12-S
+        codes: [MENT-12-S]
         grades:
           - 12
         elective: true
@@ -97,3 +97,8 @@ sections:
           resources, promotion and innovation.<p>Guest speakers will be invited
           to speak about their businesses. Students will have a chance to create
           a "Real Life Venture" with their classmates in this course.
+  - name: Programming
+    id: programming
+    # yeah someone told me that this section is "sigma" or whatever</joke>
+    courses:
+      - name: Computer Programming 9/10

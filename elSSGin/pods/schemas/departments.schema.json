@@ -65,10 +65,14 @@
           "type": "string",
           "examples": ["Computer Programming 9"]
         },
-        "code": {
-          "description": "Course code, as it appears in MyEducation BC SIS",
-          "type": "string",
-          "examples": ["ABC--123"]
+        "codes": {
+          "description": "Course code in MyEducation BC SIS",
+          "type": "array",
+          "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9-_/]+$"
+          },
+          "examples": [["ABC--123"]]
         },
         "prereqs": {
           "description": "Recommended prerequisites",
@@ -100,7 +104,7 @@
           "examples": ["This course includes web design and development...<p>Students will..."]
         }
       },
-      "required": ["name", "code", "grades", "elective", "desc"]
+      "required": ["name", "codes", "grades", "elective", "desc"]
     },
     "grade": {
       "description": "Grade level",

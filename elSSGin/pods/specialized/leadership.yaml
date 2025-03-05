@@ -5,7 +5,7 @@ sections:
     id: co-op
     courses:
       - name: Co-op
-        code: PKG--11-G
+        codes: [PKG--11-G]
         grades:
           - 11
         elective: true
