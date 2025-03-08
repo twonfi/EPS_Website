@@ -20,6 +20,7 @@
   <meta name="apple-mobile-web-app-title" content="Elgin Park">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+  {% if path_ != None %}<link rel="canonical" href="https://www.elginparksecondary.com{{ path_ }}">{% endif %}
   <meta name="robots" content="noimageai">
   <!--<script type="application/ld+json">
     {

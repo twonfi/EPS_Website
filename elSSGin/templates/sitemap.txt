@@ -1,0 +1,2 @@
+{% for p in paths %}{% if p != None %}https://www.elginparksecondary.com{{ p }}
+{% endif %}{% endfor %}
