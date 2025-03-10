@@ -93,14 +93,58 @@ html {
   display: block;
 }
 
+/* Logo styles from home page */
+#img1 {
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Remove the previous logo styling */
+.logo, .logo-container {
+  display: none;
+}
+
 /* Calendar Section */
 #calendar-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 20px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#calendar {
+  width: 100%;
+  height: auto;
+  min-height: 600px;
+}
+
+/* FullCalendar customizations to match site theme */
+.fc-header-toolbar {
+  margin-bottom: 1.5em !important;
+}
+
+.fc-button-primary {
+  background-color: #40263b !important;
+  border-color: #40263b !important;
+}
+
+.fc-button-primary:hover {
+  background-color: #4d42b3 !important;
+  border-color: #4d42b3 !important;
+}
+
+.fc-daygrid-day.fc-day-today {
+  background-color: rgba(77, 66, 179, 0.1) !important;
+}
+
+.fc-event {
+  background-color: #40263b !important;
+  border-color: #40263b !important;
 }
 
 /* Footer */
@@ -131,5 +175,18 @@ footer p {
   .dropbtn1 {
     font-size: 16px;
     padding: 10px;
+  }
+
+  #calendar-container {
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .fc-header-toolbar {
+    flex-direction: column;
+  }
+  
+  .fc-toolbar-chunk {
+    margin-bottom: 10px;
   }
 }
