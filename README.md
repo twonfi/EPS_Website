@@ -42,4 +42,6 @@ This project is made possible thanks to the hard work and dedication of the foll
 
 *Oliver Kihoi Guo*
 
+*Andrew Schutte*
+
 * **Enter your name here if you want to be recognized**
