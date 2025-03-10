@@ -103,6 +103,7 @@ html {
     margin-top: 1%;
 }
 
+/* 
 .navbar {
     background-color: #40263b;
     height: 90px;
@@ -113,11 +114,11 @@ html {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    /* required */
+    /* required *//*
     overflow: auto;
     transition: 1s;
-}
-
+} */
+/* 
 .navbarActive {
     background-color: #40263b;
     height: 90px;
@@ -127,11 +128,11 @@ html {
     border-color: #4d42b3;
     position: fixed;
     top: 0;
-    /* required */
+    /* required *//*
     overflow: auto;
     z-index: 99;
     transition: 1s;
-}
+} */
 
 #elginorca1 {
     width: 20%;
