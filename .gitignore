@@ -19,6 +19,7 @@ site/forms.html
 site/.wrangler/
 site/elSSGin/*
 site/resources/lib/node_modules/
+site/sitemap.txt
 # "keepers". they MUST exist, to prevent dir not found failing build
 !site/departments/_
 !site/specialized/_
