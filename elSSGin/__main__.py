@@ -115,7 +115,7 @@ def dept_pages(pods: list[dict], file_dir: str) -> None:
                     ".html", os.path.basename(pod_path))),
             bob(
                 jinja_env.get_template('departments.html'),
-                f'/{file_dir}/{entry['id']}',
+                f'/{file_dir}/{entry["id"]}',
                 {
                     'dept': pod_data,
                     'dept_id': entry['id']
