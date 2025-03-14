@@ -39,7 +39,6 @@ fetch('blog-posts.json')
             const description = document.createElement('p');
             description.classList.add('blog-description');
             description.textContent = item.description;
-
             // Append the thumbnail, title, and description to the grid item
             gridItem.appendChild(thumbnail);
             gridItem.appendChild(title);
