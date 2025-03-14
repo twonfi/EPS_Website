@@ -646,12 +646,12 @@ html {
     width: 100%;
 } */
 
-li.dropdown {
+/* li.dropdown {
     transition: ease-in-out 0.5s;
     display: inline-block;
-}
+} */
 
-.dropdown-content {
+/* .dropdown-content {
     margin-left: 20px;
     transition: ease-in-out 0.5s;
     display: none;
@@ -660,9 +660,9 @@ li.dropdown {
     width: inherit;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-}
+} */
 
-.dropdown:hover .dropdown-content {
+/* .dropdown:hover .dropdown-content {
     transition: ease-in-out 0.5s;
     display: block;
 }
@@ -675,22 +675,22 @@ li.dropdown {
 .dropdown:focus .dropdown-content {
     transition: ease-in-out 0.5s;
     display: block;
-}
+} */
 
-.dropdown-content a {
+/* .dropdown-content a {
     transition: ease-in-out 0.5s;
     color: black;
     text-decoration: none;
     display: block;
     text-align: left;
     cursor: pointer;
-}
+} */
 
-.dropdown-content a:hover {
+/* .dropdown-content a:hover {
     transition: ease-in-out 0.5s;
     color: black;
     background-color: #f1f1f1;
-}
+} */
 
 /* li a div,
 .dropbtn2 {
@@ -706,7 +706,7 @@ li.dropdown {
     transition: ease-in-out 0.5s;
 } */
 
-.dropdown-content2 {
+/* .dropdown-content2 {
     transition: ease-in-out 0.5s;
     position: absolute;
     background-color: #f9f9f9;
@@ -734,7 +734,7 @@ li.dropdown {
 .db1:hover .dropdown-content2 {
     transition: ease-in-out 0.5s;
     display: block;
-}
+} */
 
 /* .NavItem {
     display: flex;
