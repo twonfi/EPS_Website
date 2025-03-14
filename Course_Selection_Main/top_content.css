@@ -113,6 +113,11 @@ li.dropdown {
     align-items: center;
 }
 
+.NavItem button:hover {
+    transition: background-color 0.1s ease-in-out;
+    background-color: #332333;
+}
+
 /* Header Images */
 #img1 {
     padding-top: 12px;

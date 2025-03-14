@@ -48,7 +48,7 @@ html {
     font-family: "DM Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
     margin-right: 12%;
     margin-left: 12%;
-    margin-bottom 0px;
+    margin-bottom: 0px;
 }
 
 .p2 {
@@ -175,7 +175,7 @@ html {
     width: 40%;
 }
 
-.navB {
+/* .navB {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,7 +189,7 @@ html {
     margin-top: 24px;
     margin-left: 2%;
     display: inline-block;
-}
+} */
 
 #article1Title {
     font-size: 30px;
@@ -428,8 +428,6 @@ html {
     color: purple;
 }
 
-#fs {}
-
 #lege {
     border-style: solid;
     margin-left: 5%;
@@ -508,7 +506,7 @@ html {
     margin-top: 1%;
 }
 
-#navbar {
+/* #navbar {
     background-color: #40263B;
     height: 90px;
     width: 100%;
@@ -518,9 +516,9 @@ html {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    /* required */
+    /* required *//*
     overflow: auto;
-}
+} */
 
 #main {
     margin-top: inherit;
@@ -551,7 +549,7 @@ html {
     font-weight: bold;
 }
 
-.navB {
+/* .navB {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -565,7 +563,7 @@ html {
     margin-top: 24px;
     margin-left: 1%;
     display: inline-block;
-}
+} */
 
 #textSpace {
     top: 0px;
@@ -631,7 +629,7 @@ html {
     float: left;
 }
 
-li button,
+/* li button,
 .dropbtn1 {
     border: none;
     padding: 0px 15px;
@@ -646,7 +644,7 @@ li button,
     background-color: #40263b;
     height: 90px;
     width: 100%;
-}
+} */
 
 li.dropdown {
     transition: ease-in-out 0.5s;
@@ -694,7 +692,7 @@ li.dropdown {
     background-color: #f1f1f1;
 }
 
-li a div,
+/* li a div,
 .dropbtn2 {
     margin-left: 25px;
     margin-right: 25px;
@@ -706,7 +704,7 @@ li a div,
     text-align: center;
     text-decoration: none;
     transition: ease-in-out 0.5s;
-}
+} */
 
 .dropdown-content2 {
     transition: ease-in-out 0.5s;
@@ -738,7 +736,7 @@ li a div,
     display: block;
 }
 
-.NavItem {
+/* .NavItem {
     display: flex;
     height: 100%;
     width: 100%;
@@ -746,7 +744,7 @@ li a div,
     z-index: 10;
     justify-content: center;
     align-items: center;
-}
+} */
 
 table,
 td,
