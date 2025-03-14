@@ -79,8 +79,8 @@ li.dropdown {
     position: absolute;
     background-color: #f9f9f9;
     width: inherit;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    /* border-radius: 20px; */ /*Gives rounded edges to the whole dropdown box*/
 }
 
 .dropdown:hover .dropdown-content,
@@ -90,17 +90,18 @@ li.dropdown {
 }
 
 .dropdown-content a {
-    transition: ease-in-out 0.5s;
+    transition: background-color ease-in-out 0.1s;
     color: black;
     text-decoration: none;
     display: block;
     text-align: left;
     cursor: pointer;
-    padding: 10px;
+    padding: 16px 16px;
+    /* border-radius: 20px;*/ /*Gives rounded edges when hovering over dropdown items */
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #f0f0f0;
 }
 
 /* Navigation Items */
@@ -111,6 +112,14 @@ li.dropdown {
     font-size: x-large;
     justify-content: center;
     align-items: center;
+}
+
+.NavItem button {
+    transition: ease-in-out 0.2s;
+}
+
+.NavItem button:hover {
+    background-color: #332333;
 }
 
 /* Header Images */
