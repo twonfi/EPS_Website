@@ -1,6 +1,6 @@
 /home.html / 301
 
-/favicon.ico /resources/images/fav/196x196.ico 301
+/favicon.ico /resources/images/fav/favicon.ico 301
 
 # old departments
 /business.html /departments/business 301
