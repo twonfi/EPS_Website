@@ -25,13 +25,15 @@
     <article id="{{ club["id"] }}" class="club" aria-label="{{ club["name"] | safe }}">
       <a class="club-claim-link"
          href="/edit-requests?url=https%3A%2F%2Fwww.elginparksecondary.com%2Fclubs%3F%23{{ club["id"] }}" title="Request an edit">
-        <img src="/resources/images/pencil.svg" alt="Request an edit for {{ club["name"] }}">
+        <img src="/resources/images/pencil.svg" alt="Request an edit for {{ club["name"] | safe }}">
       </a><h2>{{ club["name"] | safe }}</h2>
-      {% if club["instagram"] %}
-        <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/"><img src="/resources/images/instagram.svg" alt></a>
-      {% endif %}
+      <div class="icon-shelf">
+        {% if club["instagram"] %}
+          <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/"><img src="/resources/images/instagram.svg" alt="{{ club["name"] | safe }}'s Instagram"></a>
+        {% endif %}
+      </div>
       {% if club["logo"] %}
-        <img class="club-logo" src="/resources/images/clubs/{{ club["id"] }}/logo.{{ club["logo"] }}" alt="{{ club["name"] }}'s Instagram">
+        <img class="club-logo" src="/resources/images/clubs/{{ club["id"] }}/logo.{{ club["logo"] }}" alt>
       {% endif %}
       <span class="club-info">
         Sponsored by {{ club["sponsor"] }}<br>
