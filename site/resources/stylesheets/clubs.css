@@ -38,13 +38,12 @@ article, .club {
       width: 1.5em;
     }
   }
-  .instagram-icon {
-    position: relative;
-    top: .25em;
-    left: -1.2em;
-    margin-left: .9em;
-    img {
-      width: 1.7em;
+  .icon-shelf {
+    margin-bottom: .5em;
+    a {
+      img {
+        width: 1.7em;
+      }
     }
   }
   .club-logo {
