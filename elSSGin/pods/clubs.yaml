@@ -7,8 +7,6 @@
 # Tell the AI to correct grammar and leave a #comment behind.
 # We cannot trust the office with grammar.
 
-# TODO: Get all Instagram accounts here.
-
 - name: ABC Detective Club
   id: abc-detective
   meeting-days:
@@ -26,17 +24,19 @@
     - Friday after school, monthly
   meeting-room: Room 111C
   sponsor: Ms. Li
+  instagram: aaacosplayanimeclubeps
   desc: >-
     Showing ACGN cosplay culture, organize an
     anime convention and cosplay performance and board games for
     relaxing.
 
-- name: Anti Racism Committee
+- name: Anti-Racism Committee
   id: anti-racism
   meeting-days:
     - Wednesday at lunch
   meeting-room: Room 130S
   sponsor: Ms. Sharma
+  instagram: eps_antiracism_committee
   desc: >-
     This is a committee that connects once a
     week to discuss on how to make sure our school has ways to celebrate
@@ -61,6 +61,7 @@
     - Tuesday after school
   meeting-room: Room 115C
   sponsor: Ms. Davidson and Ms. Li
+  instagram: epsartclub25  # they change it every year?
   desc: >-
     To provide arts and crafts workshops to the student body and
     raise money for the food bank as well as our own program.
@@ -93,6 +94,7 @@
     - Wednesday at lunch
   meeting-room: Room 143C
   sponsor: Ms. Li
+  instagram: epsbeyond_athletics
   desc: >-
     Supporting South Surrey youth in building
     connection, enhancing their athletic and interpersonal skills while
@@ -137,6 +139,7 @@
     - Tuesday after school
   meeting-room: Room 203N
   sponsor: Mr. Moffett
+  # instagram: eps_writing_club  # twonfi: TODO: messaged, waiting for response (no "creative")
   desc: >-
     To provide an environment for students to
     improve their storytelling, writing skills, and to get feedback/assistance
@@ -149,6 +152,7 @@
     - Wednesday after school
   meeting-room: Room 130S
   sponsor: Mr. Tsang
+  instagram: epscomputerprogramming
   desc: >-
     The Computer Programming Club is for anyone interested in programming and web
     design. You'll learn about algorithms, data structures, and a chance to write
@@ -160,6 +164,7 @@
   meeting-days:
     - Tuesday at lunch
   meeting-room: Room 203N
+  instagram: eps_createchangeclub
   desc: >-
     To help fundraise for community causes and
     involvement, also to bring awareness to societal issues.
@@ -181,6 +186,7 @@
   meeting-days:
     - Friday after school
   meeting-room: Room 143C
+  instagram: eps_dance_club
   desc: >-
     To provide a space where students can learn and enjoy
     various dances, offer an opportunity to develop self-expression, learn the
@@ -214,6 +220,7 @@
   meeting-days:
     - Friday at lunch
   meeting-room: Room 207N
+  instagram: thepodpress
   desc: >-
     To keep students updated on school and world news. To
     serve as an instrument of communication for staff to students. To
@@ -261,6 +268,7 @@
   meeting-days:
     - Thursday after school
   meeting-room: Room 143C
+  instagram: epsguitarclub
   desc: >-
     The Guitar Club will be a place for guitarists, no matter
     their skill or proficiency, to practice, learn and play together. In addition,
@@ -312,6 +320,7 @@
   meeting-days:
     - Tuesday after school
   meeting-room: Room 233S
+  instagram: eps_math_support_club
   desc: >-
     We hope to support our fellow students in Math
     and Physics, provide a positive learning environment for members to
@@ -321,6 +330,7 @@
   id: plc
   sponsor: Ms. Janzen
   meeting-room: Careers Room
+  instagram: eps_plc_  # Don't be like PLC, faking "fonts" with Unicode (a11y)
   desc: >-
     Service-driven club, supporting Grade 8 students and school-wide events.
 
@@ -341,6 +351,7 @@
   meeting-days:
     - Wednesday at lunch, bi-weekly
   meeting-room: Room 103N
+  instagram: epspsychology
   desc: >-
     The club wants to help students better understand
     different mental health and psychological illnesses and host many fun
@@ -375,6 +386,7 @@
   id: science
   sponsor: Mr. Quan
   meeting-room: Rooms 102N &amp; 106N
+  instagram: eps.science
   desc: >-
     Spark interest in science and introduce science
     concepts which students may not be familiar with.
@@ -443,6 +455,7 @@
   meeting-days:
     - Wednesday after school
   meeting-room: Cafeteria
+  instagram: eps_tabletennis
   desc: >-
     To keep students active through table tennis, also known as ping-pong.
 
