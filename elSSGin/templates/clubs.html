@@ -14,7 +14,13 @@
       <summary id="toc-summary">Table of contents</summary>
       <ul aria-labelledby="toc-summary">
         {% for club in clubs %}
-          <li><a href="#{{ club["id"] }}">{{ club["name"] | safe}}</a></li>
+          <li><a href="#{{ club["id"] }}">
+            {% if club["abbr"] %}
+              <abbr title="{% if club["safe-name"] %}{{ club["safe-name"] }}{% else %}{{ club["name"] }}{% endif %}">{{ club["abbr"] }}</abbr>
+            {% else %}
+              {{ club["name"] }}
+            {% endif %}
+          </a></li>
         {% endfor %}
         <li><a href="#start-your-own-club">Start a club</a></li>
       </ul>
@@ -22,14 +28,16 @@
 
 
   {% for club in clubs %}
-    <article id="{{ club["id"] }}" class="club" aria-label="{{ club["name"] | safe }}">
+    {% if club["safe-name"] %}{% set safe_name = club["safe-name"] %}{% else %}{% set safe_name = club["name"] %}{% endif %}
+
+    <article id="{{ club["id"] }}" class="club" aria-label="{{ safe_name }}">
       <a class="club-claim-link"
          href="/edit-requests?url=https%3A%2F%2Fwww.elginparksecondary.com%2Fclubs%3F%23{{ club["id"] }}" title="Request an edit">
-        <img src="/resources/images/pencil.svg" alt="Request an edit for {{ club["name"] | safe }}">
-      </a><h2>{{ club["name"] | safe }}</h2>
+        <img src="/resources/images/pencil.svg" alt="Request an edit for {{ safe_name }}">
+      </a><h2>{{ club["name"] | safe }} {% if club["abbr"] %}({{ club["abbr"] }}){% endif %}</h2>
       <div class="icon-shelf">
         {% if club["instagram"] %}
-          <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/"><img src="/resources/images/instagram.svg" alt="{{ club["name"] | safe }}'s Instagram"></a>
+          <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/"><img src="/resources/images/instagram.svg" alt="{{ safe_name }}'s Instagram"></a>
         {% endif %}
       </div>
       {% if club["logo"] %}

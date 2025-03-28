@@ -77,8 +77,9 @@
     and the Art 2 Heart. For Art 2 Heart, a lot of the work/art that we do will
     be donated to seniors homes in our community.
 
-- name: Black Student Union (BSU)
+- name: Black Student Union
   id: bsu
+  abbr: BSU
   meeting-days:
     - Tuesday after school, bi-weekly
   meeting-room: Library
@@ -169,8 +170,9 @@
     To help fundraise for community causes and
     involvement, also to bring awareness to societal issues.
 
-- name: Care/Art/Performance (CAP) Club
+- name: Care/Art/Performance Club
   id: cap
+  abbr: CAP Club
   sponsor: Mr. Henderson
   meeting-days:
     - Thursday after school
@@ -326,8 +328,9 @@
     and Physics, provide a positive learning environment for members to
     study, work and tutor.
 
-- name: Peer Leadership Council (PLC)
+- name: Peer Leadership Council
   id: plc
+  abbr: PLC
   sponsor: Ms. Janzen
   meeting-room: Careers Room
   instagram: eps_plc_  # Don't be like PLC, faking "fonts" with Unicode (a11y)
@@ -369,8 +372,9 @@
     of our affectionate furry friends and transform the painful echoes into
     loads of love, hope and positivity
 
-- name: Surrey Youth Leadership Club (SYLC)
+- name: Surrey Youth Leadership Club
   id: sylc
+  abbr: SYLC
   sponsor: Ms. Fowler
   meeting-days:
     - Wednesday at lunch
@@ -392,8 +396,9 @@
     concepts which students may not be familiar with.
 
 # -> EPS-less club name
-- name: Student Council (STUCO)
+- name: Student Council
   id: stuco
+  abbr: STUCO
   sponsor: Ms. Ellett, Mr. Pereira-Costa, Mr. Black
   meeting-days:
     - TBA
@@ -424,8 +429,9 @@
     To educate peers in fields of 3D printing,
     computer science and biotechnology.
 
-- name: Trading Card Games (TCG) Club
+- name: Trading Card Games Club
   id: tcg
+  abbr: TCG Club
   sponsor: Mr. Wu
   meeting-days:
     - Thursday after school
