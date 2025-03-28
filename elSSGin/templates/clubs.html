@@ -5,10 +5,7 @@
 {% block title %}Clubs - ElginParkSecondary.com{% endblock %}
 {% set stylesheet = 'clubs.css' %}
 {% set description = 'Elgin Park has over ' + clubs | length | string + " clubs for all your interests, from art and chess to helping out in the community and more! Don't see a club? Start your own!" %}
-{% block head %}
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.css" crossorigin="anonymous" integrity="sha512-jGFXuWMxJUKzdfBmoyqCXz9k2AU3Z/ZNoayoUPEBAtJZjHbTbw50AxTR1ICVPQJbSamH9ny1JwOur0x4WOdcWQ==">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lite-youtube-embed/0.3.3/lite-yt-embed.min.js" crossorigin="anonymous" integrity="sha512-l8cIzs5aAJutiOPIyW/9PAvDevwTA8F17Pmge51rwmKBkjZ47tap3kRv+pI8JX9owkkBpRMuOIUE7v+Rg6os9w==" async></script>
-{% endblock %}
+{% set lite_youtube = True %}
 
 {% block main %}
   <h1>Clubs</h1>
@@ -17,7 +14,13 @@
       <summary id="toc-summary">Table of contents</summary>
       <ul aria-labelledby="toc-summary">
         {% for club in clubs %}
-          <li><a href="#{{ club["id"] }}">{{ club["name"] | safe}}</a></li>
+          <li><a href="#{{ club["id"] }}">
+            {% if club["abbr"] %}
+              <abbr title="{% if club["safe-name"] %}{{ club["safe-name"] }}{% else %}{{ club["name"] }}{% endif %}">{{ club["abbr"] }}</abbr>
+            {% else %}
+              {{ club["name"] }}
+            {% endif %}
+          </a></li>
         {% endfor %}
         <li><a href="#start-your-own-club">Start a club</a></li>
       </ul>
@@ -25,16 +28,20 @@
 
 
   {% for club in clubs %}
-    <article id="{{ club["id"] }}" class="club" aria-label="{{ club["name"] | safe }}">
+    {% if club["safe-name"] %}{% set safe_name = club["safe-name"] %}{% else %}{% set safe_name = club["name"] %}{% endif %}
+
+    <article id="{{ club["id"] }}" class="club" aria-label="{{ safe_name }}">
       <a class="club-claim-link"
          href="/edit-requests?url=https%3A%2F%2Fwww.elginparksecondary.com%2Fclubs%3F%23{{ club["id"] }}" title="Request an edit">
-        <img src="/resources/images/pencil.svg" alt="Request an edit for {{ club["name"] }}">
-      </a><h2>{{ club["name"] | safe }}</h2>
-      {% if club["instagram"] %}
-        <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/"><img src="/resources/images/instagram.svg" alt></a>
-      {% endif %}
+        <img src="/resources/images/pencil.svg" alt="Request an edit for {{ safe_name }}">
+      </a><h2>{{ club["name"] | safe }} {% if club["abbr"] %}(<abbr>{{ club["abbr"] }}</abbr>){% endif %}</h2>
+      <div class="icon-shelf">
+        {% if club["instagram"] %}
+          <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/"><img src="/resources/images/instagram.svg" alt="{{ safe_name }}'s Instagram"></a>
+        {% endif %}
+      </div>
       {% if club["logo"] %}
-        <img class="club-logo" src="/resources/images/clubs/{{ club["id"] }}/logo.{{ club["logo"] }}" alt="{{ club["name"] }}'s Instagram">
+        <img class="club-logo" src="/resources/images/clubs/{{ club["id"] }}/logo.{{ club["logo"] }}" alt>
       {% endif %}
       <span class="club-info">
         Sponsored by {{ club["sponsor"] }}<br>

@@ -14,15 +14,25 @@
       "type": "object",
       "properties": {
         "name": {
-          "description": "Club name. Parsed as HTML, so elements like <i> can be used, but characters like & need to be escaped (e.g. &amp;)",
+          "description": "Full club name. Parsed as HTML, so elements like <i> can be used, but characters like & need to be escaped (e.g. &amp;)",
           "type": "string",
           "examples": ["Computer Programming Club", "<i>Dungeons &amp; Dragons</i> Club"]
         },
         "id": {
-          "description": "Club ID (abbreviation if more common but usually full name, no \"club\", a-z, 0-9, -)",
+          "description": "Club ID (official abbreviation if available or full name, no \"-club\", a-z, 0-9, -)",
           "type": "string",
-          "pattern": "^[a-z0-9-]*$",
+          "pattern": "^[a-z0-9-]*$(?<!-club$)",
           "examples": ["computer-programming", "dnd", "stuco"]
+        },
+        "safe-name": {
+          "description": "Plain-text name for attributes. Only use for club names with HTML elements or entities. No HTML.",
+          "type": "string",
+          "examples": ["Dungeons & Dragons Club"]
+        },
+        "abbr": {
+          "description": "Club name abbreviation. Only use for 'official' abbreviations commonly used in official club communications. Parsed as HTML.",
+          "type": "string",
+          "examples": ["STUCO", "SYLC", "<i>D&amp;D</i> Club"]
         },
         "logo": {
           "description": "Logo file extension. The actual file is stored in /resources/images/clubs/{{ club[\"id\"] }}/logo.{{ club[\"logo\"] }}",

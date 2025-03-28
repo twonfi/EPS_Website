@@ -1,0 +1,62 @@
+name: Mathematics
+youtube: _KjTu0jgFW0
+desc: >-
+  The Mathematics curriculum is designed to give all students the opportunity to learn skills to successfully locate,
+  analyze and apply the information they need in their work and personal lives after they graduate. They include the 
+  four major strands of competencies that are critical to students' learning, doing and understanding Mathematics.
+  
+  <p>
+  
+  <b>Reasoning and Analyzing</b>
+  <ul>
+    <li>Demonstrate fluency with mental mathematics and estimation
+    <li>Develop inductive and deductive mathematical reasoning
+    <li>Use tools or technology to explore and create patterns and relationships, and test conjectures 
+  </ul>
+  
+  <b>Understanding and Solving</b>
+  <ul>
+    <li>Develop, construct and apply new mathematical knowledge through play, inquiry, and problem solving
+    <li>Demonstrate multiple strategies to solve problems in both abstract and real-life situations using different 
+        cultural perspectives
+  </ul>
+  
+  <b>Communicating and Representing</b>
+  <ul>
+    <li>Use mathematical vocabulary and language to communicate in a variety of ways to explain, clarify, and justify ideas
+    <li>Develop mathematical understanding through concrete, pictorial and symbolic representations
+  </ul>
+
+  <b>Connecting and Reflecting</b>
+  <ul>
+    <li>Develop visualization skills to assist in exploring, connecting, applying, and describing concepts to each
+        other, to other disciplines, and to the real world
+  </ul>
+  
+  <p>It is advised that both parents and students maintain contact with the Math teacher when concerns or questions 
+  arise concerning Math placements. In addition, please check with post-secondary institutions for requirements of math 
+  courses and grades in specific programs. The <a href="/forms#math-flowchart">Math Flowchart</a> is available as a
+  reference for choosing courses based on your post-secondary goals.
+sections:
+  # TODO: courses
+  - name: Grade 9
+    id: grade-9
+    courses:
+      - name: Mathematics 9
+        codes: ['MMA--09--S']
+        grades: [9]
+        elective: false
+        desc: >-
+          Mathematics 9 is a continuum of the skills from the Mathematics 8 course to assist further aptitudes.
+          Students will study:
+          <ul>
+            <li>Numbers and its operations
+            <li>Patterns, proportional reasoning and relations (algebra)
+            <li>Shape and Space (measurement, geometry and trigonometry)
+            <li>Probability and statistics
+            <li>Financial literacy
+            <li>Problem solving
+          </ul>
+  - name: Grade 10
+    id: grade-10
+    courses: [] # TODO

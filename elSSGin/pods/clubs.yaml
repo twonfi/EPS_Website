@@ -1,53 +1,151 @@
-- name: 3D Printing &amp; 3D Modeling Club
-  id: "3d"
-  logo: png
-  sponsor: TBA
-  meeting-days:
-    - Tuesday after school
-  meeting-room: Room 130S
-  instagram: eps.3dprinting
+# The main club list is on the Orca News app
+# (https://elginpark.appazur.com/#/),
+# in the "Elgin Park" tab.
+#
+# It's a PDF table from Word (don't even try to parse it without AI),
+# and probably have grammatical mistakes (apostrophe's for plural's).
+# Tell the AI to correct grammar and leave a #comment behind.
+# We cannot trust the office with grammar.
+
 - name: ABC Detective Club
   id: abc-detective
   meeting-days:
     - Wednesday after school
   meeting-room: Room 145C
   sponsor: Mr. Leeder
+  desc: >-
+    To strengthen students' logical
+    thinking ability and biological knowledge through the study of different
+    cases.
+
 - name: Anime &amp; Cosplay Club
   id: anime-and-cosplay
   meeting-days:
     - Friday after school, monthly
   meeting-room: Room 111C
   sponsor: Ms. Li
+  instagram: aaacosplayanimeclubeps
+  desc: >-
+    Showing ACGN cosplay culture, organize an
+    anime convention and cosplay performance and board games for
+    relaxing.
+
+- name: Anti-Racism Committee
+  id: anti-racism
+  meeting-days:
+    - Wednesday at lunch
+  meeting-room: Room 130S
+  sponsor: Ms. Sharma
+  instagram: eps_antiracism_committee
+  desc: >-
+    This is a committee that connects once a
+    week to discuss on how to make sure our school has ways to celebrate
+    all learners and their stories. We use compassionate system tools to
+    unpack racism and have dialogue on how to ensure our students all feel a
+    sense of belonging in our school community.
+
+- name: AP Club
+  id: ap
+  meeting-days:
+    - Thursday after school, bi-weekly
+  meeting-room: Room 243C
+  sponsor: Mr. Kwan
+  desc: >-
+    Aiding students participating in AP programs in achieving their
+    goal scores, as well as creating an environment where each can study
+    while helping their peers.
+
 - name: Art Club
   id: art
   meeting-days:
     - Tuesday after school
   meeting-room: Room 115C
   sponsor: Ms. Davidson and Ms. Li
-- name: Black Student Union (BSU)
+  instagram: epsartclub25  # they change it every year?
+  desc: >-
+    To provide arts and crafts workshops to the student body and
+    raise money for the food bank as well as our own program.
+
+- name: Art 2 Heart Club
+  id: art-2-heart
+  meeting-days:
+    - Tuesday after school
+  meeting-room: Room 115C
+  sponsor: Ms. Davidson and Ms. Li
+  desc: >-
+    We will be doing a joint program between Art Club
+    and the Art 2 Heart. For Art 2 Heart, a lot of the work/art that we do will
+    be donated to seniors homes in our community.
+
+- name: Black Student Union
   id: bsu
+  abbr: BSU
   meeting-days:
     - Tuesday after school, bi-weekly
   meeting-room: Library
-  sponsor: Ms. Hogan
+  sponsor: Ms. Hogan, Ms. Sharma
+  desc: >-
+    To promote diversity support, educational
+    opportunities, activism, connection, communication and leadership
+    among Black students and the school community.
+
 - name: Beyond Athletics Club
   id: beyond-athletics
   meeting-days:
     - Wednesday at lunch
   meeting-room: Room 143C
   sponsor: Ms. Li
+  instagram: epsbeyond_athletics
+  desc: >-
+    Supporting South Surrey youth in building
+    connection, enhancing their athletic and interpersonal skills while
+    engaging with community.
+
 - name: Biking Club
   id: biking
   meeting-days:
     - Thursday at lunch
-  meeting-room: Drama Room
-  sponsor: TBA
+  meeting-room: Room 160C
+  sponsor: Mr. Weiss
+  desc: >-
+    To get youth of all levels outside and active. We will go on
+    after school bike rides in Crescent Park and South Surrey Athletic Park.
+
 - name: Chess Club
   id: chess
   meeting-days:
     - Wednesday after school
   meeting-room: Room 235S
   sponsor: Mr. Pereira-Costa
+  desc: >-
+    The purpose of the Chess Club is to create an environment in
+    which players can learn, compete, discuss and have fun through the
+    game of chess. The goal is to build a community of chess players who
+    can represent our school at a provincial and even national level.
+
+- name: Christian Fellowship Club
+  id: christian-fellowship
+  meeting-days:
+    - Friday at lunch
+  meeting-room: Room 235S
+  sponsor: Mr. Pereira-Costa
+  desc: >-
+    Discuss/Share our values as Christians,
+    especially as it connects and deals with culture. Learn and discuss the
+    history of Christianity and people in the faith.
+
+- name: Creative Writing Club
+  id: creative-writing
+  meeting-days:
+    - Tuesday after school
+  meeting-room: Room 203N
+  sponsor: Mr. Moffett
+  # instagram: eps_writing_club  # twonfi: TODO: messaged, waiting for response (no "creative")
+  desc: >-
+    To provide an environment for students to
+    improve their storytelling, writing skills, and to get feedback/assistance
+    with their works.
+
 - name: Computer Programming Club
   id: computer-programming
   meeting-days:
@@ -55,33 +153,48 @@
     - Wednesday after school
   meeting-room: Room 130S
   sponsor: Mr. Tsang
+  instagram: epscomputerprogramming
   desc: >-
-    The Computer Programming Club is for anyone interested in programming, web
-    design...
+    The Computer Programming Club is for anyone interested in programming and web
+    design. You'll learn about algorithms, data structures, and a chance to write
+    the Canadian Computing Competition.
+
 - name: Create Change Club
   id: create-change
   sponsor: Mr. Ellett
   meeting-days:
     - Tuesday at lunch
   meeting-room: Room 203N
-- name: Creative Writing Club
-  id: creative-writing
-  meeting-days:
-    - Tuesday after school
-  meeting-room: Room 203N
-  sponsor: Mr. Moffett
-- name: Care/Art/Performance (CAP) Club
+  instagram: eps_createchangeclub
+  desc: >-
+    To help fundraise for community causes and
+    involvement, also to bring awareness to societal issues.
+
+- name: Care/Art/Performance Club
   id: cap
+  abbr: CAP Club
   sponsor: Mr. Henderson
   meeting-days:
     - Thursday after school
   meeting-room: Room 147C
+  desc: >-
+    We believe that art, music, dance,
+    etc. can bring people joy and hope. The club will perform for nursing
+    homes, charity agencies, orphanages, and bring the lonely ones happiness.
+
 - name: Dance Club
   id: dance
   sponsor: Mr. Wu
   meeting-days:
     - Friday after school
   meeting-room: Room 143C
+  instagram: eps_dance_club
+  desc: >-
+    To provide a space where students can learn and enjoy
+    various dances, offer an opportunity to develop self-expression, learn the
+    importance of team work and collaboration, showcase talents and make
+    a positive impact through dance.
+
 - name: Debate Club
   id: debate
   sponsor: Mr. Pereira-Costa
@@ -89,12 +202,44 @@
     - Monday after school
     - Friday after school
   meeting-room: Room 235S
+  desc: >-
+    To provide an environment for students to learn debate,
+    find tournament opportunities, and forming a debate team.
+
 - name: Diabetes Awareness Club
   id: diabetes-awareness
   sponsor: Mr. Grave
   meeting-days:
     - TBA, bi-weekly
   meeting-room: Room 134S
+  desc: >-
+    Lead by example and create a safe place for
+    students/staff that have Type 1 or 2 diabetes to chat.
+
+- name: Elgin News
+  id: elgin-news
+  sponsor: Ms. Ellett
+  meeting-days:
+    - Friday at lunch
+  meeting-room: Room 207N
+  instagram: thepodpress
+  desc: >-
+    To keep students updated on school and world news. To
+    serve as an instrument of communication for staff to students. To
+    increase school spirit.
+
+# Clubs starting with "EPS" in PDF club list
+# (don't include for elSSGin, and sort without "EPS")
+#
+# For the actual club entries, add a line before it:
+# -> EPS-less club name
+#
+# - EPS Karaoke Club
+# - EPS Technology Club
+# - EPS Science Club
+# - EPS Student Council
+# - EPS Proud (sort-only)
+
 - name: Garden Club
   id: garden
   sponsor: Ms. Trevelyan
@@ -102,18 +247,35 @@
     - Wednesday at lunch
     - Wednesday after school
   meeting-room: Room 107N
+  desc: >-
+    To improve and maintain the Courtyard and provide an
+    outdoor interactive learning environment where students can relax and
+    connect with nature.
+
 - name: Game Design &amp; Development Club
   id: game-design-and-dev
   sponsor: Mr. Tsang
   meeting-days:
     - Thursday after school
   meeting-room: Room 132S
+  desc: >-
+    Introducing students to the process of
+    designing and developing a video game through coding, 3D modeling
+    and the use of Godot Engine, which is an open-source tool used for the
+    development of video games.
+
 - name: Guitar Club
   id: guitar
   sponsor: Mr. Black
   meeting-days:
     - Thursday after school
   meeting-room: Room 143C
+  instagram: epsguitarclub
+  desc: >-
+    The Guitar Club will be a place for guitarists, no matter
+    their skill or proficiency, to practice, learn and play together. In addition,
+    veteran players can help new guitarists.
+
 - name: IETLS Club
   id: ietls
   sponsor: Ms. Williamson
@@ -121,55 +283,195 @@
     - Tuesday at lunch
     - Thursday at lunch
   meeting-room: Room 248C
+  desc: >-
+    Our club mainly focuses on supporting all students who
+    need to take IELTS test and offering them a friendly, inclusive and
+    diverse studying environment.
+
+# -> EPS-less club name
+- name: Karaoke Club
+  id: karaoke
+  sponsor: Mr. Weiss
+  meeting-days:
+    - Wednesday at lunch
+  meeting-room: Drama Theatre
+  desc: >-
+    Create an atmosphere where peers feel safe to
+    express themselves with their voices. It's a fun, all-inclusive club that
+    promotes authenticity as well as self-expression.
+
+- name: Little Heroes, Big Hearts
+  # note: in PDF list, the name is misspelled as "Heros"
+  id: little-heroes-big-hearts
+  sponsor: Mr. Black
+  meeting-days:
+    - Monday at lunch
+    - Monday after school
+    - Thursday at lunch
+    - Thursday after school
+  meeting-room: Room 143C
+  desc: >-
+    For students, contribute to a real-world cause,
+    the BC Children's Hospital, and to gain recognition for their work. In
+    addition, the club has partnered with an organization for fundraising to
+    BCCHF and we hope to advance medical research.
+
 - name: Math Support Club
   id: math-support
   sponsor: Ms. Hill
   meeting-days:
     - Tuesday after school
   meeting-room: Room 233S
-- name: Elgin News
-  id: elgin-news
-  sponsor: Ms. Ellett
+  instagram: eps_math_support_club
+  desc: >-
+    We hope to support our fellow students in Math
+    and Physics, provide a positive learning environment for members to
+    study, work and tutor.
+
+- name: Peer Leadership Council
+  id: plc
+  abbr: PLC
+  sponsor: Ms. Janzen
+  meeting-room: Careers Room
+  instagram: eps_plc_  # Don't be like PLC, faking "fonts" with Unicode (a11y)
+  desc: >-
+    Service-driven club, supporting Grade 8 students and school-wide events.
+
+# -> EPS-less club name (sort-only)
+- name: EPS Proud
+  id: proud
+  sponsor: Ms. Wagner
   meeting-days:
-    - Friday at lunch
-  meeting-room: Room 207N
+    - Tuesday at lunch
+  meeting-room: Room 238S
+  instagram: epsproud
+  desc: >-
+    SOGI initiatives
+
 - name: Psychology Club
   id: psychology
   sponsor: Mr. Webb
   meeting-days:
     - Wednesday at lunch, bi-weekly
   meeting-room: Room 103N
+  instagram: epspsychology
+  desc: >-
+    The club wants to help students better understand
+    different mental health and psychological illnesses and host many fun
+    events.
+
+- name: SPCA Outreach Club
+  id: spca-outreach
+  sponsor: Ms. Cottrell
+  meeting-days:
+    - Thursday at lunch
+  meeting-room: Room 101N
+  instagram: eps_spca.outreach
+  desc: >-
+    SPCA Outreach Club wants to amplify the silent cries
+    of our affectionate furry friends and transform the painful echoes into
+    loads of love, hope and positivity
+
 - name: Surrey Youth Leadership Club
-  id: surrey-youth-leadership
+  id: sylc
+  abbr: SYLC
   sponsor: Ms. Fowler
   meeting-days:
     - Wednesday at lunch
   meeting-room: Room 163C
+  teams-code: bsnmnms
+  instagram: surrey.ylc
+  desc: >-
+    Plan and hold events to raise money
+    for the Surrey Food Bank.
+
+# -> EPS-less club name
 - name: Science Club
   id: science
   sponsor: Mr. Quan
   meeting-room: Rooms 102N &amp; 106N
+  instagram: eps.science
+  desc: >-
+    Spark interest in science and introduce science
+    concepts which students may not be familiar with.
+
+# -> EPS-less club name
 - name: Student Council
   id: stuco
-  sponsor: Ms. Ellett, Mr. P-C &amp; Mr. Black
+  abbr: STUCO
+  sponsor: Ms. Ellett, Mr. Pereira-Costa, Mr. Black
   meeting-days:
     - TBA
   meeting-room: Room 143C
+  instagram: epsstudentcouncil
+  desc: >-
+    To improve school spirit and host enjoyable
+    events to increase school culture. STUCO will represent the wishes of
+    the student body and represent it.
+
+- name: Tabletop Games Club
+  id: tabletop-games
+  sponsor: Mr. Casteran de Jeanceon
+  meeting-days:
+    - Tuesday after school
+  meeting-room: Room 152C
+  desc: >-
+    Play board games, socialize &amp; have fun.
+
+# -> EPS-less club name
+- name: Technology Club
+  id: technology
+  sponsor: TBA # Mr. Wu? Not listed in PDF list
+  meeting-days:
+    - Tuesday after school
+  meeting-room: TBA
+  desc: >-
+    To educate peers in fields of 3D printing,
+    computer science and biotechnology.
+
 - name: Trading Card Games Club
   id: tcg
+  abbr: TCG Club
   sponsor: Mr. Wu
   meeting-days:
     - Thursday after school
   meeting-room: Room 125S
+  instagram: eps_tcg
+  desc: >-
+    A place where students can engage
+    in the playing of trading cards, a hobby otherwise rather inaccessible
+    here in South Surrey. Trading card games help improve strategical
+    thinking and promotes better student relationships as students are forced
+    to interact.
+
 - name: Tutoring Club
   id: tutoring
   sponsor: Ms. Hogan &amp; Ms. Fowler
   meeting-days:
     - Wednesday at lunch
   meeting-room: Room 163C
+  desc: >-
+    To help students excel in their curriculum by providing
+    student/peer tutors. To provide opportunities for students to broaden
+    their knowledge.
+
 - name: Table Tennis Club
   id: table-tennis
   sponsor: Mr. Tsang
   meeting-days:
     - Wednesday after school
   meeting-room: Cafeteria
+  instagram: eps_tabletennis
+  desc: >-
+    To keep students active through table tennis, also known as ping-pong.
+
+- name: Traditional Drumming Club
+  id: traditional-drumming
+  sponsor: Mr. Black, Ms. Davis
+  meeting-days:
+    - Monday at lunch
+  meeting-room: Room 143C
+  desc: >-
+    Bringing in cultural revitalization activities to
+    express and connect students by using student traditional knowledge to
+    bring in teachings.
