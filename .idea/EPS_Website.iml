@@ -21,7 +21,6 @@
     <option name="TEMPLATE_FOLDERS">
       <list>
         <option value="$MODULE_DIR$/elSSGin/templates" />
-        <option value="$MODULE_DIR$/elSSGin/pods" />
       </list>
     </option>
   </component>
