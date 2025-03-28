@@ -34,7 +34,7 @@
       <a class="club-claim-link"
          href="/edit-requests?url=https%3A%2F%2Fwww.elginparksecondary.com%2Fclubs%3F%23{{ club["id"] }}" title="Request an edit">
         <img src="/resources/images/pencil.svg" alt="Request an edit for {{ safe_name }}">
-      </a><h2>{{ club["name"] | safe }} {% if club["abbr"] %}({{ club["abbr"] }}){% endif %}</h2>
+      </a><h2>{{ club["name"] | safe }} {% if club["abbr"] %}(<abbr>{{ club["abbr"] }}</abbr>){% endif %}</h2>
       <div class="icon-shelf">
         {% if club["instagram"] %}
           <a class="instagram-icon" href="https://www.instagram.com/{{ club["instagram"] }}/"><img src="/resources/images/instagram.svg" alt="{{ safe_name }}'s Instagram"></a>
