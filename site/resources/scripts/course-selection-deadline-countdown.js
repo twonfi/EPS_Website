@@ -1,3 +1,5 @@
+'use strict';
+
 window.addEventListener("load", async (event) => {
   const deadlineCountdown = document.getElementById('deadline-countdown');
 
