@@ -82,16 +82,33 @@
               {{ code }}{{ ", " if not loop.last else "" }}
             {% endfor %}
           </div>
-          {% if course["prereqs"] %}
-            <div class="prereqs" role="note">
-              Recommended Prerequisite{% if course["prereqs"] | length > 1 %}s{% endif %}:
-              <ul aria-label="{{ course["name"] }} recommended prerequisites">
-                {% for prereq in course["prereqs"] %}
-                  <li><a href="{% if prereq["dept"] %}/{{ prereq["dept"] }}{% endif %}#{{ prereq["code"] }}">{{ prereq["name"] }}</a></li>
-                {% endfor %}
-              </ul>
-            </div>
-          {% endif %}
+          <div class="course-notes" role="note">
+            {% if course["recommended"] %}
+              <div class="recommended" role="note">
+                Recommended Course{% if course["recommended"] | length > 1 %}s{% endif %}:
+                <ul aria-label="{{ course["name"] }} recommended courses">
+                  {% for prereq in course["recommended"] %}
+                    <li>{% if prereq["grade"] %}{{ prereq["grade"] }} or higher in {% endif %}<a href="{% if prereq["dept"] %}/{{ prereq["dept"] }}{% endif %}#{{ prereq["code"] }}">{{ prereq["name"] }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+            {% if course["prereqs"] %}
+              <div class="prereqs" role="note">
+                Prerequisite{% if course["prereqs"] | length > 1 %}s{% endif %}:
+                <ul aria-label="{{ course["name"] }} prerequisites">
+                  {% for prereq in course["prereqs"] %}
+                    <li>{% if prereq["grade"] %}{{ prereq["grade"] }} or higher in {% endif %}<a href="{% if prereq["dept"] %}/{{ prereq["dept"] }}{% endif %}#{{ prereq["code"] }}">{{ prereq["name"] }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+            {% if course["notes"] %}
+              <div class="course-note-text" role="note">
+                <p>{{ course["notes"] }}
+              </div>
+            {% endif %}
+          </div>
           {% if course["youtube"] %}
             <lite-youtube class="youtube-embed" videoid="{{ course["youtube"] }}" playlabel="Video for {{ course["name"] }} course"></lite-youtube>
           {% endif %}

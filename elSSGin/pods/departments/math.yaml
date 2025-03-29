@@ -38,13 +38,12 @@ desc: >-
   courses and grades in specific programs. The <a href="/forms#math-flowchart">Math Flowchart</a> is available as a
   reference for choosing courses based on your post-secondary goals.
 sections:
-  # TODO: courses
   - name: Grade 9
     id: grade-9
     courses:
       - name: Mathematics 9
-        codes: ['MMA--09--S']
-        grades: [9]
+        codes: [ 'MMA--09--S' ]
+        grades: [ 9 ]
         elective: false
         desc: >-
           Mathematics 9 is a continuum of the skills from the Mathematics 8 course to assist further aptitudes.
@@ -59,4 +58,156 @@ sections:
           </ul>
   - name: Grade 10
     id: grade-10
-    courses: [] # TODO
+    courses:
+      - name: Workplace Math 10
+        codes: [ 'MWPM-10--S' ]
+        grades: [ 10 ]
+        elective: false
+        desc: >-
+          Workplace Mathematics pathway is designed to provide students with the mathematical understandings and 
+          critical-thinking skills identified for entry into the majority of trades and for direct entry into the
+          work force. Students will explore:
+          <ul>
+            <li>Puzzles and games for computational fluency
+            <li>Create, interpret, and critique graphs
+            <li>Primary trigonometric ratios
+            <li>Metric and imperial measurement and conversions
+            <li>Solving problems involving surface area and volume
+            <li>Angles
+            <li>Central tendency
+            <li>Experimental probability
+            <li>Financial literacy: gross and net pay
+          </ul>
+      - name: Foundations of Math & Pre-Calculus 10 (with/without Honours)
+        codes: [ 'MFMP-10--S', 'MFMP-10H-S' ]
+        grades: [ 10 ]
+        elective: false
+        desc: >-
+          This course develops major strands in Algebra, relations and functions and measurement with more formal 
+          instruction. Students intending to pursue post-secondary studies in Arts and Sciences must enroll in this 
+          course. Students will study:
+          <ul>
+            <li>Real numbers
+            <li>Number patterns
+            <li>Factors and products
+            <li>Roots and powers
+            <li>Relations and functions
+            <li>Linear functions
+            <li>Systems of linear equations
+            <li>Problem solving
+            <li>Financial Literacy
+          </ul>
+          <p>Honours develops the same strands but with enrichment. B or better in Mathematics 9 is recommended.
+  - name: Grade 11
+    id: grade-11
+    courses:
+      - name: Workplace Math 11
+        codes: [ 'MWPM-11--S' ]
+        grades: [ 11 ]
+        elective: false
+        desc: >-
+          Workplace 11 satisfies the graduation requirement for a math course at the Grade 11 level. Content in this 
+          pathway was chosen to meet the needs of students intending to pursue careers in the trades and general
+          workplaces. Students will study:
+          <ul>
+            <li>Financial literacy
+            <li>Rate of change
+            <li>Contexts
+            <li>Interpreting graphs
+            <li>Three-dimensional objects
+            <li>Problem solving
+          </ul>
+      - name: Foundations of Math 11
+        codes: [ 'MFOM-11-S' ]
+        grades: [ 11 ]
+        elective: false
+        desc: >-
+          This course is designed to provide students with the mathematical understandings and critical-thinking skills
+          identified for post-secondary studies in programs that do not require study of theoretical calculus.
+          Content in this pathway was chosen to meet the needs of the majority of the students intending to pursue
+          careers in areas that typically require university, but are not math intensive, such as the humanities, fine
+          arts, social sciences, and nursing. (Some programs may require Foundations of Math 12 in addition). 
+          Students will study:
+          <ul>
+            <li>Scale models
+            <li>Angle relationships
+            <li>Graphical analysis
+            <li>Mathematical reasoning
+            <li>Spatial puzzles
+            <li>Statistics (normal distribution, interpretation of statistical data)
+            <li>Linear inequalities
+            <li>Quadratic functions
+            <li>Systems of equations
+            <li>Financial literacy
+            <li>Applications
+          </ul>
+      - name: Pre-Calculus Math 11
+        codes: [ 'MPREC11--S' ]
+        grades: [ 11 ]
+        elective: false
+        desc: >-
+          This pathway is designed to provide students with the mathematical understandings and critical-thinking skills
+          identified for entry into post-secondary programs that require the study of theoretical calculus. Content in 
+          this pathway was chosen to meet the needs of students interested in pursuing careers in Math, Engineering
+          and Science. Students will study:
+          <ul>
+            <li>Real number system
+            <li>Powers with rational exponents
+            <li>Radical operations and equations
+            <li>Polynomial factoring
+            <li>Rational expressions and equations
+            <li>Quadratic functions and equations
+            <li>Linear and quadratic inequalities
+            <li>Trigonometry
+            <li>Financial literacy
+          </ul>
+  - name: Grade 12
+    id: grade-12
+    courses:
+      - name: Foundations of Math 12
+        codes: [ 'MFOM-12--S' ]
+        grades: [ 12 ]
+        elective: false
+        desc: >-
+          This course is designed to provide students with the mathematical understandings and critical-thinking skills identified for post-secondary studies in the arts or the humanities. Students will study:
+          <ul>
+            <li>Financial planning
+            <li>Geometric explorations: constructions, conics, fractals
+            <li>Graphical representations of polynomial, logarithmic, exponential, and sinusoidal functions
+            <li>Regression analysis
+            <li>Odds, probability, and expected value
+            <li>Combinatorics
+          </ul>
+      - name: Pre-Calculus 12
+        codes: [ 'MPREC12--S' ]
+        grades: [ 12 ]
+        elective: false
+        desc: >-
+          This course is designed to provide students with the mathematical understandings and critical-thinking skills identified for entry into post-secondary programs that require the study of theoretical calculus, in Mathematics, Sciences or Engineering. Students will study:
+          <ul>
+            <li>Transformations of functions and relations
+            <li>Exponential functions and equations
+            <li>Polynomial functions and equations
+            <li>Rational functions
+            <li>Trigonometric functions, equations and identities
+            <li>Logarithms; operations, functions, and equations
+            <li>Geometric sequences and series
+          </ul>
+      - name: Calculus 12
+        codes: [ 'MCALC12--S' ]
+        grades: [ 12 ]
+        elective: true
+        recommended:
+          - name: Pre-Calculus 12
+            code: MPREC12--S
+            grade: B
+        desc: >-
+          This is an excellent preparatory course for first year University Mathematics. The course content is mostly 
+          differentiation with applications and introduction of basic integration. (Students registered in Calculus 12 
+          may write the UBC/SFU/UNBC/UVIC Challenge Exam in the first week of June.) A percentage with a letter grade is
+          mailed directly to the student's home address. The student may then present this credit to local institutions 
+          within British Columbia to receive their first year Calculus credit.
+      - course-redirect:
+          name: Advanced Placement Calculus 12
+          dept: specialized/advanced-placement
+          code: PKG--12--S-4

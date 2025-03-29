@@ -4,9 +4,8 @@ sections:
     id: co-op
     courses:
       - name: Co-op
-        codes: [PKG--11-G]
-        grades:
-          - 11
+        codes: [ PKG--11-G ]
+        grades: [ 11 ]
         elective: true
         youtube: NMFdomGBJd4
         desc: >-
@@ -72,4 +71,156 @@ sections:
           <p><b>Applications are available in the Career
           Centre and are due by February 23rd.</b>
         # TODO: link application form and included courses
-      # TODO: rest of leadership courses
+  - name: Lab Tech
+    id: lab-tech
+    courses:
+      - name: Laboratory Technologist 12
+        codes: [ YED--2A--S ]
+        grades: [ 12 ]
+        elective: true
+        prereqs:
+          - name: Chemistry 12
+            dept: departments/science
+            code: MSC--12--S
+        notes: Completion of Chemistry 12 at Elgin Park, with teacher approval required
+        desc: >-
+          This course allows students to gain valuable work experience by applying their knowledge of sciences, 
+          particularly Chemistry. It will require students to think critically as they prepare student experiments and 
+          potentially develop new experiments for all science courses at Elgin Park Secondary. This course will prepare
+          students for university level lab work, as they work with equipment and learn about laboratory techniques 
+          beyond the scope of standard secondary school curriculum in sciences. Student responsibilities may include,
+          but are not limited to:
+          <ul>
+            <li>Solution preparation
+            <li>Assembly and maintenance of Lab Experiment Kits
+            <li>Researching, testing, and developing new experiments and equipment
+            <li>Providing leadership for the Chemistry Club
+            <li>Communicating with all members of the Science Department to assess and meet their needs
+            <li>Maintaining clean, organized, safe workspace
+          </ul>
+          <p>
+          Students chosen for this program are expected to have high proficiency in Chemistry, have excellent work
+          ethics and a high level of interest in all sciences. Interested students may be interviewed prior to
+          acceptance into this course.
+          <p>
+          By the end of this course students will have developed:
+          <ul>
+            <li>Proficiency in working independently
+            <li>Proficiency and confidence working in a lab setting Leadership and communication skills
+          </ul>
+  - name: Leadership Courses
+    id: leadership-courses
+    courses:
+      - name: PHE Leadership 10
+        codes: [ MPHED10LDS ]
+        grades: [ 10 ]
+        elective: true
+        recommended:
+          - name: PE 9
+            dept: departments/physical-education
+            code: MPHE-09--S  # TODO: elSSGin change needed: [ MPHE-09--S, MPHED10--S ]
+            grade: B
+          - name: PE 10
+            dept: departments/physical-education
+            code: MPHE-09--S  # TODO: elSSGin change needed: [ MPHE-09--S, MPHED10--S ]
+        desc: >-
+          The emphasis of the P.E. Leadership Program is to introduce students to a variety of leadership opportunities
+          in P.E. classes and within the Athletic Program. Students will apply leadership and organizational skills in 
+          activities such as: tournament coordination, officiating, and in the organization of school events.
+          For example: students will receive training in minor officiating and will be expected to commit to a minimum
+          of 30 hours of volunteer service outside of class time.
+          <p>
+          Students will be exposed to a variety of sports and games, similar to a regular P.E. 10 class, and also have
+          the opportunity to try many community based recreational activities such as bowling, rock climbing, hiking, 
+          paddle boarding and snowshoeing. The course is open to mature, energetic students in Grade 10.
+          <p>
+          <b>Application Process:</b> Students interested in this course should select it; however, final acceptance 
+          into the program is dependent upon an application/interview process.
+  - name: Peer Tutoring
+    id: peer-tutoring
+    desc: >-
+      (Please note that there will be a 4 day training session for Peer Tutors in June; exact dates to be announced)
+      <p>
+      Students who want to take part in the Peer Tutoring program must:
+      <ul>
+        <li>be in Grades 11 or 12
+        <li>have good communication and organizational skills
+        <li>be willing to help support younger students
+        <li>be excellent role models
+        <li>be recommended by at least two teachers or staf
+        <li>maintain a C+ or better GPA
+        <li>complete an application: please see your counsellor
+      </ul>
+    courses:
+      - name: Peer Tutoring 11
+        codes: [ YIPS-2B--S ]
+        id: peer-tutoring-11
+        grades: [ 11 ]
+        elective: true
+        desc: >-
+          The most effective way to learn is to teach. Peer Tutoring 11 provides students with the opportunity to learn 
+          about teaching and learning. This course is designed for peer tutors to gain an awareness of the diversity of 
+          the student population, model successful learning and organization, study and communication skills. These
+          skills are imperative to the success of the peer tutor and the students they support.
+      - name: Peer Tutoring 12
+        codes: [ YIPS-2B--S ]
+        id: peer-tutoring-12
+        grades: [ 12 ]
+        elective: true
+        desc: >-
+          Peer Tutoring 12 provides students with the opportunity to expand on previous experiences with tutoring. This 
+          course is designed to gain a deeper understanding of the dynamic nature of the teaching process. Course work
+          includes instructional theory and strategies, communication, study skills and organization, instructional 
+          applications and the metacognitive process. Tutors will gain further awareness of the diversity of learners 
+          and the basis of educational theory and practice.
+  - name: Intramurals
+    id: intramurals
+    desc: N/A
+  - name: Library Science Program
+    id: library-science
+    youtube: VNWxIVVXYXI
+    desc: >-
+      Students will be learning about how a library learning commons (LLC) works, help run the LLC, and assist 
+      Elgin Park students and staff. Students will learn how to process and organize materials, access information, use
+      the learning commons website, and help with the technology in the library learning commons. This course will 
+      provide students with an understanding of library management, library organization, customer service, teamwork;
+      and reading fiction and non-fiction, storytelling and research skills&mdash;skills that will carry them into their
+      post-secondary lives.
+      <p>
+      The expectation is that students work independently and in a team environment, stay actively engaged in the daily 
+      tasks of the learning commons and be personable and helpful to all users of the LLC.
+      <p>
+      <b>Prerequisite:</b> Due to limited space, permission of the teacher-librarian is required. Please see the 
+      teacher-librarian in the Library Learning Commons to discuss plans before registering in a Library Science course.
+      It is recommended that students have a B in English and Math, as well as an interest in books, computers and
+      technology, be independently motivated, and have a history of good attendance.
+    courses:
+      - name: Library Science 10
+        codes: [ YCAIS0A--S ]
+        grades: [ 10 ]
+        elective: true
+        desc: >-
+          This course provides students interested in library or information-related careers with an introduction to
+          library management, research, organization, reading and storytelling, and customer service skills. Through
+          controlled inquiry, students will develop and practice transliteracy skills and promote them to their peers.
+          Students will also learn and practice the operation methods of the Learning Commons. Evaluation is based on
+          daily work habits, attendance, assignments and project work, and demonstrated knowledge of skills.
+      - name: Library Information & Literary Studies 11
+        codes: [ YCAIS1A--S ]
+        grades: [ 11 ]
+        elective: true
+        desc: >-
+          This course provides students with an in-depth study of the role of the Library Learning Commons as the
+          learning centre of the school as it supports all members of the school community. Through supported inquiry,
+          students will continue to develop and practice their transliteracy skills and promote them to the school 
+          community in various ways (e.g. developing ideas for the LLC website, reading stories). Students will continue
+          to develop their ability to promote and support access to the Library Learning Commons resources, services and
+          programs not only to their peers but to all members of the school community.
+      - name: Library Learning Commons Inquiry 12
+        codes: [ YCAIS2A--S ]
+        grades: [ 12 ]
+        elective: true
+        desc: >-
+          This course provides students with the opportunity to refine their understanding of the role of the 
+          Library Learning Commons in a school setting through inquiry. Students will develop the skills and maturity
+          to learn independently as they work toward meaningful inquiry goals. 

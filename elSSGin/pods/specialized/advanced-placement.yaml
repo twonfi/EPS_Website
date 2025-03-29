@@ -7,7 +7,7 @@ sections:
         grades: [ 11, 12 ]
         codes: [ 'acsc-2A' ]
         elective: true
-        prereqs:
+        recommended:
           - { name: 'Computer Programming 11', dept: 'departments/business', code: 'MCMPR11--S,MCMPR12--S'}
         # Originally on the page in white-on-white (invisible unless selected) text: Lowkey best class
         desc: >-
