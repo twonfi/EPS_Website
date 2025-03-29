@@ -47,7 +47,7 @@
                 {% if course["course-redirect"] %}
                   <li><a href="#course-redirect-{{ course['course-redirect']['code'] }}">{{ course['course-redirect']['name'] | safe }}</a></li>
                 {% else %}
-                  <li><a href="#{% for c in course["codes"] %}{{ c }}{{ "," if not loop.last else "" }}{% endfor %}">{{ course["name"] | safe}}</a></li>
+                  <li><a href="#{% if course["course-redirect"] %}course-redirect-{{ course["course-redirect"]["code"] }}{% elif course["id"] %}{{ course["id"] }}{% else %}{% for c in course["codes"] %}{{ c }}{{ "," if not loop.last else "" }}{% endfor %}{% endif %}">{{ course["name"] | safe}}</a></li>
                 {% endif %}
               {% endfor %}
             </ul>
@@ -56,7 +56,7 @@
       {% endif %}
 
     {% for course in section["courses"] %}
-      <article id="{% if course["course-redirect"] %}course-redirect-{{ course["course-redirect"]["code"] }}{% else %}{% for c in course["codes"] %}{{ c }}{{ "," if not loop.last else "" }}{% endfor %}{% endif %}" class="course" aria-label="{{ course["name"] }}">
+      <article id="{% if course["course-redirect"] %}course-redirect-{{ course["course-redirect"]["code"] }}{% elif course["id"] %}{{ course["id"] }}{% else %}{% for c in course["codes"] %}{{ c }}{{ "," if not loop.last else "" }}{% endfor %}{% endif %}" class="course" aria-label="{{ course["name"] }}">
         {% if course["course-redirect"] %}
           <h3>{{ course["course-redirect"]['name'] }}</h3>
           <div class="course-redirect">
