@@ -10,6 +10,7 @@
 {% endblock %}
 
 {% block main %}
+  {# </p> may be omitted and prevents errors for descriptions with block elements. See MDN. #}
   <h1>{{ dept["name"] }}</h1>
   {% if dept["desc"] %}
     {{ dept["desc"] }}
@@ -33,7 +34,7 @@
         </div>
       {% endif %}
       {% if section["desc"] %}
-        <p>{{ section["desc"] | safe }}</p>
+        <div><p>{{ section["desc"] | safe }}</div>{# a <div> makes auto-closing more reliable #}
       {% endif %}
       {% if section["youtube"] %}
         <lite-youtube class="youtube-embed section-youtube" videoid="{{ section["youtube"] }}" playlabel="Video for {{ section["name"] }} section"></lite-youtube>
@@ -117,7 +118,7 @@
               {{ course["embed-code"] | safe }}
             </div>
           {% endif %}
-          <p>{{ course["desc"] }}</p>
+          <p>{{ course["desc"] }}
         {% endif %}
       </article>
     {% endfor %}
