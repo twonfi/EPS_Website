@@ -6,4 +6,4 @@
   Cache-Control: public, max-age=2592000
 
 /resources/*
-  Cache-Control: public, max-age=1209600
+  Cache-Control: public, max-age=172800
