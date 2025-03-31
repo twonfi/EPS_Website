@@ -68,12 +68,12 @@
           <h3>{{ course["name"] }}</h3>
           <div class="course-icons" role="note">
             {% for grade in course["grades"] %}
-              <span class="grade{{ grade }} course-info-icon" role="note" aria-label="Grade {{ grade }}">{{ grade }}</span>
+              <span class="grade{{ grade }} course-info-icon grade-icon" role="note" aria-label="Grade {{ grade }}">{{ grade }}</span>
             {% endfor %}
             {% if course["elective"] %}
-              <span class="elec course-info-icon" role="note">Elective</span>
+              <span class="elec course-info-icon elec-req-icon" role="note">Elective</span>
             {% else %}
-              <span class="req course-info-icon" role="note">Required</span>
+              <span class="req course-info-icon elec-req-icon" role="note">Required</span>
             {% endif %}
           </div>
           <div class="course-code" role="note">

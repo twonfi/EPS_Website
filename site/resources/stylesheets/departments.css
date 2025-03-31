@@ -62,76 +62,53 @@ lite-youtube, .youtube-embed {
   margin-right: .7em;
 }
 
-.grade9{
+.grade-icon {
   text-align: center;
-  vertical-align:middle;
-  border-radius: 100%;
+  vertical-align: middle;
+  border-radius: 50%;
   width: 2em;
-  line-height:2em;
+  line-height: 2em;
   font-weight: bold;
+  padding: 4px;
+  display: inline-block;
+}
+.grade8{
+  background-color: #A6E1FA;
+  color: black;
+}
+.grade9{
   background-color: blue;
   color: white;
-  padding: 11px 17px;
 }
-
 .grade10{
-  text-align: center;
-  vertical-align:middle;
-  border-radius: 100%;
-  width: 2em;
-  line-height:2em;
-  font-weight: bold;
-  padding: 11px;
   background-color: #0C5F0C;
   color: white;
 }
-
 .grade11{
-  text-align: center;
-  vertical-align:middle;
-  border-radius: 100%;
-  width: 2em;
-  line-height:2em;
-  font-weight: bold;
   background-color: orange;
   color: black;
-  padding: 11px;
 }
-
 .grade12{
-  text-align: center;
-  vertical-align:middle;
-  border-radius: 100%;
-  width: 2em;
-  line-height:2em;
-  font-weight: bold;
   background-color: gold;
   color: black;
-  padding: 11px;
 }
 
-.req{
+.elec-req-icon {
   text-align: center;
   vertical-align:middle;
   border-radius: 100%;
   width: 2em;
   line-height:2em;
   font-weight: bold;
+  padding: 11px;
+}
+.req{
   background-color: purple;
   color: white;
-  padding: 11px;
 }
-
 .elec{
-  text-align: center;
-  vertical-align:middle;
-  border-radius: 100%;
-  width: 2em;
-  line-height:2em;
-  font-weight: bold;
   background-color: #AD0000;
   color: white;
-  padding: 11px;
 }
 
 h1 {
