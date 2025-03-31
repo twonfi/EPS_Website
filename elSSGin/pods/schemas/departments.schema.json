@@ -66,7 +66,8 @@
       "type": "object",
       "properties": {
         "course-redirect": {
-          "$ref": "#/definitions/course-link"
+          "$ref": "#/definitions/course-link",
+          "description": "Link to a course on another department"
         },
         "name": {
           "description": "Name of course",
@@ -83,17 +84,28 @@
           "examples": [["ABC--123"]]
         },
         "id": {
-          "description": "Internal ID for courses without course codes. If possible, course codes should be used. Don't use both.",
+          "description": "Internal ID for courses without course codes. If possible, course codes should be used. Use both only in edge cases for duplicate course codes.",
           "type": "string",
           "pattern": "^[a-z0-9-_]+$",
           "examples": ["computer-programming-9"]
         },
-        "prereqs": {
+        "recommended": {
           "description": "Recommended prerequisites",
           "type": "array",
           "items": {
             "$ref": "#/definitions/course-link"
           }
+        },
+        "prereqs": {
+          "description": "Required prerequisites",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/course-link"
+          }
+        },
+        "notes": {
+          "description": "Course notes",
+          "type": "string"
         },
         "grades": {
           "description": "Grade levels",
@@ -119,7 +131,7 @@
       "oneOf": [
         {
           "required": ["name", "grades", "elective", "desc"],
-          "oneOf": [
+          "anyOf": [
               {"required": ["codes"]},
               {"required": ["id"]}
           ]
@@ -153,6 +165,11 @@
           "description": "Course code or internal ID of course",
           "type": "string",
           "examples": ["ABC--123", "internal-id"]
+        },
+        "grade": {
+          "description": "Recommended grade",
+          "type": "string",
+          "examples": ["B"]
         }
       },
       "required": ["name","code"]
