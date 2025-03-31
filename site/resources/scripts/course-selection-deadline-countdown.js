@@ -6,8 +6,7 @@ window.addEventListener("load", async (event) => {
   try {
     console.log("Preparing to count down...");
 
-    const response = await fetch('/resources/course-selection-deadline.txt');
-    const deadlineString = await response.text();
+    const deadlineString = deadlineCountdown.attributes['datetime'].nodeValue;
     const deadline = new Date(deadlineString);
     console.log(`The deadline is ${deadlineString}`);
     console.log(deadline);
