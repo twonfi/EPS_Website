@@ -1,6 +1,6 @@
 // Fetch JSON data and dynamically generate the grid
 console.log("blogCMS.js loaded");
-fetch('blog-posts.json')
+fetch('Teacher_DSC.json')
     .then(response => {
         if (!response.ok) {
             throw new Error("Failed to load JSON data");
