@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
+    // Add navbar HTML
     document.body.insertAdjacentHTML("afterbegin", `
         <ul class="l1">
             <a href="home.html"><img src="./elgin_logo.png" id="img1"></a>
@@ -34,4 +35,40 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </ul>
     `);
+
+    // Get navbar element
+    const navbar = document.querySelector('.l1');
+    let lastScroll = 0;
+
+    // Debounce function
+    function debounce(func, wait = 40) {
+        let timeout;
+        return function() {
+            const context = this;
+            const args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                func.apply(context, args);
+            }, wait);
+        };
+    }
+
+    // Scroll handler
+    function handleScroll() {
+        const currentScroll = window.pageYOffset;
+
+        // Scrolling down - hide navbar
+        if (currentScroll > lastScroll && currentScroll > 60) {
+            navbar.classList.add('nav-hidden');
+        }
+        // Scrolling up - show navbar
+        else if (currentScroll < lastScroll) {
+            navbar.classList.remove('nav-hidden');
+        }
+
+        lastScroll = currentScroll;
+    }
+
+    // Add debounced scroll event listener
+    window.addEventListener('scroll', debounce(handleScroll));
 });

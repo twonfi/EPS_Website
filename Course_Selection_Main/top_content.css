@@ -1,12 +1,17 @@
 /* General Page Setup */
+
 body,
 html {
     height: 85%;
     margin: 0;
+    /* padding-top: 30px; */
+    /* Match 60px navbar height */
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
 /* Hero Section */
+
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)), url("scool.jpg");
     height: inherit;
@@ -26,15 +31,28 @@ html {
     color: white;
 }
 
+
 /* Navigation Bar */
+
 .l1 {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
+    /* Changed to allow dropdown overflow */
     background-color: #40263b;
     height: 60px;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.l1.nav-hidden {
+    transform: translateY(-100%);
 }
 
 .l1 li {
@@ -52,11 +70,13 @@ li button,
     text-decoration: none;
     cursor: pointer;
     background-color: #40263b;
-    height: 90px;
+    height: 60px;
     width: 100%;
 }
 
+
 /* Dropdown Menu */
+
 li.dropdown {
     transition: ease-in-out 0.5s;
     display: inline-block;
@@ -68,8 +88,11 @@ li.dropdown {
     position: absolute;
     background-color: #f9f9f9;
     width: inherit;
-    z-index: 1;
-    /* border-radius: 20px; */ /*Gives rounded edges to the whole dropdown box*/
+    z-index: 1001;
+    /* border-radius: 20px; */
+    /*Gives rounded edges to the whole dropdown box*/
+    top: 60px;
+    /* Match navbar height */
 }
 
 .dropdown:hover .dropdown-content,
@@ -86,14 +109,17 @@ li.dropdown {
     text-align: left;
     cursor: pointer;
     padding: 16px 16px;
-    /* border-radius: 20px;*/ /*Gives rounded edges when hovering over dropdown items */
+    /* border-radius: 20px;*/
+    /*Gives rounded edges when hovering over dropdown items */
 }
 
 .dropdown-content a:hover {
     background-color: #f0f0f0;
 }
 
+
 /* Navigation Items */
+
 .NavItem {
     display: flex;
     height: 100%;
@@ -111,9 +137,11 @@ li.dropdown {
     background-color: #332333;
 }
 
+
 /* Header Images */
+
 #img1 {
-    height:60px;
-    width:114px;
+    height: 60px;
+    width: 114px;
     position: absolute;
 }
