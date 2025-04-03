@@ -105,6 +105,8 @@ li.dropdown {
     gap: 15px;
     opacity: 0;
     visibility: hidden;
+    border-bottom: 3px solid #5e3356;
+    /* Purple accent bar */
 }
 
 .dropdown:hover .dropdown-content,
@@ -120,7 +122,7 @@ li.dropdown {
     display: block;
     text-align: left;
     cursor: pointer;
-    padding: 16px 16px;
+    padding: 10px 10px;
     /* border-radius: 20px;*/
     /*Gives rounded edges when hovering over dropdown items */
 }
@@ -154,6 +156,7 @@ li.dropdown {
 
 #img1 {
     padding-top: 5px;
+    padding-left: 5px;
     height: var(--header-img-height);
     width: var(--header-img-width);
     position: absolute;
