@@ -83,22 +83,26 @@ li.dropdown {
 }
 
 .dropdown-content {
-    transition: ease-in-out 0.5s;
-    display: none;
-    position: absolute;
+    transition: all 0.3s ease;
+    position: fixed;
     background-color: #f9f9f9;
-    width: inherit;
+    width: 100%;
+    left: 0;
     z-index: 1001;
-    /* border-radius: 20px; */
-    /*Gives rounded edges to the whole dropdown box*/
     top: 60px;
-    /* Match navbar height */
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .dropdown:hover .dropdown-content,
-.dropdown:active .dropdown-content,
-.dropdown:focus .dropdown-content {
-    display: block;
+.dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    visibility: visible;
 }
 
 .dropdown-content a {
