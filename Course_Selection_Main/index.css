@@ -39,6 +39,7 @@ html {
     border-color: white;
     color: white;
     font-weight: bold;
+    border-radius:10px;
 }
 
 .b1s:hover {
@@ -120,6 +121,7 @@ html {
     line-height: 35px;
     margin: 10px 0;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 #deadline9 {
@@ -275,9 +277,6 @@ html {
     background-attachment: fixed;
     height: auto;
 }
-
-
-/* sectioners */
 
 #sectionerWhite {
     min-height: 100vh;
