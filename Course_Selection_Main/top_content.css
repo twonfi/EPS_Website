@@ -1,3 +1,11 @@
+:root {
+    --navbar-height: 70px;
+    --header-img-height: 60px;
+    --header-img-width: 114px;
+    /* Scaled proportionally from original 60:114 ratio */
+}
+
+
 /* General Page Setup */
 
 body,
@@ -5,7 +13,7 @@ html {
     height: 85%;
     margin: 0;
     /* padding-top: 30px; */
-    /* Match 60px navbar height */
+    /* Match var(--navbar-height) navbar height */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -41,7 +49,7 @@ html {
     overflow: visible;
     /* Changed to allow dropdown overflow */
     background-color: #40263b;
-    height: 60px;
+    height: var(--navbar-height);
     width: 100%;
     position: fixed;
     top: 0;
@@ -70,7 +78,7 @@ li button,
     text-decoration: none;
     cursor: pointer;
     background-color: #40263b;
-    height: 60px;
+    height: var(--navbar-height);
     width: 100%;
 }
 
@@ -89,7 +97,7 @@ li.dropdown {
     width: 100%;
     left: 0;
     z-index: 1001;
-    top: 60px;
+    top: var(--navbar-height);
     padding: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     display: grid;
@@ -145,7 +153,8 @@ li.dropdown {
 /* Header Images */
 
 #img1 {
-    height: 60px;
-    width: 114px;
+    padding-top: 5px;
+    height: var(--header-img-height);
+    width: var(--header-img-width);
     position: absolute;
 }

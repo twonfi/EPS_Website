@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const navbar = document.querySelector('.l1');
     let lastScroll = 0;
 
-    // Debounce function
+    // Debounce functions
     function debounce(func, wait = 40) {
         let timeout;
         return function() {
@@ -69,6 +69,57 @@ document.addEventListener("DOMContentLoaded", function() {
         lastScroll = currentScroll;
     }
 
-    // Add debounced scroll event listener
-    window.addEventListener('scroll', debounce(handleScroll));
+
+    //!Memory optimization stuff idk I chatgpt this shit
+    // Cache DOM references
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const dropdownContents = document.querySelectorAll('.dropdown-content');
+
+    // Add passive scroll event listener
+    const debouncedScroll = debounce(handleScroll);
+    window.addEventListener('scroll', debouncedScroll, { passive: true });
+
+    // Cleanup when page is hidden
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            window.removeEventListener('scroll', debouncedScroll);
+            dropdowns.forEach(dropdown => {
+                dropdown.removeEventListener('mouseenter', showDropdown);
+                dropdown.removeEventListener('mouseleave', hideDropdown);
+            });
+        } else {
+            window.addEventListener('scroll', debouncedScroll, { passive: true });
+            // Reattach dropdown events if needed
+        }
+    });
+
+    // Debounce dropdown animations
+    const showDebounced = debounce(showDropdown, 15);
+    const hideDebounced = debounce(hideDropdown, 15);
+
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('mouseenter', showDebounced);
+        dropdown.addEventListener('mouseleave', hideDebounced);
+    });
+
+    // Dropdown functions
+    function showDropdown() {
+        this.querySelector('.dropdown-content').style.opacity = '1';
+        this.querySelector('.dropdown-content').style.visibility = 'visible';
+    }
+
+    function hideDropdown() {
+        this.querySelector('.dropdown-content').style.opacity = '0';
+        this.querySelector('.dropdown-content').style.visibility = 'hidden';
+    }
+
+    // Reattach dropdown events when page becomes visible again
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) {
+            dropdowns.forEach(dropdown => {
+                dropdown.addEventListener('mouseenter', showDebounced);
+                dropdown.addEventListener('mouseleave', hideDebounced);
+            });
+        }
+    });
 });
