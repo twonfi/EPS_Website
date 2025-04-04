@@ -175,11 +175,6 @@ html {
     margin-right: 10px;
 }
 
-#line3 {
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
 
 #boxReq {
     border-style: solid;
@@ -308,4 +303,19 @@ hr {
     height: 2px;
     background-color: purple;
     margin: 10px 0;
+}
+
+.thinContainer {
+    margin: 5px 0;
+    padding: 0;
+}
+
+.thinContainer hr {
+    margin: 2px 0;
+}
+
+.thinContainer p {
+    margin: 2px 0;
+    font-size: 0.9em;
+    line-height: 1.2;
 }
