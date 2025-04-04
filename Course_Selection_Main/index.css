@@ -278,19 +278,19 @@ html {
     height: auto;
 }
 
-#sectionerWhite {
-    min-height: 100vh;
-    height: auto;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    background-color: rgb(255, 255, 255);
-}
-
+#sectionerWhite,
 #sectionerAlt {
     min-height: 100vh;
     height: auto;
     padding-top: 1%;
     padding-bottom: 1%;
+}
+
+#sectionerWhite {
+    background-color: rgb(255, 255, 255);
+}
+
+#sectionerAlt {
     background-color: lavender;
 }
 
