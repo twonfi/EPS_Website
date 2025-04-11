@@ -290,11 +290,11 @@ html {
 
 #processInfo {
     font-size: 18px;
-    margin-top: 40 px;
-    margin-bottom: 50px;
+    margin-top: 20px;
     text-align: left;
     font-family: arial;
     line-height: 1.5;
+    margin-right: 20px;
 }
 
 hr {
