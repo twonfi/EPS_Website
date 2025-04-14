@@ -32,13 +32,6 @@ html {
     font-size: 20px;
 }
 
-#img1 {
-    padding-top: 12px;
-    padding-left: 12px;
-    height: 65px;
-    width: 135px;
-    position: absolute;
-}
 
 #img2 {
     padding-top: 12px;
@@ -76,7 +69,7 @@ html {
     margin-right: 10%;
 }
 
-#navbar {
+/* #navbar {
     background-color: #40263B;
     height: 90px;
     width: 100%;
@@ -86,9 +79,9 @@ html {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    /* required */
+    /* required *//*
     overflow: auto;
-}
+} */
 
 #main {
     margin-top: inherit;
@@ -118,7 +111,7 @@ html {
     font-weight: bold;
 }
 
-.navB {
+/* .navB {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +124,7 @@ html {
     margin-top: 24px;
     margin-left: 1%;
     display: inline-block;
-}
+} */
 
 #textSpace {
     top: 0px;
@@ -194,7 +187,7 @@ html {
     float: left;
 }
 
-li button,
+/* li button,
 .dropbtn1 {
     border: none;
     padding: 0px 15px;
@@ -309,7 +302,7 @@ li a div,
     z-index: 10;
     justify-content: center;
     align-items: center;
-}
+} */
 
 #ul1 {
     color: black;
