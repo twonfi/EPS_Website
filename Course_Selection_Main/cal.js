@@ -1,7 +1,9 @@
 window.addEventListener("load", function () {
   var calendarEl = document.getElementById("calendar");
   var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: "dayGridMonth",
+      initialView: "dayGridMonth", 
+      showNonCurrentDates: false, //depends if you wanna show other dates, too visually messy
+      fixedWeekCount: false,
       headerToolbar: {left: "prev,next today",
           center: "title",
           right: "dayGridMonth,timeGridWeek,timeGridDay",
@@ -10,7 +12,7 @@ window.addEventListener("load", function () {
           try {
             const response = await fetch(
                 // DO NOT USE IN PRODUCTION I'LL THINK OF BETTER WAY
-                // (but it would probably be used anyways)
+                // (but it would probably be used anyways) -> Yep lmao will use
 
                 /* note:
                  we can use /orca_news/calendar.json if Appazur blocks the proxy's IP or if the proxy blocks us
